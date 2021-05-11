@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FeatureInfoResponse xmlns:esri_wms="http://www.esri.com/wms" xmlns="http://www.esri.com/wms">
+<FIELDS OBJECTID="3" Name="Nördlicher Schwarzwald" Alias="Nordschwarzwald" Flaeche_km="1052" Bundesland="Baden-Württemberg" Shape="Polygon" Shape.STArea="1050733972.600878" Shape.STLength="226394.902031"></FIELDS>
+</FeatureInfoResponse>

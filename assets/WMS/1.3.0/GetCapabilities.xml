@@ -1,0 +1,918 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WMS_Capabilities version="1.3.0" updateSequence="0" xmlns="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sld="http://www.opengis.net/sld" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>WMS Bebauungspläne Ohmden</Title>
+    <Abstract>Bebauungspläne Ohmden</Abstract>
+    <KeywordList>
+      <Keyword vocabulary="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode">Bodennutzung</Keyword>
+      <Keyword>infoMapAccessService</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson></ContactPerson>
+        <ContactOrganization>Gemeinde Ohmden</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition></ContactPosition>
+      <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>Hauptstraße 18</Address>
+        <City>Ohmden</City>
+        <StateOrProvince>Baden-Württemberg</StateOrProvince>
+        <PostCode>73275</PostCode>
+        <Country>Deutschland</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>07023 95100</ContactVoiceTelephone>
+      <ContactElectronicMailAddress>gemeinde@ohmden.de</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>Die dargestellten Daten geben den Inhalt der Bebauungspläne wieder. Es handelt sich hier um keine rechtlich verbindlichen Informationen. Amtliche Auskünft sind bei der jeweiligen Gemeindeverwaltung (Datenherr) zu erfragen.</Fees>
+    <AccessConstraints>otherRestrictions</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>image/png; subtype=8bit</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/x-ms-bmp</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <Format>text/xml</Format>
+        <Format>text/xml; subtype=gml/2.1.2</Format>
+        <Format>text/xml; subtype=gml/3.0.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.2.1</Format>
+        <Format>application/gml+xml; version=2.1</Format>
+        <Format>application/gml+xml; version=3.0</Format>
+        <Format>application/gml+xml; version=3.1</Format>
+        <Format>application/gml+xml; version=3.2</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <sld:GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/png; subtype=8bit</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/x-ms-bmp</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </sld:GetLegendGraphic>
+    </Request>
+    <Exception>
+      <Format>BLANK</Format>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+    </Exception>
+    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" xmlns:ows11="http://www.opengis.net/ows/1.1" xmlns:metadata="http://www.deegree.org/services/metadata" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0">
+      <inspire_common:MetadataUrl>
+        <inspire_common:URL>https://geodienste.komm.one/services/bsp/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8/md/service/id_wms</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.iso.19139+xml</inspire_common:MediaType>
+      
+      </inspire_common:MetadataUrl>
+      <inspire_common:SupportedLanguages>
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>ger</inspire_common:Language>
+        
+        </inspire_common:DefaultLanguage>
+      
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>ger</inspire_common:Language>
+      
+      </inspire_common:ResponseLanguage>
+    
+    </inspire_vs:ExtendedCapabilities>
+    <soapwms:ExtendedCapabilities xmlns:soapwms="http://schemas.deegree.org/extensions/services/wms/1.3.0" xmlns:wms="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://schemas.deegree.org/extensions/services/wms/1.3.0 http://schemas.deegree.org/extensions/services/wms/1.3.0/soapwms.xsd">
+      <soapwms:SOAP>
+        <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms"/>
+        <soapwms:Constraint name="SOAPVersion">
+          <soapwms:Value>1.1</soapwms:Value>
+          <soapwms:Value>1.2</soapwms:Value>
+        </soapwms:Constraint>
+        <soapwms:SupportedOperations>
+          <soapwms:Operation name="GetCapabilities"/>
+          <soapwms:Operation name="GetMap"/>
+          <soapwms:Operation name="GetFeatureInfo"/>
+        </soapwms:SupportedOperations>
+      </soapwms:SOAP>
+    </soapwms:ExtendedCapabilities>
+    <Layer queryable="0" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+      <Title>Bebauungspläne Ohmden</Title>
+      <Abstract>Bebauungspläne Ohmden</Abstract>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:25832</CRS>
+      <CRS>EPSG:3042</CRS>
+      <CRS>EPSG:3043</CRS>
+      <CRS>EPSG:3040</CRS>
+      <CRS>EPSG:3041</CRS>
+      <CRS>EPSG:31467</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:3039</CRS>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3038</CRS>
+      <CRS>EPSG:3046</CRS>
+      <CRS>EPSG:3047</CRS>
+      <CRS>EPSG:3044</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>EPSG:3045</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>9.51641109</westBoundLongitude>
+        <eastBoundLongitude>9.55469910</eastBoundLongitude>
+        <southBoundLatitude>48.64286577</southBoundLatitude>
+        <northBoundLatitude>48.65369179</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="EPSG:3857" minx="1059362.03684756" miny="6214479.02413101" maxx="1063624.23817303" maxy="6216303.12616841"/>
+      <BoundingBox CRS="EPSG:25832" minx="538032.71802702" miny="5387884.77979439" maxx="540861.29377304" maxy="5389107.96498518"/>
+      <BoundingBox CRS="EPSG:3042" minx="1420832.61826519" miny="5463836.96325407" maxx="1423843.61479585" maxy="5465505.54750427"/>
+      <BoundingBox CRS="EPSG:3043" minx="5408281.61517015" miny="979789.98473443" maxx="5409726.33922344" maxy="982711.16878600"/>
+      <BoundingBox CRS="EPSG:3040" minx="2296996.39565588" miny="5684916.45546586" maxx="2300176.68849014" maxy="5687051.34151795"/>
+      <BoundingBox CRS="EPSG:3041" minx="1860310.55308320" miny="5555526.59362561" maxx="1863408.42174364" maxy="5557424.45223830"/>
+      <BoundingBox CRS="EPSG:31467" minx="5389600.99407833" miny="3538123.77138692" maxx="5390824.69417598" maxy="3540953.49318568"/>
+      <BoundingBox CRS="EPSG:4326" minx="48.64286577" miny="9.51641109" maxx="48.65369179" maxy="9.55469910"/>
+      <BoundingBox CRS="EPSG:3039" minx="2729070.88767929" miny="5854114.10969869" maxx="2732325.98538055" maxy="5856495.06517972"/>
+      <BoundingBox CRS="EPSG:4258" minx="48.64286577" miny="9.51641109" maxx="48.65369179" maxy="9.55469910"/>
+      <BoundingBox CRS="EPSG:3038" minx="3153869.32531292" miny="6065677.08231271" maxx="3157186.33648975" maxy="6068312.93928498"/>
+      <BoundingBox CRS="EPSG:3046" minx="-345179.99335474" miny="5451305.80545365" maxx="-342184.83510485" maxy="5452934.11004754"/>
+      <BoundingBox CRS="EPSG:3047" minx="-785101.22098535" miny="5536446.52953841" maxx="-782018.59763688" maxy="5538302.94563377"/>
+      <BoundingBox CRS="EPSG:3044" minx="5387884.77979439" miny="538032.71802702" maxx="5389107.96498518" maxy="540861.29377304"/>
+      <BoundingBox CRS="EPSG:900913" minx="1059362.03684756" miny="6214479.02413101" maxx="1063624.23817303" maxy="6216303.12616841"/>
+      <BoundingBox CRS="EPSG:3045" minx="96135.02784562" miny="5402080.98308839" maxx="99039.89969437" maxy="5403486.08701760"/>
+      <AuthorityURL name="GemeindeOhmden">
+        <OnlineResource xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
+      </AuthorityURL>
+      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>bp_plan</Name>
+        <Title>bp_plan</Title>
+        <Abstract>Bebauungspläne Ohmden</Abstract>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:3042</CRS>
+        <CRS>EPSG:3043</CRS>
+        <CRS>EPSG:3040</CRS>
+        <CRS>EPSG:3041</CRS>
+        <CRS>EPSG:31467</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:3039</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3038</CRS>
+        <CRS>EPSG:3046</CRS>
+        <CRS>EPSG:3047</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:900913</CRS>
+        <CRS>EPSG:3045</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>9.51641684</westBoundLongitude>
+          <eastBoundLongitude>9.55464584</eastBoundLongitude>
+          <southBoundLatitude>48.64302956</southBoundLatitude>
+          <northBoundLatitude>48.65353572</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857" minx="1059362.67654733" miny="6214506.61826775" maxx="1063618.30926975" maxy="6216276.82646901"/>
+        <BoundingBox CRS="EPSG:25832" minx="538033.25863808" miny="5387902.98897944" maxx="540857.23813735" maxy="5389090.58786311"/>
+        <BoundingBox CRS="EPSG:3042" minx="1420835.92200192" miny="5463855.17986770" maxx="1423836.67107273" maxy="5465487.60296212"/>
+        <BoundingBox CRS="EPSG:3043" minx="5408299.84266031" miny="979791.89408158" maxx="5409708.66711853" maxy="982705.67980146"/>
+        <BoundingBox CRS="EPSG:3040" minx="2297002.65744036" miny="5684934.51075783" maxx="2300166.68464218" maxy="5687032.95052979"/>
+        <BoundingBox CRS="EPSG:3041" minx="1860315.30031513" miny="5555544.75922854" maxx="1863399.97948545" maxy="5557406.26347778"/>
+        <BoundingBox CRS="EPSG:31467" minx="5389619.21058026" miny="3538124.31236049" maxx="5390807.31004191" maxy="3540949.43576853"/>
+        <BoundingBox CRS="EPSG:4326" minx="48.64302956" miny="9.51641684" maxx="48.65353572" maxy="9.55464584"/>
+        <BoundingBox CRS="EPSG:3039" minx="2729078.75417658" miny="5854131.96672585" maxx="2732314.34245544" maxy="5856476.53730717"/>
+        <BoundingBox CRS="EPSG:4258" minx="48.64302956" miny="9.51641684" maxx="48.65353572" maxy="9.55464584"/>
+        <BoundingBox CRS="EPSG:3038" minx="3153878.90077699" miny="6065694.61333869" maxx="3157172.97002353" maxy="6068294.37479703"/>
+        <BoundingBox CRS="EPSG:3046" minx="-345176.80238738" miny="5451324.55700724" maxx="-342191.37675472" maxy="5452916.74458802"/>
+        <BoundingBox CRS="EPSG:3047" minx="-785096.52582762" miny="5536465.52784413" maxx="-782026.55738132" maxy="5538285.61965228"/>
+        <BoundingBox CRS="EPSG:3044" minx="5387902.98897944" miny="538033.25863808" maxx="5389090.58786311" maxy="540857.23813735"/>
+        <BoundingBox CRS="EPSG:900913" minx="1059362.67654733" miny="6214506.61826775" maxx="1063618.30926975" maxy="6216276.82646901"/>
+        <BoundingBox CRS="EPSG:3045" minx="96136.76207617" miny="5402099.45954912" maxx="99034.73859635" maxy="5403468.71801550"/>
+        <Identifier authority="GemeindeOhmden">www.gemeinde-ohmden.de/91c3aacd-6c19-41ad-b563-34f2a1494ae5_bp_plan</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/services/bsp/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8/md/dataset/dataset1"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="249" height="135">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=bp_plan&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>bp_planRaster</Name>
+        <Title>bp_planRaster</Title>
+        <Abstract>Bebauungspläne Ohmden</Abstract>
+        <CRS>EPSG:25832</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>9.51641109</westBoundLongitude>
+          <eastBoundLongitude>9.55469910</eastBoundLongitude>
+          <southBoundLatitude>48.64286577</southBoundLatitude>
+          <northBoundLatitude>48.65369179</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25832" minx="538040.72676700" miny="5387904.50619800" maxx="540852.69129300" maxy="5389088.23121600"/>
+        <Identifier authority="GemeindeOhmden">www.gemeinde-ohmden.de/91c3aacd-6c19-41ad-b563-34f2a1494ae5_bp_planRaster</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/services/bsp/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8/md/dataset/dataset1"/>
+        </MetadataURL>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.c4216073-88fe-464a-be29-10b125c16b0f_bp_planRaster</Name>
+          <Title>Stahlacker-und Dorfwiesenweg</Title>
+          <Abstract>Stahlacker-und Dorfwiesenweg Nutzung: MI</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.51947853</westBoundLongitude>
+            <eastBoundLongitude>9.52606866</eastBoundLongitude>
+            <southBoundLatitude>48.64299963</southBoundLatitude>
+            <northBoundLatitude>48.64506010</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538266.69516400" miny="5387904.50619800" maxx="538750.61343500" maxy="5388130.23931900"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.c4216073-88fe-464a-be29-10b125c16b0f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.83cb6d08-966c-4b9d-b497-613f6ab80bd9_bp_planRaster</Name>
+          <Title>Marienstraße</Title>
+          <Abstract>Marienstraße Baulinienplan, Verfahrensdaten unbekannt</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53009433</westBoundLongitude>
+            <eastBoundLongitude>9.53262577</eastBoundLongitude>
+            <southBoundLatitude>48.64594896</southBoundLatitude>
+            <northBoundLatitude>48.64798043</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539046.42813500" miny="5388235.69645600" maxx="539231.33445200" maxy="5388460.23426600"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.83cb6d08-966c-4b9d-b497-613f6ab80bd9_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.83513ae1-724c-430c-ae31-9f20f66e2406_bp_planRaster</Name>
+          <Title>Mittlere Schulstraße</Title>
+          <Abstract>Mittlere Schulstraße Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52822188</westBoundLongitude>
+            <eastBoundLongitude>9.52990090</eastBoundLongitude>
+            <southBoundLatitude>48.64434547</southBoundLatitude>
+            <northBoundLatitude>48.64486311</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538909.74211700" miny="5388056.06782300" maxx="539033.03319300" maxy="5388112.75482400"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.83513ae1-724c-430c-ae31-9f20f66e2406_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.53745c03-5e6b-4042-a520-bf58407baf2f_bp_planRaster</Name>
+          <Title>Östliche Schulstraße  (1. Änderung)</Title>
+          <Abstract>Östliche Schulstraße (1. Änderung) Genehmigungsdatum: 04.05.1972/ 02.10.1972; Nutzung: WR</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53052563</westBoundLongitude>
+            <eastBoundLongitude>9.53216158</eastBoundLongitude>
+            <southBoundLatitude>48.64449690</southBoundLatitude>
+            <northBoundLatitude>48.64526261</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539079.32302400" miny="5388074.05661600" maxx="539199.24694200" maxy="5388158.34117200"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.53745c03-5e6b-4042-a520-bf58407baf2f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.40ccb983-ae93-434f-91ff-ef0ec5a03fce_bp_planRaster</Name>
+          <Title>Erweiterung Carl-Scheufelen-Straße</Title>
+          <Abstract>Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52717762</westBoundLongitude>
+            <eastBoundLongitude>9.52904069</eastBoundLongitude>
+            <southBoundLatitude>48.64781527</southBoundLatitude>
+            <northBoundLatitude>48.64911670</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538830.15546200" miny="5388441.31869400" maxx="538966.39269900" maxy="5388585.04707500"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.40ccb983-ae93-434f-91ff-ef0ec5a03fce_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.d8c2591a-57b5-4dec-8096-e2212bf97714_bp_planRaster</Name>
+          <Title>Ortsbaulinienplanerweiterung Im Grund Halden</Title>
+          <Abstract>Ortsbaulinienplanerweiterung "Im Grund Halden" ist im westl. Teil durch den Bebauungsplan "Südlich der Carl-Scheufelenstr." von 1971 ersetzt.</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52287404</westBoundLongitude>
+            <eastBoundLongitude>9.52975772</eastBoundLongitude>
+            <southBoundLatitude>48.64488337</southBoundLatitude>
+            <northBoundLatitude>48.64907533</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538515.38423300" miny="5388115.76661400" maxx="539019.25488500" maxy="5388578.28360300"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.d8c2591a-57b5-4dec-8096-e2212bf97714_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.660136d9-77a0-4cec-ae89-99d446514b12_bp_planRaster</Name>
+          <Title>Südseite der vorderen Carl-Scheufelen-Straße</Title>
+          <Abstract>Südseite der vorderen Carl-Scheufelen-Straße Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52471347</westBoundLongitude>
+            <eastBoundLongitude>9.52646517</eastBoundLongitude>
+            <southBoundLatitude>48.64636309</southBoundLatitude>
+            <northBoundLatitude>48.64715799</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538649.76544300" miny="5388278.58866000" maxx="538778.19583200" maxy="5388366.06839100"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.660136d9-77a0-4cec-ae89-99d446514b12_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.f4ffd84d-6beb-49dd-b390-13a84966a893_bp_planRaster</Name>
+          <Title>Östliches Weitgassbett und Göpelshalde (1. Änderung)</Title>
+          <Abstract>Östliches Weitgassbett und Göpelshalde (1. Änderung) Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53195105</westBoundLongitude>
+            <eastBoundLongitude>9.53391970</eastBoundLongitude>
+            <southBoundLatitude>48.64528381</southBoundLatitude>
+            <northBoundLatitude>48.64598154</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539183.70974900" miny="5388162.43270400" maxx="539328.19279200" maxy="5388238.98558300"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.f4ffd84d-6beb-49dd-b390-13a84966a893_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.3aeb34f8-8831-4b4e-aa38-b9901d74e734_bp_planRaster</Name>
+          <Title>Friedrichstraße</Title>
+          <Abstract>Friedrichstraße Baulinienplan Genehmigung: 15.10.1877</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52071030</westBoundLongitude>
+            <eastBoundLongitude>9.52340314</eastBoundLongitude>
+            <southBoundLatitude>48.64474763</southBoundLatitude>
+            <northBoundLatitude>48.64682942</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538356.11926600" miny="5388097.45995800" maxx="538552.90824400" maxy="5388327.53248500"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.3aeb34f8-8831-4b4e-aa38-b9901d74e734_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.021e28cb-83fe-42c2-b01a-646b60e0215f_bp_planRaster</Name>
+          <Title>Weitgaßbett</Title>
+          <Abstract>Weitgaßbett Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53089203</westBoundLongitude>
+            <eastBoundLongitude>9.53493035</eastBoundLongitude>
+            <southBoundLatitude>48.64602138</southBoundLatitude>
+            <northBoundLatitude>48.64847259</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539105.12514100" miny="5388244.93139200" maxx="539400.70274100" maxy="5388515.35165000"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.021e28cb-83fe-42c2-b01a-646b60e0215f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.543417c0-52ee-4a0e-9a89-d9eac3c455d0_bp_planRaster</Name>
+          <Title>Dorfwiesenweg II</Title>
+          <Abstract>Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52385340</westBoundLongitude>
+            <eastBoundLongitude>9.52578704</eastBoundLongitude>
+            <southBoundLatitude>48.64400040</southBoundLatitude>
+            <northBoundLatitude>48.64504213</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538588.21562300" miny="5388015.61184400" maxx="538729.86710100" maxy="5388130.43923700"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.543417c0-52ee-4a0e-9a89-d9eac3c455d0_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.cc37b57e-c71e-4dbc-b844-5f043a4ed283_bp_planRaster</Name>
+          <Title>Östliche Schulstraße</Title>
+          <Abstract>Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52871380</westBoundLongitude>
+            <eastBoundLongitude>9.53220087</eastBoundLongitude>
+            <southBoundLatitude>48.64410267</southBoundLatitude>
+            <northBoundLatitude>48.64534726</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538946.15825900" miny="5388030.25300200" maxx="539202.08178100" maxy="5388166.82737000"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.cc37b57e-c71e-4dbc-b844-5f043a4ed283_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.f165cb91-a841-4cce-bf28-0f1e031d8d87_bp_planRaster</Name>
+          <Title>Bäumlen</Title>
+          <Abstract>Baulinienplan Bäumlen</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52748397</westBoundLongitude>
+            <eastBoundLongitude>9.53207804</eastBoundLongitude>
+            <southBoundLatitude>48.64557098</southBoundLatitude>
+            <northBoundLatitude>48.64772617</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538854.43453600" miny="5388193.39962100" maxx="539191.19478700" maxy="5388430.63942500"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.f165cb91-a841-4cce-bf28-0f1e031d8d87_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.ea25ffdf-fbe1-431c-a757-9d44220d94e0_bp_planRaster</Name>
+          <Title>Baulinienplan</Title>
+          <Abstract>Baulinienplan; Genehmigung: 15.10.1877</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.51642911</westBoundLongitude>
+            <eastBoundLongitude>9.53212741</eastBoundLongitude>
+            <southBoundLatitude>48.64331602</southBoundLatitude>
+            <northBoundLatitude>48.64827136</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538041.79573200" miny="5387942.75325600" maxx="539194.44769400" maxy="5388485.68718300"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.ea25ffdf-fbe1-431c-a757-9d44220d94e0_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.3f368396-fc3d-4347-90d8-d0ac99554923_bp_planRaster</Name>
+          <Title>Bei Hauptstraße 2</Title>
+          <Abstract>Baulinienplan; Nutzung: ---</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52577837</westBoundLongitude>
+            <eastBoundLongitude>9.52646752</eastBoundLongitude>
+            <southBoundLatitude>48.64561964</southBoundLatitude>
+            <northBoundLatitude>48.64595162</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538728.77722900" miny="5388195.95195800" maxx="538779.28964500" maxy="5388232.50810600"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.3f368396-fc3d-4347-90d8-d0ac99554923_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.f3be30a4-b650-4708-aeae-f28c06896867_bp_planRaster</Name>
+          <Title>Schulhaus</Title>
+          <Abstract>Schulhaus Baulinienplan, Genehmigungsdatum "Mai 1915"</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52548959</westBoundLongitude>
+            <eastBoundLongitude>9.52858838</eastBoundLongitude>
+            <southBoundLatitude>48.64405147</southBoundLatitude>
+            <northBoundLatitude>48.64578956</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538708.69712200" miny="5388022.71043200" maxx="538935.64429100" maxy="5388214.35470800"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.f3be30a4-b650-4708-aeae-f28c06896867_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.2c96b307-1fe5-4a0d-a567-5ead5bdefc75_bp_planRaster</Name>
+          <Title>Weitgaßbett (2. Änderung)</Title>
+          <Abstract>Weitgaßbett (2. Änderung) Nutzung: WR</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53332794</westBoundLongitude>
+            <eastBoundLongitude>9.53442461</eastBoundLongitude>
+            <southBoundLatitude>48.64721454</southBoundLatitude>
+            <northBoundLatitude>48.64784727</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539283.63540900" miny="5388377.30881200" maxx="539363.92848400" maxy="5388447.08426300"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.2c96b307-1fe5-4a0d-a567-5ead5bdefc75_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.a81733ba-0ef5-4df9-957a-07d9c293fd0f_bp_planRaster</Name>
+          <Title>Golfanlage Wasenwiesen (1. Änderung)</Title>
+          <Abstract>Golfanlage Wasenwiesen (1. Änderung)</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.54288534</westBoundLongitude>
+            <eastBoundLongitude>9.54383155</eastBoundLongitude>
+            <southBoundLatitude>48.65059898</southBoundLatitude>
+            <northBoundLatitude>48.65110115</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539984.93211900" miny="5388758.41071900" maxx="540054.23231700" maxy="5388813.74114500"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.a81733ba-0ef5-4df9-957a-07d9c293fd0f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.82fe6224-64a2-459c-a756-668948916722_bp_planRaster</Name>
+          <Title>Am Berbach</Title>
+          <Abstract>Am Berbach, Nutzung: GE</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.51643089</westBoundLongitude>
+            <eastBoundLongitude>9.51961174</eastBoundLongitude>
+            <southBoundLatitude>48.64496793</southBoundLatitude>
+            <northBoundLatitude>48.64748106</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538040.72676700" miny="5388120.03807800" maxx="538273.15011400" maxy="5388397.82770400"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.82fe6224-64a2-459c-a756-668948916722_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.b2de1001-9d16-408e-863a-c29b037f75d6_bp_planRaster</Name>
+          <Title>Östliche Schulstraße (2. Änderung)</Title>
+          <Abstract>Östliche Schulstraße (2. Änderung) Nutzung: WR</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53055073</westBoundLongitude>
+            <eastBoundLongitude>9.53213928</eastBoundLongitude>
+            <southBoundLatitude>48.64450622</southBoundLatitude>
+            <northBoundLatitude>48.64524901</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539081.16431300" miny="5388075.08175400" maxx="539197.61459500" maxy="5388156.84202100"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.b2de1001-9d16-408e-863a-c29b037f75d6_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.d0a8994d-fb29-44d8-a5ff-6f36b6c49a37_bp_planRaster</Name>
+          <Title>Hintere Schulstraße</Title>
+          <Abstract>Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52974348</westBoundLongitude>
+            <eastBoundLongitude>9.53222535</eastBoundLongitude>
+            <southBoundLatitude>48.64476042</southBoundLatitude>
+            <northBoundLatitude>48.64558901</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539021.50235200" miny="5388103.38187100" maxx="539203.69432800" maxy="5388194.22340100"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.d0a8994d-fb29-44d8-a5ff-6f36b6c49a37_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.4cc79e8f-cc3b-4baf-ae37-05c8eed99478_bp_planRaster</Name>
+          <Title>Stahlacker-und Dorfwiesenweg (3. Änderung)</Title>
+          <Abstract>Stahlacker-und Dorfwiesenweg (3. Änderung) Nutzung: MD</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52021055</westBoundLongitude>
+            <eastBoundLongitude>9.52598845</eastBoundLongitude>
+            <southBoundLatitude>48.64341305</southBoundLatitude>
+            <northBoundLatitude>48.64446279</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538320.30749000" miny="5387950.42576700" maxx="538745.16031200" maxy="5388064.20605700"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.4cc79e8f-cc3b-4baf-ae37-05c8eed99478_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.2e5fb2d2-f221-4477-b5ed-f71c99948577_bp_planRaster</Name>
+          <Title>Golfanlage Wasenwiesen</Title>
+          <Abstract>Golfanlage Wasenwiesen</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.54182545</westBoundLongitude>
+            <eastBoundLongitude>9.55469910</eastBoundLongitude>
+            <southBoundLatitude>48.65043244</southBoundLatitude>
+            <northBoundLatitude>48.65357538</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539906.95575400" miny="5388745.64463900" maxx="540852.69129300" maxy="5389088.23121600"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.2e5fb2d2-f221-4477-b5ed-f71c99948577_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.b232c35b-4fcd-4021-9c86-fbc0eacbb64f_bp_planRaster</Name>
+          <Title>Östliches Weitgassbett und Göpelshalde</Title>
+          <Abstract>Östliches Weitgassbett und Göpelshalde Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53137780</westBoundLongitude>
+            <eastBoundLongitude>9.53589372</eastBoundLongitude>
+            <southBoundLatitude>48.64519354</southBoundLatitude>
+            <northBoundLatitude>48.64919715</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539141.54514300" miny="5388153.39970800" maxx="539471.09667300" maxy="5388596.14957400"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.b232c35b-4fcd-4021-9c86-fbc0eacbb64f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.b2449072-160e-4a47-a855-8c455788a3bc_bp_planRaster</Name>
+          <Title>Karlstraße</Title>
+          <Abstract>Karlstraße Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.51990046</westBoundLongitude>
+            <eastBoundLongitude>9.52092096</eastBoundLongitude>
+            <southBoundLatitude>48.64607948</southBoundLatitude>
+            <northBoundLatitude>48.64689963</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538295.46297600" miny="5388244.26095800" maxx="538370.01727900" maxy="5388334.92371400"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.b2449072-160e-4a47-a855-8c455788a3bc_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.6c0bdd51-38d6-4cf4-9fb8-3bc50def82d4_bp_planRaster</Name>
+          <Title>Hofäcker - Fabrikstraße</Title>
+          <Abstract>Hofäcker - Fabrikstraße</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.51653302</westBoundLongitude>
+            <eastBoundLongitude>9.51964531</eastBoundLongitude>
+            <southBoundLatitude>48.64479662</southBoundLatitude>
+            <northBoundLatitude>48.64636718</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538048.37875400" miny="5388101.01694100" maxx="538276.46539500" maxy="5388274.05688000"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.6c0bdd51-38d6-4cf4-9fb8-3bc50def82d4_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.d327e0a2-fc9c-4897-b2d8-1d737a045489_bp_planRaster</Name>
+          <Title>Weitgaßbett (1. Änderung)</Title>
+          <Abstract>Weitgaßbett (1. Änderung) Nutzung: WR</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53334171</westBoundLongitude>
+            <eastBoundLongitude>9.53477575</eastBoundLongitude>
+            <southBoundLatitude>48.64680610</southBoundLatitude>
+            <northBoundLatitude>48.64784524</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539284.96592600" miny="5388332.08704200" maxx="539389.79516700" maxy="5388446.86789200"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.d327e0a2-fc9c-4897-b2d8-1d737a045489_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.bdb5c12a-01c9-4bc7-a6fa-6c72bf4c720a_bp_planRaster</Name>
+          <Title>Grubäcker I</Title>
+          <Abstract>Grubäcker I Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53380457</westBoundLongitude>
+            <eastBoundLongitude>9.53896653</eastBoundLongitude>
+            <southBoundLatitude>48.64798269</southBoundLatitude>
+            <northBoundLatitude>48.65047461</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539318.13079600" miny="5388465.03712100" maxx="539696.42239800" maxy="5388739.38944700"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.bdb5c12a-01c9-4bc7-a6fa-6c72bf4c720a_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.5b35020e-db1d-4cee-b9a6-040668d0ee3e_bp_planRaster</Name>
+          <Title>Stahlacker-und Dorfwiesenweg (1. Änderung)</Title>
+          <Abstract>Stahlacker-und Dorfwiesenweg (1. Änderung) Nutzung: Mi</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52298603</westBoundLongitude>
+            <eastBoundLongitude>9.52472028</eastBoundLongitude>
+            <southBoundLatitude>48.64401424</southBoundLatitude>
+            <northBoundLatitude>48.64456736</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538524.31357500" miny="5388016.61190500" maxx="538651.65138700" maxy="5388077.22503800"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.5b35020e-db1d-4cee-b9a6-040668d0ee3e_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.6f48eca2-aa51-4e6b-8663-31c9f93a44b2_bp_planRaster</Name>
+          <Title>Stahlacker-und Dorfwiesenweg (2. Änderung zwischen Stahlackerweg und Trinkbach)</Title>
+          <Abstract>Stahlacker-und Dorfwiesenweg (2. Änderung zwischen Stahlackerweg und Trinkbach) Nutzung: Mi</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.52345787</westBoundLongitude>
+            <eastBoundLongitude>9.52421674</eastBoundLongitude>
+            <southBoundLatitude>48.64373879</southBoundLatitude>
+            <northBoundLatitude>48.64407483</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="538559.28336200" miny="5387985.73992600" maxx="538614.93231300" maxy="5388022.71303900"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.6f48eca2-aa51-4e6b-8663-31c9f93a44b2_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>org.140.d0b3ae0c-d069-4483-97bc-111e0118d5b2_bp_planRaster</Name>
+          <Title>Grubäcker 2 Nord</Title>
+          <Abstract>Grubäcker 2 Nord; Verfahren nach § 13b; Nutzung: WA</Abstract>
+          <CRS>EPSG:25832</CRS>
+          <EX_GeographicBoundingBox>
+            <westBoundLongitude>9.53794520</westBoundLongitude>
+            <eastBoundLongitude>9.54030557</eastBoundLongitude>
+            <southBoundLatitude>48.64851662</southBoundLatitude>
+            <northBoundLatitude>48.65022350</northBoundLatitude>
+          </EX_GeographicBoundingBox>
+          <BoundingBox CRS="EPSG:25832" minx="539622.70530100" miny="5388525.08929900" maxx="539795.23376900" maxy="5388713.61378400"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="16" height="16">
+              <Format>image/png</Format>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=org.140.d0b3ae0c-d069-4483-97bc-111e0118d5b2_bp_planRaster&amp;style=default&amp;format=image/png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
