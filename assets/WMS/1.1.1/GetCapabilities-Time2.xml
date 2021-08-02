@@ -1,0 +1,2110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "https://brz-maps.dwd.de/geoserver/schemas/wms/1.1.1/WMS_MS_Capabilities.dtd">
+<WMT_MS_Capabilities version="1.1.1" updateSequence="892">
+  <Service>
+    <Name>OGC:WMS</Name>
+    <Title>DWD GeoServer WMS</Title>
+    <Abstract>This is the Web Map Server of DWD.</Abstract>
+    <KeywordList/>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization>Deutscher Wetterdienst</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>Frankfurter Strasse 135</Address>
+        <City>Offenbach</City>
+        <StateOrProvince>Hessen</StateOrProvince>
+        <PostCode>63067</PostCode>
+        <Country>Germany</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>info@dwd.de</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>none</Fees>
+    <AccessConstraints>http://www.dwd.de/DE/service/copyright/copyright_node.html</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom xml</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=geojson</Format>
+        <Format>application/json;type=topojson</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/openlayers</Format>
+        <Format>application/openlayers2</Format>
+        <Format>application/openlayers3</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss xml</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml</Format>
+        <Format>application/vnd.google-earth.kml xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>application/vnd.google-earth.kmz xml</Format>
+        <Format>application/vnd.google-earth.kmz+xml</Format>
+        <Format>application/vnd.google-earth.kmz;mode=networklink</Format>
+        <Format>application/vnd.mapbox-vector-tile</Format>
+        <Format>application/x-protobuf;type=mapbox-vector</Format>
+        <Format>atom</Format>
+        <Format>geojson</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/gif;subtype=animated</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png8</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg</Format>
+        <Format>image/svg xml</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <Format>kml</Format>
+        <Format>kmz</Format>
+        <Format>openlayers</Format>
+        <Format>pbf</Format>
+        <Format>rss</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <Format>topojson</Format>
+        <Format>utfgrid</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <DescribeLayer>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </DescribeLayer>
+      <GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/jpeg</Format>
+        <Format>application/json</Format>
+        <Format>image/gif</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetLegendGraphic>
+      <GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>application/json</Format>
+      <Format>text/javascript</Format>
+    </Exception>
+    <UserDefinedSymbolization SupportSLD="1" UserLayer="1" UserStyle="1" RemoteWFS="1"/>
+    <Layer>
+      <Title>DWD GeoServer WMS</Title>
+      <Abstract>This is the Web Map Server of DWD.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <SRS>EPSG:3044</SRS>
+      <SRS>EPSG:3045</SRS>
+      <SRS>EPSG:3413</SRS>
+      <SRS>EPSG:3857</SRS>
+      <SRS>EPSG:4258</SRS>
+      <SRS>EPSG:4326</SRS>
+      <SRS>EPSG:4839</SRS>
+      <SRS>EPSG:25832</SRS>
+      <SRS>EPSG:25833</SRS>
+      <SRS>EPSG:31467</SRS>
+      <SRS>EPSG:31468</SRS>
+      <SRS>EPSG:900913</SRS>
+      <SRS>EPSG:1000001</SRS>
+      <SRS>EPSG:1000002</SRS>
+      <SRS>EPSG:1000003</SRS>
+      <LatLonBoundingBox minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+      <Layer>
+        <Name>Fachlayer</Name>
+        <Title>Fachlayer</Title>
+        <Layer>
+          <Name>Wetter</Name>
+          <Title>Wetter</Title>
+          <Layer>
+            <Name>Mittelfristvorhersagen</Name>
+            <Title>Mittelfristvorhersagen</Title>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_DD10M</Name>
+              <Title>Windrichtung 10m aus CWAM</Title>
+              <Abstract>Windrichtung 10m aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Windrichtung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_dd10m</Name>
+                <Title>Windrichtung</Title>
+                <Abstract>Visualisierung der Windrichtung als Windpfeil</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_DD10M"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_MDTS</Name>
+              <Title>Mittlere Ausbreitungsrichtung (Dünung) aus CWAM</Title>
+              <Abstract>Mittlere Ausbreitungsrichtung (Dünung) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_mdts</Name>
+                <Title>Windrichtung</Title>
+                <Abstract>Visualisierung der Windrichtung als Windpfeil</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_MDTS"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_MDWW</Name>
+              <Title>Mittlere Ausbreitungsrichtung (Windsee) aus CWAM</Title>
+              <Abstract>Mittlere Ausbreitungsrichtung (Windsee) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_mdww</Name>
+                <Title>Windrichtung</Title>
+                <Abstract>Visualisierung der Windrichtung als Windpfeil</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_MDWW"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_PPTS</Name>
+              <Title>Peak Periode (Dünung) aus CWAM</Title>
+              <Abstract>Peak Periode (Dünung) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_ppts</Name>
+                <Title>peak periode in s</Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="82" height="137">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_PPTS"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_PPWW</Name>
+              <Title>Peak Periode (Windsee) aus CWAM</Title>
+              <Abstract>Peak Periode (Windsee) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/P1D</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_ppww</Name>
+                <Title>peak periode in s</Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="82" height="137">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_PPWW"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_SHTS</Name>
+              <Title>Signifikante Wellenhöhe (Dünung) aus CWAM</Title>
+              <Abstract>Signifikante Wellenhöhe (Dünung) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Dünung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/P1D</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_shts</Name>
+                <Title>Wellenhöhe</Title>
+                <Abstract>style for wind waves and sewll isoflaechen</Abstract>
+                <LegendURL width="79" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_SHTS"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_SHWW</Name>
+              <Title>Signifikante Wellenhöhe (Windsee) aus CWAM</Title>
+              <Abstract>Signifikante Wellenhöhe (Windsee) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Windsee</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/P1D</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_shww</Name>
+                <Title>Wellenhöhe</Title>
+                <Abstract>style for wind waves and sewll isoflaechen</Abstract>
+                <LegendURL width="79" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_SHWW"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_SP10M</Name>
+              <Title>Windgeschwindigkeit 10m aus CWAM</Title>
+              <Abstract>Windgeschwindigkeit 10m aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Windgeschwindigkeit</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_sp10m</Name>
+                <Title>Windgeschwindigkeit 10m in m/s </Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_SP10M"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Cwam_reg025_fd_sl_SWH</Name>
+              <Title>Signifikante Wellenhöhe (totaler Seegang) aus CWAM</Title>
+              <Abstract>Signifikante Wellenhöhe (totaler Seegang) aus dem Seegangsmodell CWAM,  Abdeckung der deutschen Küsten (56°26‘45‘‘–53°13‘45‘‘, 006°10‘25‘‘–014°54‘35‘‘), horizontale Auflösung von 30‘‘ x 50‘‘(~900m), Windantrieb durch ICON-EU und Randsteuerung durch EWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Windsee</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.16666672036456" miny="53.2250012709069" maxx="14.9166658182402" maxy="56.4500017808509"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>cwam_reg025_fd_sl_swh</Name>
+                <Title>Wellenhöhe</Title>
+                <Abstract>style for wind waves and sewll isoflaechen</Abstract>
+                <LegendURL width="72" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cwam_reg025_fd_sl_SWH"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_DD10M</Name>
+              <Title>Windrichtung 10m aus EWAM</Title>
+              <Abstract>Windrichtung 10m aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Windrichtung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_dd10m</Name>
+                <Title>Windrichtung</Title>
+                <Abstract>Visualisierung der Windrichtung als Windpfeil</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_DD10M"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_MDTS</Name>
+              <Title>Mittlere Ausbreitungsrichtung (Dünung) aus EWAM</Title>
+              <Abstract>Mittlere Ausbreitungsrichtung (Dünung) aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_mdts</Name>
+                <Title>Windrichtung</Title>
+                <Abstract>Visualisierung der Windrichtung als Windpfeil</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_MDTS"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_MDWW</Name>
+              <Title>Mittlere Ausbreitungsrichtung (Windsee) aus EWAM</Title>
+              <Abstract>Mittlere Ausbreitungsrichtung (Windsee) aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_mdww</Name>
+                <Title>Windrichtung</Title>
+                <Abstract>Visualisierung der Windrichtung als Windpfeil</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_MDWW"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_PPTS</Name>
+              <Title>Peak Periode (Dünung) aus EWAM</Title>
+              <Abstract>Peak Periode (Dünung) aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>ImageMosaic</Keyword>
+                <Keyword>Wellenhöhe der Dünung</Keyword>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_ppts</Name>
+                <Title>peak periode in s</Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="82" height="137">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_PPTS"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_PPWW</Name>
+              <Title>Peak Periode (Windsee) aus EWAM</Title>
+              <Abstract>Peak Periode (Windsee) aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/P1D</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_ppww</Name>
+                <Title>peak periode in s</Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="82" height="137">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_PPWW"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_SHTS</Name>
+              <Title>Signifikante Wellenhöhe (Dünung) aus EWAM</Title>
+              <Abstract>Signifikante Wellenhöhe (Dünung) aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Dünung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/P1D</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_shts</Name>
+                <Title>Wellenhöhe</Title>
+                <Abstract>style for wind waves and sewll isoflaechen</Abstract>
+                <LegendURL width="79" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_SHTS"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_SHWW</Name>
+              <Title>Signifikante Wellenhöhe (Windsee) aus EWAM</Title>
+              <Abstract>Signifikante Wellenhöhe (Windsee) aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Windsee</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/P1D</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_shww</Name>
+                <Title>Wellenhöhe</Title>
+                <Abstract>style for wind waves and sewll isoflaechen</Abstract>
+                <LegendURL width="79" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_SHWW"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_SP10M</Name>
+              <Title>Signifikane Wellenöhe (totaler Seegang) aus EWAM</Title>
+              <Abstract>Signifikane Wellenöhe (totaler Seegang aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Windsee</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_sp10m</Name>
+                <Title>Windgeschwindigkeit 10m in m/s </Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_SP10M"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Ewam_reg025_fd_sl_SWH</Name>
+              <Title>Signifikane Wellenöhe (totaler Seegang) aus EWAM</Title>
+              <Abstract>Signifikane Wellenöhe (totaler Seegang aus dem Seegangsmodell EWAM, europäische Abdeckung (66.00°N -30.00°N  10.50°W -42.00°E), horizontale Auflösung von 0.05°x0.1° (~5km), Windantrieb durch ICON-EU und Randsteuerung durch GWAM, stündliche Vorhersage (wobei hier nur vv+00,24,48,72)</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wellenhöhe der Windsee</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <BoundingBox SRS="EPSG:4326" minx="-10.55" miny="29.975" maxx="42.05" maxy="66.025"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-30T00:00:00.000Z/PT1H</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T00:00:00.000Z">2021-07-27T00:00:00.000Z</Extent>
+              <Style>
+                <Name>ewam_reg025_fd_sl_swh</Name>
+                <Title>Wellenhöhe</Title>
+                <Abstract>style for wind waves and sewll isoflaechen</Abstract>
+                <LegendURL width="72" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Ewam_reg025_fd_sl_SWH"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+          </Layer>
+          <Layer>
+            <Name>Kurzfristvorhersagen</Name>
+            <Title>Kurzfristvorhersagen</Title>
+            <Layer queryable="1" opaque="0">
+              <Name>Icon-eu_reg00625_fd_pl_RELHUM</Name>
+              <Title>Realtive Feuchte auf Druckleveln in hPa aus ICON-EU</Title>
+              <Abstract>Relative Feuchte 46 ausgewählter Drucklevel aus dem WAWFOR-Datensatz basierend auf dem Modell ICON-EU mit einer räumlichen Auflösung von 0.0625° und einer stündlichen Auflösung, europaweite Abdeckung (ICON-EU Modellgebiet). Die Daten liegen für die Modellläufe 00, 06, 12, und 18 UTC für die Vorhersagezeitschritte vv+00 bis vv+48 vor. Bei den 46 ausgewählten Drucklevel handelt es sich um folgende Höhen: 50, 75, 100, 125, 150,155, 165, 175, 185, 200, 210, 225, 240, 250, 265, 275, 285, 300, 325, 350, 365, 385, 400, 420, 450, 475, 500, 540, 550, 570, 600, 620, 650, 675, 700, 775, 750, 800, 825, 850, 875, 900, 925, 950, 975, 1000 hPa</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Atmosphärische Druckfläche</Keyword>
+                <Keyword>Drucklevel</Keyword>
+                <Keyword>Gitterpunkt (reguläres geographisches Gitter)</Keyword>
+                <Keyword>GRIB</Keyword>
+                <Keyword>Horizontale Auflösung von 0,0625 Grad</Keyword>
+                <Keyword>Klimatologie</Keyword>
+                <Keyword>Numerische Wettervorhersagen</Keyword>
+                <Keyword>Stündlich</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wettervorhersagen</Keyword>
+                <Keyword>Windgeschwindigkeit</Keyword>
+                <Keyword>Windrichtung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-23.53125" miny="29.46875" maxx="62.53125" maxy="70.53125"/>
+              <BoundingBox SRS="EPSG:4326" minx="-23.53125" miny="29.46875" maxx="62.53125" maxy="70.53125"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="elevation" units="Barometric Height" unitSymbol="hPa"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T00:00:00.000Z/2021-07-29T06:00:00.000Z/PT1H</Extent>
+              <Extent name="elevation" default="50.0">50.0,75.0,100.0,125.0,150.0,155.0,165.0,175.0,185.0,200.0,210.0,225.0,240.0,250.0,265.0,275.0,285.0,300.0,325.0,350.0,365.0,385.0,400.0,420.0,450.0,475.0,500.0,540.0,550.0,570.0,600.0,620.0,650.0,675.0,700.0,750.0,775.0,800.0,825.0,850.0,875.0,900.0,925.0,950.0,975.0,1000.0</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T06:00:00.000Z">2021-07-27T00:00:00.000Z,2021-07-27T06:00:00.000Z</Extent>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_relhum</Name>
+                <Title>relativehumidity_percent_wv2_</Title>
+                <LegendURL width="59" height="135">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_RELHUM"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Icon-eu_reg00625_fd_pl_T</Name>
+              <Title>Temperatur auf Druckleveln in hPa aus ICON-EU</Title>
+              <Abstract>Temperatur 45 ausgewählter Drucklevel aus dem WAWFOR-Datensatz basierend auf dem Modell ICON-EU mit einer räumlichen Auflösung von 0.0625° und einer stündlichen Auflösung, europaweite Abdeckung (ICON-EU Modellgebiet). Die Daten liegen für die Modellläufe 00, 06, 12, und 18 UTC für die Vorhersagezeitschritte vv+00 bis vv+48 vor. Bei den 45 ausgewählten Drucklevel handelt es sich um folgende Höhen: 75, 100, 125, 150,155, 165, 175, 185, 200, 210, 225, 240, 250, 265, 275, 285, 300, 325, 350, 365, 385, 400, 420, 450, 475, 500, 540, 550, 570, 600, 620, 650, 675, 700, 775, 750, 800, 825, 850, 875, 900, 925, 950, 975, 1000 hPa</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Atmosphärische Druckfläche</Keyword>
+                <Keyword>Drucklevel</Keyword>
+                <Keyword>Gitterpunkt (reguläres geographisches Gitter)</Keyword>
+                <Keyword>GRIB</Keyword>
+                <Keyword>Horizontale Auflösung von 0,0625 Grad</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Lufttemperatur</Keyword>
+                <Keyword>Numerische Wettervorhersagen</Keyword>
+                <Keyword>Stündlich</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Vorhersage</Keyword>
+                <Keyword>Wettervorhersagen</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-23.53125" miny="29.46875" maxx="62.53125" maxy="70.53125"/>
+              <BoundingBox SRS="EPSG:4326" minx="-23.53125" miny="29.46875" maxx="62.53125" maxy="70.53125"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="elevation" units="Barometric Height" unitSymbol="hPa"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T06:00:00.000Z/2021-07-29T06:00:00.000Z/PT1H</Extent>
+              <Extent name="elevation" default="50.0">50.0,75.0,100.0,125.0,150.0,155.0,165.0,175.0,185.0,200.0,210.0,225.0,240.0,250.0,265.0,275.0,285.0,300.0,325.0,350.0,365.0,385.0,400.0,420.0,450.0,475.0,500.0,540.0,550.0,570.0,600.0,620.0,650.0,675.0,700.0,750.0,775.0,800.0,825.0,850.0,875.0,900.0,925.0,950.0,975.0,1000.0</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T06:00:00.000Z">2021-07-27T06:00:00.000Z</Extent>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_75hpa</Name>
+                <Title>temperature FL590/75hPa</Title>
+                <Abstract>style for temperature FL590/75hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_900hpa</Name>
+                <Title>temperature</Title>
+                <Abstract>style for temperature 900hpa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_900hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_175hpa</Name>
+                <Title>temperature FL410/175hPa</Title>
+                <Abstract>style for temperature FL410/175hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_175hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_225hpa</Name>
+                <Title>temperature FL360/225hPa</Title>
+                <Abstract>style for temperature FL360/225hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_225hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_800hpa</Name>
+                <Title>temperature</Title>
+                <Abstract>style for temperature 800hpa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_800hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_150hpa</Name>
+                <Title>temperature FL450/150hPa</Title>
+                <Abstract>style for temperature FL450/150hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_150hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_250hpa</Name>
+                <Title>temperature FL340/250hPa</Title>
+                <Abstract>style for temperature FL340/250hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_250hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_500hpa</Name>
+                <Title>temperature FL180/500hPa</Title>
+                <Abstract>style for temperature FL180/500hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_500hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_400hpa</Name>
+                <Title>temperature FL240/400hPa</Title>
+                <Abstract>style for temperature FL240/400hPa</Abstract>
+                <LegendURL width="62" height="250">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_400hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_300hpa</Name>
+                <Title>temperature FL300/300hPa</Title>
+                <Abstract>style for temperature FL300/300hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_300hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_275hpa</Name>
+                <Title>temperature FL320/275hPa</Title>
+                <Abstract>style for temperature FL320/275hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_275hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_925hpa</Name>
+                <Title>temperature</Title>
+                <Abstract>style for temperature 925hpa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_925hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_600hpa</Name>
+                <Title>temperature FL140/600hPa</Title>
+                <Abstract>style for temperature FL140/600hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_600hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_125hpa</Name>
+                <Title>temperature FL480/125hPa</Title>
+                <Abstract>style for temperature FL480/125hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_125hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_700hpa</Name>
+                <Title>temperature FL100/700hPa</Title>
+                <Abstract>style for temperature FL100/700hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_700hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_450hpa</Name>
+                <Title>temperature FL210/450hPa</Title>
+                <Abstract>style for temperature FL210/450hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_450hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_100hpa</Name>
+                <Title>temperature FL530/100hPa</Title>
+                <Abstract>style for temperature FL530/100hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_100hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_350hpa</Name>
+                <Title>temperature FL270/350hPa</Title>
+                <Abstract>style for temperature FL270/350hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_350hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_75hpa</Name>
+                <Title>temperature FL590/75hPa</Title>
+                <Abstract>style for temperature FL590/75hPa</Abstract>
+                <LegendURL width="74" height="252">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_75hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_975hpa</Name>
+                <Title>temperature 975hPa</Title>
+                <Abstract>style for temperature 975hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_975hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_950hpa</Name>
+                <Title>temperature 950hPa</Title>
+                <Abstract>style for temperature 950hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_950hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_750hpa</Name>
+                <Title>temperature FL080/750hPa</Title>
+                <Abstract>style for temperature FL050/750hpa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_750hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_1000hpa</Name>
+                <Title>temperature 1000hPa</Title>
+                <Abstract>style for temperature 1000hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_1000hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_850hpa</Name>
+                <Title>temperature FL050/850hPa</Title>
+                <Abstract>style for temperature FL050/850hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_850hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_550hpa</Name>
+                <Title>temperature 550hPa</Title>
+                <Abstract>style for temperature 550hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_550hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_200hpa</Name>
+                <Title>temperature FL390/200hPa</Title>
+                <Abstract>style for temperature FL390/200hPa</Abstract>
+                <LegendURL width="62" height="250">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_200hpa"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_t_650hpa</Name>
+                <Title>temperature 650hPa</Title>
+                <Abstract>style for temperature 650hPa</Abstract>
+                <LegendURL width="273" height="279">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_T&amp;style=icon-eu_reg00625_fd_pl_t_650hpa"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Icon-eu_reg00625_fd_pl_U</Name>
+              <Title>U-Windkompnente auf Druckleveln in hPa aus ICON-EU</Title>
+              <Abstract>U-Windkomponente 45 ausgewählter Drucklevel aus dem WAWFOR-Datensatz basierend auf dem Modell ICON-EU mit einer räumlichen Auflösung von 0.0625° und einer stündlichen Auflösung, europaweite Abdeckung (ICON-EU Modellgebiet). Die Daten liegen für die Modellläufe 00, 06, 12, und 18 UTC für die Vorhersagezeitschritte vv+00 bis vv+48 vor. Bei den 45 ausgewählten Drucklevel handelt es sich um folgende Höhen: 75, 100, 125, 150,155, 165, 175, 185, 200, 210, 225, 240, 250, 265, 275, 285, 300, 325, 350, 365, 385, 400, 420, 450, 475, 500, 540, 550, 570, 600, 620, 650, 675, 700, 775, 750, 800, 825, 850, 875, 900, 925, 950, 975, 1000 hPa</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Atmosphärische Druckfläche</Keyword>
+                <Keyword>Atmosphärische Druckfläche</Keyword>
+                <Keyword>Gitterpunkt (reguläres geographisches Gitter)</Keyword>
+                <Keyword>GRIB</Keyword>
+                <Keyword>Horizontale Auflösung von 0,0625 Grad</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Numerische Wettervorhersagen</Keyword>
+                <Keyword>Stündlich</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Vorhersage</Keyword>
+                <Keyword>Wettervorhersagen</Keyword>
+                <Keyword>Windgeschwindigkeit</Keyword>
+                <Keyword>Windrichtung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-66.1409567992148" miny="29.46875" maxx="78.7441571281139" maxy="70.5319355554604"/>
+              <BoundingBox SRS="EPSG:4326" minx="-66.1409567992148" miny="29.46875" maxx="78.7441571281139" maxy="70.5319355554604"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="elevation" units="Barometric Height" unitSymbol="hPa"/>
+              <Dimension name="REFERENCE_TIME" units="" unitSymbol="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T06:00:00.000Z/2021-07-29T06:00:00.000Z/PT1H</Extent>
+              <Extent name="elevation" default="50.0">50.0,75.0,100.0,125.0,150.0,155.0,165.0,175.0,185.0,200.0,210.0,225.0,240.0,250.0,265.0,275.0,285.0,300.0,325.0,350.0,365.0,385.0,400.0,420.0,450.0,475.0,500.0,540.0,550.0,570.0,600.0,620.0,650.0,675.0,700.0,750.0,775.0,800.0,825.0,850.0,875.0,900.0,925.0,950.0,975.0,1000.0</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T06:00:00.000Z">2021-07-27T06:00:00.000Z</Extent>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_u</Name>
+                <Title>gust</Title>
+                <Abstract>style for wind isoflaechen</Abstract>
+                <LegendURL width="46" height="296">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_U"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Icon-eu_reg00625_fd_pl_V</Name>
+              <Title>V-Windkompnente auf Druckleveln in hPa aus ICON-EU</Title>
+              <Abstract>V-Windkompnente 45 ausgewählter Drucklevel aus dem WAWFOR-Datensatz basierend auf dem Modell ICON-EU mit einer räumlichen Auflösung von 0.0625° und einer stündlichen Auflösung, europaweite Abdeckung (ICON-EU Modellgebiet). Die Daten liegen für die Modellläufe 00, 06, 12, und 18 UTC für die Vorhersagezeitschritte vv+00 bis vv+48 vor. Bei den 45 ausgewählten Drucklevel handelt es sich um folgende Höhen: 75, 100, 125, 150,155, 165, 175, 185, 200, 210, 225, 240, 250, 265, 275, 285, 300, 325, 350, 365, 385, 400, 420, 450, 475, 500, 540, 550, 570, 600, 620, 650, 675, 700, 775, 750, 800, 825, 850, 875, 900, 925, 950, 975, 1000 hPa</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Atmosphärische Druckfläche</Keyword>
+                <Keyword>Drucklevel</Keyword>
+                <Keyword>Gitterpunkt (reguläres geographisches Gitter)</Keyword>
+                <Keyword>GRIB</Keyword>
+                <Keyword>Horizontale Auflösung von 0,0625 Grad</Keyword>
+                <Keyword>Klimatologie</Keyword>
+                <Keyword>Numerische Wettervorhersagen</Keyword>
+                <Keyword>Stündlich</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wettervorhersagen</Keyword>
+                <Keyword>Windgeschwindigkeit</Keyword>
+                <Keyword>Windrichtung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-66.1409567992148" miny="29.46875" maxx="78.7441571281139" maxy="70.5319355554604"/>
+              <BoundingBox SRS="EPSG:4326" minx="-66.1409567992148" miny="29.46875" maxx="78.7441571281139" maxy="70.5319355554604"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="elevation" units="Barometric Height" unitSymbol="hPa"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T06:00:00.000Z/2021-07-29T06:00:00.000Z/PT1H</Extent>
+              <Extent name="elevation" default="50.0">50.0,75.0,100.0,125.0,150.0,155.0,165.0,175.0,185.0,200.0,210.0,225.0,240.0,250.0,265.0,275.0,285.0,300.0,325.0,350.0,365.0,385.0,400.0,420.0,450.0,475.0,500.0,540.0,550.0,570.0,600.0,620.0,650.0,675.0,700.0,750.0,775.0,800.0,825.0,850.0,875.0,900.0,925.0,950.0,975.0,1000.0</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T06:00:00.000Z">2021-07-27T06:00:00.000Z</Extent>
+              <Style>
+                <Name>icon-eu_reg00625_fd_pl_v</Name>
+                <Title>gust</Title>
+                <Abstract>style for wind isoflaechen</Abstract>
+                <LegendURL width="46" height="296">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_reg00625_fd_pl_V"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+          </Layer>
+          <Layer>
+            <Name>Analysen</Name>
+            <Title>Analysen</Title>
+            <Layer queryable="1" opaque="0">
+              <Name>NCEW_EU</Name>
+              <Title>NowCastELEC-WarnWetterApp (NCEW)</Title>
+              <Abstract>DESCRIPTION:&#13;
+NCEW draws polygons around detected and forecasted lightning strikes. The polygons are visualized in the WarnWetter-App of the Deutscher Wetterdienst.</Abstract>
+              <KeywordList>
+                <Keyword>Gewitter</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-11.5" miny="35.3" maxx="43.2" maxy="81.4"/>
+              <BoundingBox SRS="EPSG:4326" minx="-11.5" miny="35.3" maxx="43.2" maxy="81.4"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-27T12:10:00.000Z/2021-07-27T15:05:00.000Z/PT5M</Extent>
+              <Style>
+                <Name>ncew_eu</Name>
+                <Title>A line style</Title>
+                <Abstract>A  style that prints out a red line</Abstract>
+                <LegendURL width="76" height="40">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=NCEW_EU"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>NCSA_V1_EU</Name>
+              <Title>NowCastSAT Europe (NCSA EU)</Title>
+              <Abstract>NowCastSAT Rapid Scan Service is an operational product from Deutscher Wetterdienst. The scope of use is aeronautical meteorology. NowCastSAT provides near real-time detection and forecasts of convective cells with three thresholds for light, moderate and severe over the european region using the highest temporal and spatial resolution available from the satellites operated by the European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT).</Abstract>
+              <KeywordList>
+                <Keyword>Aktuell</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Satellitenbeobachtung</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-6.0" miny="27.0" maxx="37.0" maxy="59.25"/>
+              <BoundingBox SRS="EPSG:4326" minx="-6.0" miny="27.0" maxx="37.0" maxy="59.25"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Extent name="time" default="2021-07-27T14:55:00Z">2021-07-27T12:05:00.000Z/2021-07-27T14:55:00.000Z/PT5M</Extent>
+              <Style>
+                <Name>ncsa_v1_eu</Name>
+                <Title>NowCastTURB Style</Title>
+                <Abstract>Styles für Polygon Layer</Abstract>
+                <LegendURL width="79" height="80">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=NCSA_V1_EU"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>NCSA_V1_GL</Name>
+              <Title>NowCastSAT Global (NCSA GL)</Title>
+              <Abstract>NowCastSAT Global Scan Service is an operational product from Deutscher Wetterdienst. The scope of use is aeronautical meteorology. NowCastSAT provides near real-time detection and forecasts of convective cells with three thresholds for light, moderate and severe over the global region using the highest temporal and spatial resolution available from the satellites operated by the European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT).</Abstract>
+              <KeywordList>
+                <Keyword>Aktuell</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Satellitenbeobachtung</Keyword>
+                <Keyword>CB horizontale Ausdehnung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+              <BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Extent name="time" default="2021-07-27T14:00:00Z">2021-07-27T12:00:00.000Z/2021-07-27T14:00:00.000Z/PT15M</Extent>
+              <Style>
+                <Name>ncsa_v1_gl</Name>
+                <Title>NowCastSat Style</Title>
+                <Abstract>Styles für Polygon Layer</Abstract>
+                <LegendURL width="79" height="80">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=NCSA_V1_GL"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+          </Layer>
+          <Layer>
+            <Name>Satellit</Name>
+            <Title>Satellit</Title>
+            <Layer queryable="1" opaque="0">
+              <Name>SAT_EU_RGB</Name>
+              <Title>Satellitenbild METEOSAT (RGB) Europa gesamt</Title>
+              <Abstract>Satellitenbild, METEOSAT, RGB, Wolken inklusive Schnee, Eis und Nebel, Auflösung: 1 km, 3 stündige Auflieferung</Abstract>
+              <KeywordList>
+                <Keyword>Agrarmeteorologie</Keyword>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Bedeckungsgrad</Keyword>
+                <Keyword>Bedeckungsgrad (gesamt)</Keyword>
+                <Keyword>Gesamtbedeckungsgrad</Keyword>
+                <Keyword>Glaziologie</Keyword>
+                <Keyword>Hydrologie</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Satellitenbeobachtung</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wintersport</Keyword>
+                <Keyword>Wolkengattung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:32662</SRS>
+              <LatLonBoundingBox minx="-53.99861" miny="22.999347970131872" maxx="53.99681405973613" maxy="76.99705999999998"/>
+              <BoundingBox SRS="EPSG:32662" minx="-6011097.76874457" miny="2560275.70461239" maxx="6010897.8455889" maxy="8571273.51177913"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Extent name="time" default="2021-07-27T12:00:00Z">2021-07-25T12:00:00.000Z/2021-07-27T12:00:00.000Z/PT3H</Extent>
+              <Style>
+                <Name>sat_eu_rgb</Name>
+                <Title>A boring default style</Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=SAT_EU_RGB"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>SAT_EU_central_RGB_cloud</Name>
+              <Title>Satellitenbild METEOSAT (RGB) Europa Zentral</Title>
+              <Abstract>Satellitenbild, METEOSAT, RGB, bereinigt um Schnee, Eis und Nebel, reines Wolkenbild, 3 stündige Auflieferung.</Abstract>
+              <KeywordList>
+                <Keyword>Agrarmeteorologie</Keyword>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Gesamtbedeckungsgrad</Keyword>
+                <Keyword>Glaziologie</Keyword>
+                <Keyword>Hydrologie</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Ozeanographie</Keyword>
+                <Keyword>Satellitenbeobachtung</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Seemeteorologie</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Wintersport</Keyword>
+                <Keyword>Wolkengattung</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-15.074981" miny="34.7373759815055" maxx="35.2350956772705" maxy="63.567219"/>
+              <BoundingBox SRS="EPSG:4326" minx="-15.074981" miny="34.7373759815055" maxx="35.2350956772705" maxy="63.567219"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Extent name="time" default="2021-07-27T12:00:00Z">2021-07-25T12:00:00.000Z/2021-07-27T12:00:00.000Z/PT3H</Extent>
+              <Style>
+                <Name>sat_eu_rgb</Name>
+                <Title>A boring default style</Title>
+                <Abstract>A sample style for rasters</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=SAT_EU_central_RGB_cloud"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+          </Layer>
+          <Layer>
+            <Name>Radar</Name>
+            <Title>Radar</Title>
+            <Layer queryable="1" opaque="0">
+              <Name>WN-Produkt</Name>
+              <Title>Radarkomposit mit Vorhersage (WN)</Title>
+              <Abstract>WN-Radarprodukt (Auflösung 1km), 5-minütig, mit Vorhersage für die folgenden zwei Stunden in 5-Minuten-Schritten.</Abstract>
+              <KeywordList>
+                <Keyword>Agrarmeteorologie</Keyword>
+                <Keyword>Aktuell</Keyword>
+                <Keyword>Analyse</Keyword>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Beobachtungssystem</Keyword>
+                <Keyword>Bundesland</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Gitterpunktsfeld</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Hydrologie</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Meteorologie</Keyword>
+                <Keyword>Qualitätsgeprüfte Angaben</Keyword>
+                <Keyword>Radarauswertungen</Keyword>
+                <Keyword>Radarreflektivität</Keyword>
+                <Keyword>Schifffahrt</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>Staatsgebiet</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>Synoptische Meteorologie</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Vorhersage</Keyword>
+                <Keyword>Wintersport</Keyword>
+              </KeywordList>
+              <SRS>EPSG:1000001</SRS>
+              <LatLonBoundingBox minx="1.4356153795505753" miny="45.87562810340885" maxx="18.76728365136501" maxy="56.4022340819518"/>
+              <BoundingBox SRS="EPSG:1000001" minx="-543.462" miny="-4808.645" maxx="556.538" maxy="-3608.645"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Dimension name="REFERENCE_TIME" units="ISO8601"/>
+              <Extent name="time" default="current">2021-07-20T12:10:00.000Z/2021-07-27T14:10:00.000Z/PT5M</Extent>
+              <Extent name="REFERENCE_TIME" default="2021-07-27T12:10:00.000Z">2021-07-20T12:10:00.000Z,2021-07-20T12:15:00.000Z,2021-07-20T12:20:00.000Z,2021-07-20T12:25:00.000Z,2021-07-20T12:30:00.000Z,2021-07-20T12:35:00.000Z,2021-07-20T12:40:00.000Z,2021-07-20T12:45:00.000Z,2021-07-20T12:50:00.000Z,2021-07-20T12:55:00.000Z,2021-07-20T13:00:00.000Z,2021-07-20T13:05:00.000Z,2021-07-20T13:10:00.000Z,2021-07-20T13:15:00.000Z,2021-07-20T13:20:00.000Z,2021-07-20T13:25:00.000Z,2021-07-20T13:30:00.000Z,2021-07-20T13:35:00.000Z,2021-07-20T13:40:00.000Z,2021-07-20T13:45:00.000Z,2021-07-20T13:50:00.000Z,2021-07-20T13:55:00.000Z,2021-07-20T14:00:00.000Z,2021-07-20T14:05:00.000Z,2021-07-20T14:10:00.000Z,2021-07-20T14:15:00.000Z,2021-07-20T14:20:00.000Z,2021-07-20T14:25:00.000Z,2021-07-20T14:30:00.000Z,2021-07-20T14:35:00.000Z,2021-07-20T14:40:00.000Z,2021-07-20T14:45:00.000Z,2021-07-20T14:50:00.000Z,2021-07-20T14:55:00.000Z,2021-07-20T15:00:00.000Z,2021-07-20T15:05:00.000Z,2021-07-20T15:10:00.000Z,2021-07-20T15:15:00.000Z,2021-07-20T15:20:00.000Z,2021-07-20T15:25:00.000Z,2021-07-20T15:30:00.000Z,2021-07-20T15:35:00.000Z,2021-07-20T15:40:00.000Z,2021-07-20T15:45:00.000Z,2021-07-20T15:50:00.000Z,2021-07-20T15:55:00.000Z,2021-07-20T16:00:00.000Z,2021-07-20T16:05:00.000Z,2021-07-20T16:10:00.000Z,2021-07-20T16:15:00.000Z,2021-07-20T16:20:00.000Z,2021-07-20T16:25:00.000Z,2021-07-20T16:30:00.000Z,2021-07-20T16:35:00.000Z,2021-07-20T16:40:00.000Z,2021-07-20T16:45:00.000Z,2021-07-20T16:50:00.000Z,2021-07-20T16:55:00.000Z,2021-07-20T17:00:00.000Z,2021-07-20T17:05:00.000Z,2021-07-20T17:10:00.000Z,2021-07-20T17:15:00.000Z,2021-07-20T17:20:00.000Z,2021-07-20T17:25:00.000Z,2021-07-20T17:30:00.000Z,2021-07-20T17:35:00.000Z,2021-07-20T17:40:00.000Z,2021-07-20T17:45:00.000Z,2021-07-20T17:50:00.000Z,2021-07-20T17:55:00.000Z,2021-07-20T18:00:00.000Z,2021-07-20T18:05:00.000Z,2021-07-20T18:10:00.000Z,2021-07-20T18:15:00.000Z,2021-07-20T18:20:00.000Z,2021-07-20T18:25:00.000Z,2021-07-20T18:30:00.000Z,2021-07-20T18:35:00.000Z,2021-07-20T18:40:00.000Z,2021-07-20T18:45:00.000Z,2021-07-20T18:50:00.000Z,2021-07-20T18:55:00.000Z,2021-07-20T19:00:00.000Z,2021-07-20T19:05:00.000Z,2021-07-20T19:10:00.000Z,2021-07-20T19:15:00.000Z,2021-07-20T19:20:00.000Z,2021-07-20T19:25:00.000Z,2021-07-20T19:30:00.000Z,2021-07-20T19:35:00.000Z,2021-07-20T19:40:00.000Z,2021-07-20T19:45:00.000Z,2021-07-20T19:50:00.000Z,2021-07-20T19:55:00.000Z,2021-07-20T20:00:00.000Z,2021-07-20T20:05:00.000Z,2021-07-20T20:10:00.000Z,2021-07-20T20:15:00.000Z,2021-07-20T20:20:00.000Z,2021-07-20T20:25:00.000Z,2021-07-20T20:30:00.000Z,2021-07-20T20:35:00.000Z,2021-07-20T20:40:00.000Z,2021-07-20T20:45:00.000Z,2021-07-20T20:50:00.000Z,2021-07-20T20:55:00.000Z,2021-07-20T21:00:00.000Z,2021-07-20T21:05:00.000Z,2021-07-20T21:10:00.000Z,2021-07-20T21:15:00.000Z,2021-07-20T21:20:00.000Z,2021-07-20T21:25:00.000Z,2021-07-20T21:30:00.000Z,2021-07-20T21:35:00.000Z,2021-07-20T21:40:00.000Z,2021-07-20T21:45:00.000Z,2021-07-20T21:50:00.000Z,2021-07-20T21:55:00.000Z,2021-07-20T22:00:00.000Z,2021-07-20T22:05:00.000Z,2021-07-20T22:10:00.000Z,2021-07-20T22:15:00.000Z,2021-07-20T22:20:00.000Z,2021-07-20T22:25:00.000Z,2021-07-20T22:30:00.000Z,2021-07-20T22:35:00.000Z,2021-07-20T22:40:00.000Z,2021-07-20T22:45:00.000Z,2021-07-20T22:50:00.000Z,2021-07-20T22:55:00.000Z,2021-07-20T23:00:00.000Z,2021-07-20T23:05:00.000Z,2021-07-20T23:10:00.000Z,2021-07-20T23:15:00.000Z,2021-07-20T23:20:00.000Z,2021-07-20T23:25:00.000Z,2021-07-20T23:30:00.000Z,2021-07-20T23:35:00.000Z,2021-07-20T23:40:00.000Z,2021-07-20T23:45:00.000Z,2021-07-20T23:50:00.000Z,2021-07-20T23:55:00.000Z,2021-07-21T00:00:00.000Z,2021-07-21T00:05:00.000Z,2021-07-21T00:10:00.000Z,2021-07-21T00:15:00.000Z,2021-07-21T00:20:00.000Z,2021-07-21T00:25:00.000Z,2021-07-21T00:30:00.000Z,2021-07-21T00:35:00.000Z,2021-07-21T00:40:00.000Z,2021-07-21T00:45:00.000Z,2021-07-21T00:50:00.000Z,2021-07-21T00:55:00.000Z,2021-07-21T01:00:00.000Z,2021-07-21T01:05:00.000Z,2021-07-21T01:10:00.000Z,2021-07-21T01:15:00.000Z,2021-07-21T01:20:00.000Z,2021-07-21T01:25:00.000Z,2021-07-21T01:30:00.000Z,2021-07-21T01:35:00.000Z,2021-07-21T01:40:00.000Z,2021-07-21T01:45:00.000Z,2021-07-21T01:50:00.000Z,2021-07-21T01:55:00.000Z,2021-07-21T02:00:00.000Z,2021-07-21T02:05:00.000Z,2021-07-21T02:10:00.000Z,2021-07-21T02:15:00.000Z,2021-07-21T02:20:00.000Z,2021-07-21T02:25:00.000Z,2021-07-21T02:30:00.000Z,2021-07-21T02:35:00.000Z,2021-07-21T02:40:00.000Z,2021-07-21T02:45:00.000Z,2021-07-21T02:50:00.000Z,2021-07-21T02:55:00.000Z,2021-07-21T03:00:00.000Z,2021-07-21T03:05:00.000Z,2021-07-21T03:10:00.000Z,2021-07-21T03:15:00.000Z,2021-07-21T03:20:00.000Z,2021-07-21T03:25:00.000Z,2021-07-21T03:30:00.000Z,2021-07-21T03:35:00.000Z,2021-07-21T03:40:00.000Z,2021-07-21T03:45:00.000Z,2021-07-21T03:50:00.000Z,2021-07-21T03:55:00.000Z,2021-07-21T04:00:00.000Z,2021-07-21T04:05:00.000Z,2021-07-21T04:10:00.000Z,2021-07-21T04:15:00.000Z,2021-07-21T04:20:00.000Z,2021-07-21T04:25:00.000Z,2021-07-21T04:30:00.000Z,2021-07-21T04:35:00.000Z,2021-07-21T04:40:00.000Z,2021-07-21T04:45:00.000Z,2021-07-21T04:50:00.000Z,2021-07-21T04:55:00.000Z,2021-07-21T05:00:00.000Z,2021-07-21T05:05:00.000Z,2021-07-21T05:10:00.000Z,2021-07-21T05:15:00.000Z,2021-07-21T05:20:00.000Z,2021-07-21T05:25:00.000Z,2021-07-21T05:30:00.000Z,2021-07-21T05:35:00.000Z,2021-07-21T05:40:00.000Z,2021-07-21T05:45:00.000Z,2021-07-21T05:50:00.000Z,2021-07-21T05:55:00.000Z,2021-07-21T06:00:00.000Z,2021-07-21T06:05:00.000Z,2021-07-21T06:10:00.000Z,2021-07-21T06:15:00.000Z,2021-07-21T06:20:00.000Z,2021-07-21T06:25:00.000Z,2021-07-21T06:30:00.000Z,2021-07-21T06:35:00.000Z,2021-07-21T06:40:00.000Z,2021-07-21T06:45:00.000Z,2021-07-21T06:50:00.000Z,2021-07-21T06:55:00.000Z,2021-07-21T07:00:00.000Z,2021-07-21T07:05:00.000Z,2021-07-21T07:10:00.000Z,2021-07-21T07:15:00.000Z,2021-07-21T07:20:00.000Z,2021-07-21T07:25:00.000Z,2021-07-21T07:30:00.000Z,2021-07-21T07:35:00.000Z,2021-07-21T07:40:00.000Z,2021-07-21T07:45:00.000Z,2021-07-21T07:50:00.000Z,2021-07-21T07:55:00.000Z,2021-07-21T08:00:00.000Z,2021-07-21T08:05:00.000Z,2021-07-21T08:10:00.000Z,2021-07-21T08:15:00.000Z,2021-07-21T08:20:00.000Z,2021-07-21T08:25:00.000Z,2021-07-21T08:30:00.000Z,2021-07-21T08:35:00.000Z,2021-07-21T08:40:00.000Z,2021-07-21T08:45:00.000Z,2021-07-21T08:50:00.000Z,2021-07-21T08:55:00.000Z,2021-07-21T09:00:00.000Z,2021-07-21T09:05:00.000Z,2021-07-21T09:10:00.000Z,2021-07-21T09:15:00.000Z,2021-07-21T09:20:00.000Z,2021-07-21T09:25:00.000Z,2021-07-21T09:30:00.000Z,2021-07-21T09:35:00.000Z,2021-07-21T09:40:00.000Z,2021-07-21T09:45:00.000Z,2021-07-21T09:50:00.000Z,2021-07-21T09:55:00.000Z,2021-07-21T10:00:00.000Z,2021-07-21T10:05:00.000Z,2021-07-21T10:10:00.000Z,2021-07-21T10:15:00.000Z,2021-07-21T10:20:00.000Z,2021-07-21T10:25:00.000Z,2021-07-21T10:30:00.000Z,2021-07-21T10:35:00.000Z,2021-07-21T10:40:00.000Z,2021-07-21T10:45:00.000Z,2021-07-21T10:50:00.000Z,2021-07-21T10:55:00.000Z,2021-07-21T11:00:00.000Z,2021-07-21T11:05:00.000Z,2021-07-21T11:10:00.000Z,2021-07-21T11:15:00.000Z,2021-07-21T11:20:00.000Z,2021-07-21T11:25:00.000Z,2021-07-21T11:30:00.000Z,2021-07-21T11:35:00.000Z,2021-07-21T11:40:00.000Z,2021-07-21T11:45:00.000Z,2021-07-21T11:50:00.000Z,2021-07-21T11:55:00.000Z,2021-07-21T12:00:00.000Z,2021-07-21T12:05:00.000Z,2021-07-21T12:10:00.000Z,2021-07-21T12:15:00.000Z,2021-07-21T12:20:00.000Z,2021-07-21T12:25:00.000Z,2021-07-21T12:30:00.000Z,2021-07-21T12:35:00.000Z,2021-07-21T12:40:00.000Z,2021-07-21T12:45:00.000Z,2021-07-21T12:50:00.000Z,2021-07-21T12:55:00.000Z,2021-07-21T13:00:00.000Z,2021-07-21T13:05:00.000Z,2021-07-21T13:10:00.000Z,2021-07-21T13:15:00.000Z,2021-07-21T13:20:00.000Z,2021-07-21T13:25:00.000Z,2021-07-21T13:30:00.000Z,2021-07-21T13:35:00.000Z,2021-07-21T13:40:00.000Z,2021-07-21T13:45:00.000Z,2021-07-21T13:50:00.000Z,2021-07-21T13:55:00.000Z,2021-07-21T14:00:00.000Z,2021-07-21T14:05:00.000Z,2021-07-21T14:10:00.000Z,2021-07-21T14:15:00.000Z,2021-07-21T14:20:00.000Z,2021-07-21T14:25:00.000Z,2021-07-21T14:30:00.000Z,2021-07-21T14:35:00.000Z,2021-07-21T14:40:00.000Z,2021-07-21T14:45:00.000Z,2021-07-21T14:50:00.000Z,2021-07-21T14:55:00.000Z,2021-07-21T15:00:00.000Z,2021-07-21T15:05:00.000Z,2021-07-21T15:10:00.000Z,2021-07-21T15:15:00.000Z,2021-07-21T15:20:00.000Z,2021-07-21T15:25:00.000Z,2021-07-21T15:30:00.000Z,2021-07-21T15:35:00.000Z,2021-07-21T15:40:00.000Z,2021-07-21T15:45:00.000Z,2021-07-21T15:50:00.000Z,2021-07-21T15:55:00.000Z,2021-07-21T16:00:00.000Z,2021-07-21T16:05:00.000Z,2021-07-21T16:10:00.000Z,2021-07-21T16:15:00.000Z,2021-07-21T16:20:00.000Z,2021-07-21T16:25:00.000Z,2021-07-21T16:30:00.000Z,2021-07-21T16:35:00.000Z,2021-07-21T16:40:00.000Z,2021-07-21T16:45:00.000Z,2021-07-21T16:50:00.000Z,2021-07-21T16:55:00.000Z,2021-07-21T17:00:00.000Z,2021-07-21T17:05:00.000Z,2021-07-21T17:10:00.000Z,2021-07-21T17:15:00.000Z,2021-07-21T17:20:00.000Z,2021-07-21T17:25:00.000Z,2021-07-21T17:30:00.000Z,2021-07-21T17:35:00.000Z,2021-07-21T17:40:00.000Z,2021-07-21T17:45:00.000Z,2021-07-21T17:50:00.000Z,2021-07-21T17:55:00.000Z,2021-07-21T18:00:00.000Z,2021-07-21T18:05:00.000Z,2021-07-21T18:10:00.000Z,2021-07-21T18:15:00.000Z,2021-07-21T18:20:00.000Z,2021-07-21T18:25:00.000Z,2021-07-21T18:30:00.000Z,2021-07-21T18:35:00.000Z,2021-07-21T18:40:00.000Z,2021-07-21T18:45:00.000Z,2021-07-21T18:50:00.000Z,2021-07-21T18:55:00.000Z,2021-07-21T19:00:00.000Z,2021-07-21T19:05:00.000Z,2021-07-21T19:10:00.000Z,2021-07-21T19:15:00.000Z,2021-07-21T19:20:00.000Z,2021-07-21T19:25:00.000Z,2021-07-21T19:30:00.000Z,2021-07-21T19:35:00.000Z,2021-07-21T19:40:00.000Z,2021-07-21T19:45:00.000Z,2021-07-21T19:50:00.000Z,2021-07-21T19:55:00.000Z,2021-07-21T20:00:00.000Z,2021-07-21T20:05:00.000Z,2021-07-21T20:10:00.000Z,2021-07-21T20:15:00.000Z,2021-07-21T20:20:00.000Z,2021-07-21T20:25:00.000Z,2021-07-21T20:30:00.000Z,2021-07-21T20:35:00.000Z,2021-07-21T20:40:00.000Z,2021-07-21T20:45:00.000Z,2021-07-21T20:50:00.000Z,2021-07-21T20:55:00.000Z,2021-07-21T21:00:00.000Z,2021-07-21T21:05:00.000Z,2021-07-21T21:10:00.000Z,2021-07-21T21:15:00.000Z,2021-07-21T21:20:00.000Z,2021-07-21T21:25:00.000Z,2021-07-21T21:30:00.000Z,2021-07-21T21:35:00.000Z,2021-07-21T21:40:00.000Z,2021-07-21T21:45:00.000Z,2021-07-21T21:50:00.000Z,2021-07-21T21:55:00.000Z,2021-07-21T22:00:00.000Z,2021-07-21T22:05:00.000Z,2021-07-21T22:10:00.000Z,2021-07-21T22:15:00.000Z,2021-07-21T22:20:00.000Z,2021-07-21T22:25:00.000Z,2021-07-21T22:30:00.000Z,2021-07-21T22:35:00.000Z,2021-07-21T22:40:00.000Z,2021-07-21T22:45:00.000Z,2021-07-21T22:50:00.000Z,2021-07-21T22:55:00.000Z,2021-07-21T23:00:00.000Z,2021-07-21T23:05:00.000Z,2021-07-21T23:10:00.000Z,2021-07-21T23:15:00.000Z,2021-07-21T23:20:00.000Z,2021-07-21T23:25:00.000Z,2021-07-21T23:30:00.000Z,2021-07-21T23:35:00.000Z,2021-07-21T23:40:00.000Z,2021-07-21T23:45:00.000Z,2021-07-21T23:50:00.000Z,2021-07-21T23:55:00.000Z,2021-07-22T00:00:00.000Z,2021-07-22T00:05:00.000Z,2021-07-22T00:10:00.000Z,2021-07-22T00:15:00.000Z,2021-07-22T00:20:00.000Z,2021-07-22T00:25:00.000Z,2021-07-22T00:30:00.000Z,2021-07-22T00:35:00.000Z,2021-07-22T00:40:00.000Z,2021-07-22T00:45:00.000Z,2021-07-22T00:50:00.000Z,2021-07-22T00:55:00.000Z,2021-07-22T01:00:00.000Z,2021-07-22T01:05:00.000Z,2021-07-22T01:10:00.000Z,2021-07-22T01:15:00.000Z,2021-07-22T01:20:00.000Z,2021-07-22T01:25:00.000Z,2021-07-22T01:30:00.000Z,2021-07-22T01:35:00.000Z,2021-07-22T01:40:00.000Z,2021-07-22T01:45:00.000Z,2021-07-22T01:50:00.000Z,2021-07-22T01:55:00.000Z,2021-07-22T02:00:00.000Z,2021-07-22T02:05:00.000Z,2021-07-22T02:10:00.000Z,2021-07-22T02:15:00.000Z,2021-07-22T02:20:00.000Z,2021-07-22T02:25:00.000Z,2021-07-22T02:30:00.000Z,2021-07-22T02:35:00.000Z,2021-07-22T02:40:00.000Z,2021-07-22T02:45:00.000Z,2021-07-22T02:50:00.000Z,2021-07-22T02:55:00.000Z,2021-07-22T03:00:00.000Z,2021-07-22T03:05:00.000Z,2021-07-22T03:10:00.000Z,2021-07-22T03:15:00.000Z,2021-07-22T03:20:00.000Z,2021-07-22T03:25:00.000Z,2021-07-22T03:30:00.000Z,2021-07-22T03:35:00.000Z,2021-07-22T03:40:00.000Z,2021-07-22T03:45:00.000Z,2021-07-22T03:50:00.000Z,2021-07-22T03:55:00.000Z,2021-07-22T04:00:00.000Z,2021-07-22T04:05:00.000Z,2021-07-22T04:10:00.000Z,2021-07-22T04:15:00.000Z,2021-07-22T04:20:00.000Z,2021-07-22T04:25:00.000Z,2021-07-22T04:30:00.000Z,2021-07-22T04:35:00.000Z,2021-07-22T04:40:00.000Z,2021-07-22T04:45:00.000Z,2021-07-22T04:50:00.000Z,2021-07-22T04:55:00.000Z,2021-07-22T05:00:00.000Z,2021-07-22T05:05:00.000Z,2021-07-22T05:10:00.000Z,2021-07-22T05:15:00.000Z,2021-07-22T05:20:00.000Z,2021-07-22T05:25:00.000Z,2021-07-22T05:30:00.000Z,2021-07-22T05:35:00.000Z,2021-07-22T05:40:00.000Z,2021-07-22T05:45:00.000Z,2021-07-22T05:50:00.000Z,2021-07-22T05:55:00.000Z,2021-07-22T06:00:00.000Z,2021-07-22T06:05:00.000Z,2021-07-22T06:10:00.000Z,2021-07-22T06:15:00.000Z,2021-07-22T06:20:00.000Z,2021-07-22T06:25:00.000Z,2021-07-22T06:30:00.000Z,2021-07-22T06:35:00.000Z,2021-07-22T06:40:00.000Z,2021-07-22T06:45:00.000Z,2021-07-22T06:50:00.000Z,2021-07-22T06:55:00.000Z,2021-07-22T07:00:00.000Z,2021-07-22T07:05:00.000Z,2021-07-22T07:10:00.000Z,2021-07-22T07:15:00.000Z,2021-07-22T07:20:00.000Z,2021-07-22T07:25:00.000Z,2021-07-22T07:30:00.000Z,2021-07-22T07:35:00.000Z,2021-07-22T07:40:00.000Z,2021-07-22T07:45:00.000Z,2021-07-22T07:50:00.000Z,2021-07-22T07:55:00.000Z,2021-07-22T08:00:00.000Z,2021-07-22T08:05:00.000Z,2021-07-22T08:10:00.000Z,2021-07-22T08:15:00.000Z,2021-07-22T08:20:00.000Z,2021-07-22T08:25:00.000Z,2021-07-22T08:30:00.000Z,2021-07-22T08:35:00.000Z,2021-07-22T08:40:00.000Z,2021-07-22T08:45:00.000Z,2021-07-22T08:50:00.000Z,2021-07-22T08:55:00.000Z,2021-07-22T09:00:00.000Z,2021-07-22T09:05:00.000Z,2021-07-22T09:10:00.000Z,2021-07-22T09:15:00.000Z,2021-07-22T09:20:00.000Z,2021-07-22T09:25:00.000Z,2021-07-22T09:30:00.000Z,2021-07-22T09:35:00.000Z,2021-07-22T09:40:00.000Z,2021-07-22T09:45:00.000Z,2021-07-22T09:50:00.000Z,2021-07-22T09:55:00.000Z,2021-07-22T10:00:00.000Z,2021-07-22T10:05:00.000Z,2021-07-22T10:10:00.000Z,2021-07-22T10:15:00.000Z,2021-07-22T10:20:00.000Z,2021-07-22T10:25:00.000Z,2021-07-22T10:30:00.000Z,2021-07-22T10:35:00.000Z,2021-07-22T10:40:00.000Z,2021-07-22T10:45:00.000Z,2021-07-22T10:50:00.000Z,2021-07-22T10:55:00.000Z,2021-07-22T11:00:00.000Z,2021-07-22T11:05:00.000Z,2021-07-22T11:10:00.000Z,2021-07-22T11:15:00.000Z,2021-07-22T11:20:00.000Z,2021-07-22T11:25:00.000Z,2021-07-22T11:30:00.000Z,2021-07-22T11:35:00.000Z,2021-07-22T11:40:00.000Z,2021-07-22T11:45:00.000Z,2021-07-22T11:50:00.000Z,2021-07-22T11:55:00.000Z,2021-07-22T12:00:00.000Z,2021-07-22T12:05:00.000Z,2021-07-22T12:10:00.000Z,2021-07-22T12:15:00.000Z,2021-07-22T12:20:00.000Z,2021-07-22T12:25:00.000Z,2021-07-22T12:30:00.000Z,2021-07-22T12:35:00.000Z,2021-07-22T12:40:00.000Z,2021-07-22T12:45:00.000Z,2021-07-22T12:50:00.000Z,2021-07-22T12:55:00.000Z,2021-07-22T13:00:00.000Z,2021-07-22T13:05:00.000Z,2021-07-22T13:10:00.000Z,2021-07-22T13:15:00.000Z,2021-07-22T13:20:00.000Z,2021-07-22T13:25:00.000Z,2021-07-22T13:30:00.000Z,2021-07-22T13:35:00.000Z,2021-07-22T13:40:00.000Z,2021-07-22T13:45:00.000Z,2021-07-22T13:50:00.000Z,2021-07-22T13:55:00.000Z,2021-07-22T14:00:00.000Z,2021-07-22T14:05:00.000Z,2021-07-22T14:10:00.000Z,2021-07-22T14:15:00.000Z,2021-07-22T14:20:00.000Z,2021-07-22T14:25:00.000Z,2021-07-22T14:30:00.000Z,2021-07-22T14:35:00.000Z,2021-07-22T14:40:00.000Z,2021-07-22T14:45:00.000Z,2021-07-22T14:50:00.000Z,2021-07-22T14:55:00.000Z,2021-07-22T15:00:00.000Z,2021-07-22T15:05:00.000Z,2021-07-22T15:10:00.000Z,2021-07-22T15:15:00.000Z,2021-07-22T15:20:00.000Z,2021-07-22T15:25:00.000Z,2021-07-22T15:30:00.000Z,2021-07-22T15:35:00.000Z,2021-07-22T15:40:00.000Z,2021-07-22T15:45:00.000Z,2021-07-22T15:50:00.000Z,2021-07-22T15:55:00.000Z,2021-07-22T16:00:00.000Z,2021-07-22T16:05:00.000Z,2021-07-22T16:10:00.000Z,2021-07-22T16:15:00.000Z,2021-07-22T16:20:00.000Z,2021-07-22T16:25:00.000Z,2021-07-22T16:30:00.000Z,2021-07-22T16:35:00.000Z,2021-07-22T16:40:00.000Z,2021-07-22T16:45:00.000Z,2021-07-22T16:50:00.000Z,2021-07-22T16:55:00.000Z,2021-07-22T17:00:00.000Z,2021-07-22T17:05:00.000Z,2021-07-22T17:10:00.000Z,2021-07-22T17:15:00.000Z,2021-07-22T17:20:00.000Z,2021-07-22T17:25:00.000Z,2021-07-22T17:30:00.000Z,2021-07-22T17:35:00.000Z,2021-07-22T17:40:00.000Z,2021-07-22T17:45:00.000Z,2021-07-22T17:50:00.000Z,2021-07-22T17:55:00.000Z,2021-07-22T18:00:00.000Z,2021-07-22T18:05:00.000Z,2021-07-22T18:10:00.000Z,2021-07-22T18:15:00.000Z,2021-07-22T18:20:00.000Z,2021-07-22T18:25:00.000Z,2021-07-22T18:30:00.000Z,2021-07-22T18:35:00.000Z,2021-07-22T18:40:00.000Z,2021-07-22T18:45:00.000Z,2021-07-22T18:50:00.000Z,2021-07-22T18:55:00.000Z,2021-07-22T19:00:00.000Z,2021-07-22T19:05:00.000Z,2021-07-22T19:10:00.000Z,2021-07-22T19:15:00.000Z,2021-07-22T19:20:00.000Z,2021-07-22T19:25:00.000Z,2021-07-22T19:30:00.000Z,2021-07-22T19:35:00.000Z,2021-07-22T19:40:00.000Z,2021-07-22T19:45:00.000Z,2021-07-22T19:50:00.000Z,2021-07-22T19:55:00.000Z,2021-07-22T20:00:00.000Z,2021-07-22T20:05:00.000Z,2021-07-22T20:10:00.000Z,2021-07-22T20:15:00.000Z,2021-07-22T20:20:00.000Z,2021-07-22T20:25:00.000Z,2021-07-22T20:30:00.000Z,2021-07-22T20:35:00.000Z,2021-07-22T20:40:00.000Z,2021-07-22T20:45:00.000Z,2021-07-22T20:50:00.000Z,2021-07-22T20:55:00.000Z,2021-07-22T21:00:00.000Z,2021-07-22T21:05:00.000Z,2021-07-22T21:10:00.000Z,2021-07-22T21:15:00.000Z,2021-07-22T21:20:00.000Z,2021-07-22T21:25:00.000Z,2021-07-22T21:30:00.000Z,2021-07-22T21:35:00.000Z,2021-07-22T21:40:00.000Z,2021-07-22T21:45:00.000Z,2021-07-22T21:50:00.000Z,2021-07-22T21:55:00.000Z,2021-07-22T22:00:00.000Z,2021-07-22T22:05:00.000Z,2021-07-22T22:10:00.000Z,2021-07-22T22:15:00.000Z,2021-07-22T22:20:00.000Z,2021-07-22T22:25:00.000Z,2021-07-22T22:30:00.000Z,2021-07-22T22:35:00.000Z,2021-07-22T22:40:00.000Z,2021-07-22T22:45:00.000Z,2021-07-22T22:50:00.000Z,2021-07-22T22:55:00.000Z,2021-07-22T23:00:00.000Z,2021-07-22T23:05:00.000Z,2021-07-22T23:10:00.000Z,2021-07-22T23:15:00.000Z,2021-07-22T23:20:00.000Z,2021-07-22T23:25:00.000Z,2021-07-22T23:30:00.000Z,2021-07-22T23:35:00.000Z,2021-07-22T23:40:00.000Z,2021-07-22T23:45:00.000Z,2021-07-22T23:50:00.000Z,2021-07-22T23:55:00.000Z,2021-07-23T00:00:00.000Z,2021-07-23T00:05:00.000Z,2021-07-23T00:10:00.000Z,2021-07-23T00:15:00.000Z,2021-07-23T00:20:00.000Z,2021-07-23T00:25:00.000Z,2021-07-23T00:30:00.000Z,2021-07-23T00:35:00.000Z,2021-07-23T00:40:00.000Z,2021-07-23T00:45:00.000Z,2021-07-23T00:50:00.000Z,2021-07-23T00:55:00.000Z,2021-07-23T01:00:00.000Z,2021-07-23T01:05:00.000Z,2021-07-23T01:10:00.000Z,2021-07-23T01:15:00.000Z,2021-07-23T01:20:00.000Z,2021-07-23T01:25:00.000Z,2021-07-23T01:30:00.000Z,2021-07-23T01:35:00.000Z,2021-07-23T01:40:00.000Z,2021-07-23T01:45:00.000Z,2021-07-23T01:50:00.000Z,2021-07-23T01:55:00.000Z,2021-07-23T02:00:00.000Z,2021-07-23T02:05:00.000Z,2021-07-23T02:10:00.000Z,2021-07-23T02:15:00.000Z,2021-07-23T02:20:00.000Z,2021-07-23T02:25:00.000Z,2021-07-23T02:30:00.000Z,2021-07-23T02:35:00.000Z,2021-07-23T02:40:00.000Z,2021-07-23T02:45:00.000Z,2021-07-23T02:50:00.000Z,2021-07-23T02:55:00.000Z,2021-07-23T03:00:00.000Z,2021-07-23T03:05:00.000Z,2021-07-23T03:10:00.000Z,2021-07-23T03:15:00.000Z,2021-07-23T03:20:00.000Z,2021-07-23T03:25:00.000Z,2021-07-23T03:30:00.000Z,2021-07-23T03:35:00.000Z,2021-07-23T03:40:00.000Z,2021-07-23T03:45:00.000Z,2021-07-23T03:50:00.000Z,2021-07-23T03:55:00.000Z,2021-07-23T04:00:00.000Z,2021-07-23T04:05:00.000Z,2021-07-23T04:10:00.000Z,2021-07-23T04:15:00.000Z,2021-07-23T04:20:00.000Z,2021-07-23T04:25:00.000Z,2021-07-23T04:30:00.000Z,2021-07-23T04:35:00.000Z,2021-07-23T04:40:00.000Z,2021-07-23T04:45:00.000Z,2021-07-23T04:50:00.000Z,2021-07-23T04:55:00.000Z,2021-07-23T05:00:00.000Z,2021-07-23T05:05:00.000Z,2021-07-23T05:10:00.000Z,2021-07-23T05:15:00.000Z,2021-07-23T05:20:00.000Z,2021-07-23T05:25:00.000Z,2021-07-23T05:30:00.000Z,2021-07-23T05:35:00.000Z,2021-07-23T05:40:00.000Z,2021-07-23T05:45:00.000Z,2021-07-23T05:50:00.000Z,2021-07-23T05:55:00.000Z,2021-07-23T06:00:00.000Z,2021-07-23T06:05:00.000Z,2021-07-23T06:10:00.000Z,2021-07-23T06:15:00.000Z,2021-07-23T06:20:00.000Z,2021-07-23T06:25:00.000Z,2021-07-23T06:30:00.000Z,2021-07-23T06:35:00.000Z,2021-07-23T06:40:00.000Z,2021-07-23T06:45:00.000Z,2021-07-23T06:50:00.000Z,2021-07-23T06:55:00.000Z,2021-07-23T07:00:00.000Z,2021-07-23T07:05:00.000Z,2021-07-23T07:10:00.000Z,2021-07-23T07:15:00.000Z,2021-07-23T07:20:00.000Z,2021-07-23T07:25:00.000Z,2021-07-23T07:30:00.000Z,2021-07-23T07:35:00.000Z,2021-07-23T07:40:00.000Z,2021-07-23T07:45:00.000Z,2021-07-23T07:50:00.000Z,2021-07-23T07:55:00.000Z,2021-07-23T08:00:00.000Z,2021-07-23T08:05:00.000Z,2021-07-23T08:10:00.000Z,2021-07-23T08:15:00.000Z,2021-07-23T08:20:00.000Z,2021-07-23T08:25:00.000Z,2021-07-23T08:30:00.000Z,2021-07-23T08:35:00.000Z,2021-07-23T08:40:00.000Z,2021-07-23T08:45:00.000Z,2021-07-23T08:50:00.000Z,2021-07-23T08:55:00.000Z,2021-07-23T09:00:00.000Z,2021-07-23T09:05:00.000Z,2021-07-23T09:10:00.000Z,2021-07-23T09:15:00.000Z,2021-07-23T09:20:00.000Z,2021-07-23T09:25:00.000Z,2021-07-23T09:30:00.000Z,2021-07-23T09:35:00.000Z,2021-07-23T09:40:00.000Z,2021-07-23T09:45:00.000Z,2021-07-23T09:50:00.000Z,2021-07-23T09:55:00.000Z,2021-07-23T10:00:00.000Z,2021-07-23T10:05:00.000Z,2021-07-23T10:10:00.000Z,2021-07-23T10:15:00.000Z,2021-07-23T10:20:00.000Z,2021-07-23T10:25:00.000Z,2021-07-23T10:30:00.000Z,2021-07-23T10:35:00.000Z,2021-07-23T10:40:00.000Z,2021-07-23T10:45:00.000Z,2021-07-23T10:50:00.000Z,2021-07-23T10:55:00.000Z,2021-07-23T11:00:00.000Z,2021-07-23T11:05:00.000Z,2021-07-23T11:10:00.000Z,2021-07-23T11:15:00.000Z,2021-07-23T11:20:00.000Z,2021-07-23T11:25:00.000Z,2021-07-23T11:30:00.000Z,2021-07-23T11:35:00.000Z,2021-07-23T11:40:00.000Z,2021-07-23T11:45:00.000Z,2021-07-23T11:50:00.000Z,2021-07-23T11:55:00.000Z,2021-07-23T12:00:00.000Z,2021-07-23T12:05:00.000Z,2021-07-23T12:10:00.000Z,2021-07-23T12:15:00.000Z,2021-07-23T12:20:00.000Z,2021-07-23T12:25:00.000Z,2021-07-23T12:30:00.000Z,2021-07-23T12:35:00.000Z,2021-07-23T12:40:00.000Z,2021-07-23T12:45:00.000Z,2021-07-23T12:50:00.000Z,2021-07-23T12:55:00.000Z,2021-07-23T13:00:00.000Z,2021-07-23T13:05:00.000Z,2021-07-23T13:10:00.000Z,2021-07-23T13:15:00.000Z,2021-07-23T13:20:00.000Z,2021-07-23T13:25:00.000Z,2021-07-23T13:30:00.000Z,2021-07-23T13:35:00.000Z,2021-07-23T13:40:00.000Z,2021-07-23T13:45:00.000Z,2021-07-23T13:50:00.000Z,2021-07-23T13:55:00.000Z,2021-07-23T14:00:00.000Z,2021-07-23T14:05:00.000Z,2021-07-23T14:10:00.000Z,2021-07-23T14:15:00.000Z,2021-07-23T14:20:00.000Z,2021-07-23T14:25:00.000Z,2021-07-23T14:30:00.000Z,2021-07-23T14:35:00.000Z,2021-07-23T14:40:00.000Z,2021-07-23T14:45:00.000Z,2021-07-23T14:50:00.000Z,2021-07-23T14:55:00.000Z,2021-07-23T15:00:00.000Z,2021-07-23T15:05:00.000Z,2021-07-23T15:10:00.000Z,2021-07-23T15:15:00.000Z,2021-07-23T15:20:00.000Z,2021-07-23T15:25:00.000Z,2021-07-23T15:30:00.000Z,2021-07-23T15:35:00.000Z,2021-07-23T15:40:00.000Z,2021-07-23T15:45:00.000Z,2021-07-23T15:50:00.000Z,2021-07-23T15:55:00.000Z,2021-07-23T16:00:00.000Z,2021-07-23T16:05:00.000Z,2021-07-23T16:10:00.000Z,2021-07-23T16:15:00.000Z,2021-07-23T16:20:00.000Z,2021-07-23T16:25:00.000Z,2021-07-23T16:30:00.000Z,2021-07-23T16:35:00.000Z,2021-07-23T16:40:00.000Z,2021-07-23T16:45:00.000Z,2021-07-23T16:50:00.000Z,2021-07-23T16:55:00.000Z,2021-07-23T17:00:00.000Z,2021-07-23T17:05:00.000Z,2021-07-23T17:10:00.000Z,2021-07-23T17:15:00.000Z,2021-07-23T17:20:00.000Z,2021-07-23T17:25:00.000Z,2021-07-23T17:30:00.000Z,2021-07-23T17:35:00.000Z,2021-07-23T17:40:00.000Z,2021-07-23T17:45:00.000Z,2021-07-23T17:50:00.000Z,2021-07-23T17:55:00.000Z,2021-07-23T18:00:00.000Z,2021-07-23T18:05:00.000Z,2021-07-23T18:10:00.000Z,2021-07-23T18:15:00.000Z,2021-07-23T18:20:00.000Z,2021-07-23T18:25:00.000Z,2021-07-23T18:30:00.000Z,2021-07-23T18:35:00.000Z,2021-07-23T18:40:00.000Z,2021-07-23T18:45:00.000Z,2021-07-23T18:50:00.000Z,2021-07-23T18:55:00.000Z,2021-07-23T19:00:00.000Z,2021-07-23T19:05:00.000Z,2021-07-23T19:10:00.000Z,2021-07-23T19:15:00.000Z,2021-07-23T19:20:00.000Z,2021-07-23T19:25:00.000Z,2021-07-23T19:30:00.000Z,2021-07-23T19:35:00.000Z,2021-07-23T19:40:00.000Z,2021-07-23T19:45:00.000Z,2021-07-23T19:50:00.000Z,2021-07-23T19:55:00.000Z,2021-07-23T20:00:00.000Z,2021-07-23T20:05:00.000Z,2021-07-23T20:10:00.000Z,2021-07-23T20:15:00.000Z,2021-07-23T20:20:00.000Z,2021-07-23T20:25:00.000Z,2021-07-23T20:30:00.000Z,2021-07-23T20:35:00.000Z,2021-07-23T20:40:00.000Z,2021-07-23T20:45:00.000Z,2021-07-23T20:50:00.000Z,2021-07-23T20:55:00.000Z,2021-07-23T21:00:00.000Z,2021-07-23T21:05:00.000Z,2021-07-23T21:10:00.000Z,2021-07-23T21:15:00.000Z,2021-07-23T21:20:00.000Z,2021-07-23T21:25:00.000Z,2021-07-23T21:30:00.000Z,2021-07-23T21:35:00.000Z,2021-07-23T21:40:00.000Z,2021-07-23T21:45:00.000Z,2021-07-23T21:50:00.000Z,2021-07-23T21:55:00.000Z,2021-07-23T22:00:00.000Z,2021-07-23T22:05:00.000Z,2021-07-23T22:10:00.000Z,2021-07-23T22:15:00.000Z,2021-07-23T22:20:00.000Z,2021-07-23T22:25:00.000Z,2021-07-23T22:30:00.000Z,2021-07-23T22:35:00.000Z,2021-07-23T22:40:00.000Z,2021-07-23T22:45:00.000Z,2021-07-23T22:50:00.000Z,2021-07-23T22:55:00.000Z,2021-07-23T23:00:00.000Z,2021-07-23T23:05:00.000Z,2021-07-23T23:10:00.000Z,2021-07-23T23:15:00.000Z,2021-07-23T23:20:00.000Z,2021-07-23T23:25:00.000Z,2021-07-23T23:30:00.000Z,2021-07-23T23:35:00.000Z,2021-07-23T23:40:00.000Z,2021-07-23T23:45:00.000Z,2021-07-23T23:50:00.000Z,2021-07-23T23:55:00.000Z,2021-07-24T00:00:00.000Z,2021-07-24T00:05:00.000Z,2021-07-24T00:10:00.000Z,2021-07-24T00:15:00.000Z,2021-07-24T00:20:00.000Z,2021-07-24T00:25:00.000Z,2021-07-24T00:30:00.000Z,2021-07-24T00:35:00.000Z,2021-07-24T00:40:00.000Z,2021-07-24T00:45:00.000Z,2021-07-24T00:50:00.000Z,2021-07-24T00:55:00.000Z,2021-07-24T01:00:00.000Z,2021-07-24T01:05:00.000Z,2021-07-24T01:10:00.000Z,2021-07-24T01:15:00.000Z,2021-07-24T01:20:00.000Z,2021-07-24T01:25:00.000Z,2021-07-24T01:30:00.000Z,2021-07-24T01:35:00.000Z,2021-07-24T01:40:00.000Z,2021-07-24T01:45:00.000Z,2021-07-24T01:50:00.000Z,2021-07-24T01:55:00.000Z,2021-07-24T02:00:00.000Z,2021-07-24T02:05:00.000Z,2021-07-24T02:10:00.000Z,2021-07-24T02:15:00.000Z,2021-07-24T02:20:00.000Z,2021-07-24T02:25:00.000Z,2021-07-24T02:30:00.000Z,2021-07-24T02:35:00.000Z,2021-07-24T02:40:00.000Z,2021-07-24T02:45:00.000Z,2021-07-24T02:50:00.000Z,2021-07-24T02:55:00.000Z,2021-07-24T03:00:00.000Z,2021-07-24T03:05:00.000Z,2021-07-24T03:10:00.000Z,2021-07-24T03:15:00.000Z,2021-07-24T03:20:00.000Z,2021-07-24T03:25:00.000Z,2021-07-24T03:30:00.000Z,2021-07-24T03:35:00.000Z,2021-07-24T03:40:00.000Z,2021-07-24T03:45:00.000Z,2021-07-24T03:50:00.000Z,2021-07-24T03:55:00.000Z,2021-07-24T04:00:00.000Z,2021-07-24T04:05:00.000Z,2021-07-24T04:10:00.000Z,2021-07-24T04:15:00.000Z,2021-07-24T04:20:00.000Z,2021-07-24T04:25:00.000Z,2021-07-24T04:30:00.000Z,2021-07-24T04:35:00.000Z,2021-07-24T04:40:00.000Z,2021-07-24T04:45:00.000Z,2021-07-24T04:50:00.000Z,2021-07-24T04:55:00.000Z,2021-07-24T05:00:00.000Z,2021-07-24T05:05:00.000Z,2021-07-24T05:10:00.000Z,2021-07-24T05:15:00.000Z,2021-07-24T05:20:00.000Z,2021-07-24T05:25:00.000Z,2021-07-24T05:30:00.000Z,2021-07-24T05:35:00.000Z,2021-07-24T05:40:00.000Z,2021-07-24T05:45:00.000Z,2021-07-24T05:50:00.000Z,2021-07-24T05:55:00.000Z,2021-07-24T06:00:00.000Z,2021-07-24T06:05:00.000Z,2021-07-24T06:10:00.000Z,2021-07-24T06:15:00.000Z,2021-07-24T06:20:00.000Z,2021-07-24T06:25:00.000Z,2021-07-24T06:30:00.000Z,2021-07-24T06:35:00.000Z,2021-07-24T06:40:00.000Z,2021-07-24T06:45:00.000Z,2021-07-24T06:50:00.000Z,2021-07-24T06:55:00.000Z,2021-07-24T07:00:00.000Z,2021-07-24T07:05:00.000Z,2021-07-24T07:10:00.000Z,2021-07-24T07:15:00.000Z,2021-07-24T07:20:00.000Z,2021-07-24T07:25:00.000Z,2021-07-24T07:30:00.000Z,2021-07-24T07:35:00.000Z,2021-07-24T07:40:00.000Z,2021-07-24T07:45:00.000Z,2021-07-24T07:50:00.000Z,2021-07-24T07:55:00.000Z,2021-07-24T08:00:00.000Z,2021-07-24T08:05:00.000Z,2021-07-24T08:10:00.000Z,2021-07-24T08:15:00.000Z,2021-07-24T08:20:00.000Z,2021-07-24T08:25:00.000Z,2021-07-24T08:30:00.000Z,2021-07-24T08:35:00.000Z,2021-07-24T08:40:00.000Z,2021-07-24T08:45:00.000Z,2021-07-24T08:50:00.000Z,2021-07-24T08:55:00.000Z,2021-07-24T09:00:00.000Z,2021-07-24T09:05:00.000Z,2021-07-24T09:10:00.000Z,2021-07-24T09:15:00.000Z,2021-07-24T09:20:00.000Z,2021-07-24T09:25:00.000Z,2021-07-24T09:30:00.000Z,2021-07-24T09:35:00.000Z,2021-07-24T09:40:00.000Z,2021-07-24T09:45:00.000Z,2021-07-24T09:50:00.000Z,2021-07-24T09:55:00.000Z,2021-07-24T10:00:00.000Z,2021-07-24T10:05:00.000Z,2021-07-24T10:10:00.000Z,2021-07-24T10:15:00.000Z,2021-07-24T10:20:00.000Z,2021-07-24T10:25:00.000Z,2021-07-24T10:30:00.000Z,2021-07-24T10:35:00.000Z,2021-07-24T10:40:00.000Z,2021-07-24T10:45:00.000Z,2021-07-24T10:50:00.000Z,2021-07-24T10:55:00.000Z,2021-07-24T11:00:00.000Z,2021-07-24T11:05:00.000Z,2021-07-24T11:10:00.000Z,2021-07-24T11:15:00.000Z,2021-07-24T11:20:00.000Z,2021-07-24T11:25:00.000Z,2021-07-24T11:30:00.000Z,2021-07-24T11:35:00.000Z,2021-07-24T11:40:00.000Z,2021-07-24T11:45:00.000Z,2021-07-24T11:50:00.000Z,2021-07-24T11:55:00.000Z,2021-07-24T12:00:00.000Z,2021-07-24T12:05:00.000Z,2021-07-24T12:10:00.000Z,2021-07-24T12:15:00.000Z,2021-07-24T12:20:00.000Z,2021-07-24T12:25:00.000Z,2021-07-24T12:30:00.000Z,2021-07-24T12:35:00.000Z,2021-07-24T12:40:00.000Z,2021-07-24T12:45:00.000Z,2021-07-24T12:50:00.000Z,2021-07-24T12:55:00.000Z,2021-07-24T13:00:00.000Z,2021-07-24T13:05:00.000Z,2021-07-24T13:10:00.000Z,2021-07-24T13:15:00.000Z,2021-07-24T13:20:00.000Z,2021-07-24T13:25:00.000Z,2021-07-24T13:30:00.000Z,2021-07-24T13:35:00.000Z,2021-07-24T13:40:00.000Z,2021-07-24T13:45:00.000Z,2021-07-24T13:50:00.000Z,2021-07-24T13:55:00.000Z,2021-07-24T14:00:00.000Z,2021-07-24T14:05:00.000Z,2021-07-24T14:10:00.000Z,2021-07-24T14:15:00.000Z,2021-07-24T14:20:00.000Z,2021-07-24T14:25:00.000Z,2021-07-24T14:30:00.000Z,2021-07-24T14:35:00.000Z,2021-07-24T14:40:00.000Z,2021-07-24T14:45:00.000Z,2021-07-24T14:50:00.000Z,2021-07-24T14:55:00.000Z,2021-07-24T15:00:00.000Z,2021-07-24T15:05:00.000Z,2021-07-24T15:10:00.000Z,2021-07-24T15:15:00.000Z,2021-07-24T15:20:00.000Z,2021-07-24T15:25:00.000Z,2021-07-24T15:30:00.000Z,2021-07-24T15:35:00.000Z,2021-07-24T15:40:00.000Z,2021-07-24T15:45:00.000Z,2021-07-24T15:50:00.000Z,2021-07-24T15:55:00.000Z,2021-07-24T16:00:00.000Z,2021-07-24T16:05:00.000Z,2021-07-24T16:10:00.000Z,2021-07-24T16:15:00.000Z,2021-07-24T16:20:00.000Z,2021-07-24T16:25:00.000Z,2021-07-24T16:30:00.000Z,2021-07-24T16:35:00.000Z,2021-07-24T16:40:00.000Z,2021-07-24T16:45:00.000Z,2021-07-24T16:50:00.000Z,2021-07-24T16:55:00.000Z,2021-07-24T17:00:00.000Z,2021-07-24T17:05:00.000Z,2021-07-24T17:10:00.000Z,2021-07-24T17:15:00.000Z,2021-07-24T17:20:00.000Z,2021-07-24T17:25:00.000Z,2021-07-24T17:30:00.000Z,2021-07-24T17:35:00.000Z,2021-07-24T17:40:00.000Z,2021-07-24T17:45:00.000Z,2021-07-24T17:50:00.000Z,2021-07-24T17:55:00.000Z,2021-07-24T18:00:00.000Z,2021-07-24T18:05:00.000Z,2021-07-24T18:10:00.000Z,2021-07-24T18:15:00.000Z,2021-07-24T18:20:00.000Z,2021-07-24T18:25:00.000Z,2021-07-24T18:30:00.000Z,2021-07-24T18:35:00.000Z,2021-07-24T18:40:00.000Z,2021-07-24T18:45:00.000Z,2021-07-24T18:50:00.000Z,2021-07-24T18:55:00.000Z,2021-07-24T19:00:00.000Z,2021-07-24T19:05:00.000Z,2021-07-24T19:10:00.000Z,2021-07-24T19:15:00.000Z,2021-07-24T19:20:00.000Z,2021-07-24T19:25:00.000Z,2021-07-24T19:30:00.000Z,2021-07-24T19:35:00.000Z,2021-07-24T19:40:00.000Z,2021-07-24T19:45:00.000Z,2021-07-24T19:50:00.000Z,2021-07-24T19:55:00.000Z,2021-07-24T20:00:00.000Z,2021-07-24T20:05:00.000Z,2021-07-24T20:10:00.000Z,2021-07-24T20:15:00.000Z,2021-07-24T20:20:00.000Z,2021-07-24T20:25:00.000Z,2021-07-24T20:30:00.000Z,2021-07-24T20:35:00.000Z,2021-07-24T20:40:00.000Z,2021-07-24T20:45:00.000Z,2021-07-24T20:50:00.000Z,2021-07-24T20:55:00.000Z,2021-07-24T21:00:00.000Z,2021-07-24T21:05:00.000Z,2021-07-24T21:10:00.000Z,2021-07-24T21:15:00.000Z,2021-07-24T21:20:00.000Z,2021-07-24T21:25:00.000Z,2021-07-24T21:30:00.000Z,2021-07-24T21:35:00.000Z,2021-07-24T21:40:00.000Z,2021-07-24T21:45:00.000Z,2021-07-24T21:50:00.000Z,2021-07-24T21:55:00.000Z,2021-07-24T22:00:00.000Z,2021-07-24T22:05:00.000Z,2021-07-24T22:10:00.000Z,2021-07-24T22:15:00.000Z,2021-07-24T22:20:00.000Z,2021-07-24T22:25:00.000Z,2021-07-24T22:30:00.000Z,2021-07-24T22:35:00.000Z,2021-07-24T22:40:00.000Z,2021-07-24T22:45:00.000Z,2021-07-24T22:50:00.000Z,2021-07-24T22:55:00.000Z,2021-07-24T23:00:00.000Z,2021-07-24T23:05:00.000Z,2021-07-24T23:10:00.000Z,2021-07-24T23:15:00.000Z,2021-07-24T23:20:00.000Z,2021-07-24T23:25:00.000Z,2021-07-24T23:30:00.000Z,2021-07-24T23:35:00.000Z,2021-07-24T23:40:00.000Z,2021-07-24T23:45:00.000Z,2021-07-24T23:50:00.000Z,2021-07-24T23:55:00.000Z,2021-07-25T00:00:00.000Z,2021-07-25T00:05:00.000Z,2021-07-25T00:10:00.000Z,2021-07-25T00:15:00.000Z,2021-07-25T00:20:00.000Z,2021-07-25T00:25:00.000Z,2021-07-25T00:30:00.000Z,2021-07-25T00:35:00.000Z,2021-07-25T00:40:00.000Z,2021-07-25T00:45:00.000Z,2021-07-25T00:50:00.000Z,2021-07-25T00:55:00.000Z,2021-07-25T01:00:00.000Z,2021-07-25T01:05:00.000Z,2021-07-25T01:10:00.000Z,2021-07-25T01:15:00.000Z,2021-07-25T01:20:00.000Z,2021-07-25T01:25:00.000Z,2021-07-25T01:30:00.000Z,2021-07-25T01:35:00.000Z,2021-07-25T01:40:00.000Z,2021-07-25T01:45:00.000Z,2021-07-25T01:50:00.000Z,2021-07-25T01:55:00.000Z,2021-07-25T02:00:00.000Z,2021-07-25T02:05:00.000Z,2021-07-25T02:10:00.000Z,2021-07-25T02:15:00.000Z,2021-07-25T02:20:00.000Z,2021-07-25T02:25:00.000Z,2021-07-25T02:30:00.000Z,2021-07-25T02:35:00.000Z,2021-07-25T02:40:00.000Z,2021-07-25T02:45:00.000Z,2021-07-25T02:50:00.000Z,2021-07-25T02:55:00.000Z,2021-07-25T03:00:00.000Z,2021-07-25T03:05:00.000Z,2021-07-25T03:10:00.000Z,2021-07-25T03:15:00.000Z,2021-07-25T03:20:00.000Z,2021-07-25T03:25:00.000Z,2021-07-25T03:30:00.000Z,2021-07-25T03:35:00.000Z,2021-07-25T03:40:00.000Z,2021-07-25T03:45:00.000Z,2021-07-25T03:50:00.000Z,2021-07-25T03:55:00.000Z,2021-07-25T04:00:00.000Z,2021-07-25T04:05:00.000Z,2021-07-25T04:10:00.000Z,2021-07-25T04:15:00.000Z,2021-07-25T04:20:00.000Z,2021-07-25T04:25:00.000Z,2021-07-25T04:30:00.000Z,2021-07-25T04:35:00.000Z,2021-07-25T04:40:00.000Z,2021-07-25T04:45:00.000Z,2021-07-25T04:50:00.000Z,2021-07-25T04:55:00.000Z,2021-07-25T05:00:00.000Z,2021-07-25T05:05:00.000Z,2021-07-25T05:10:00.000Z,2021-07-25T05:15:00.000Z,2021-07-25T05:20:00.000Z,2021-07-25T05:25:00.000Z,2021-07-25T05:30:00.000Z,2021-07-25T05:35:00.000Z,2021-07-25T05:40:00.000Z,2021-07-25T05:45:00.000Z,2021-07-25T05:50:00.000Z,2021-07-25T05:55:00.000Z,2021-07-25T06:00:00.000Z,2021-07-25T06:05:00.000Z,2021-07-25T06:10:00.000Z,2021-07-25T06:15:00.000Z,2021-07-25T06:20:00.000Z,2021-07-25T06:25:00.000Z,2021-07-25T06:30:00.000Z,2021-07-25T06:35:00.000Z,2021-07-25T06:40:00.000Z,2021-07-25T06:45:00.000Z,2021-07-25T06:50:00.000Z,2021-07-25T06:55:00.000Z,2021-07-25T07:00:00.000Z,2021-07-25T07:05:00.000Z,2021-07-25T07:10:00.000Z,2021-07-25T07:15:00.000Z,2021-07-25T07:20:00.000Z,2021-07-25T07:25:00.000Z,2021-07-25T07:30:00.000Z,2021-07-25T07:35:00.000Z,2021-07-25T07:40:00.000Z,2021-07-25T07:45:00.000Z,2021-07-25T07:50:00.000Z,2021-07-25T07:55:00.000Z,2021-07-25T08:00:00.000Z,2021-07-25T08:05:00.000Z,2021-07-25T08:10:00.000Z,2021-07-25T08:15:00.000Z,2021-07-25T08:20:00.000Z,2021-07-25T08:25:00.000Z,2021-07-25T08:30:00.000Z,2021-07-25T08:35:00.000Z,2021-07-25T08:40:00.000Z,2021-07-25T08:45:00.000Z,2021-07-25T08:50:00.000Z,2021-07-25T08:55:00.000Z,2021-07-25T09:00:00.000Z,2021-07-25T09:05:00.000Z,2021-07-25T09:10:00.000Z,2021-07-25T09:15:00.000Z,2021-07-25T09:20:00.000Z,2021-07-25T09:25:00.000Z,2021-07-25T09:30:00.000Z,2021-07-25T09:35:00.000Z,2021-07-25T09:40:00.000Z,2021-07-25T09:45:00.000Z,2021-07-25T09:50:00.000Z,2021-07-25T09:55:00.000Z,2021-07-25T10:00:00.000Z,2021-07-25T10:05:00.000Z,2021-07-25T10:10:00.000Z,2021-07-25T10:15:00.000Z,2021-07-25T10:20:00.000Z,2021-07-25T10:25:00.000Z,2021-07-25T10:30:00.000Z,2021-07-25T10:35:00.000Z,2021-07-25T10:40:00.000Z,2021-07-25T10:45:00.000Z,2021-07-25T10:50:00.000Z,2021-07-25T10:55:00.000Z,2021-07-25T11:00:00.000Z,2021-07-25T11:05:00.000Z,2021-07-25T11:10:00.000Z,2021-07-25T11:15:00.000Z,2021-07-25T11:20:00.000Z,2021-07-25T11:25:00.000Z,2021-07-25T11:30:00.000Z,2021-07-25T11:35:00.000Z,2021-07-25T11:40:00.000Z,2021-07-25T11:45:00.000Z,2021-07-25T11:50:00.000Z,2021-07-25T11:55:00.000Z,2021-07-25T12:00:00.000Z,2021-07-25T12:05:00.000Z,2021-07-25T12:10:00.000Z,2021-07-25T12:15:00.000Z,2021-07-25T12:20:00.000Z,2021-07-25T12:25:00.000Z,2021-07-25T12:30:00.000Z,2021-07-25T12:35:00.000Z,2021-07-25T12:40:00.000Z,2021-07-25T12:45:00.000Z,2021-07-25T12:50:00.000Z,2021-07-25T12:55:00.000Z,2021-07-25T13:00:00.000Z,2021-07-25T13:05:00.000Z,2021-07-25T13:10:00.000Z,2021-07-25T13:15:00.000Z,2021-07-25T13:20:00.000Z,2021-07-25T13:25:00.000Z,2021-07-25T13:30:00.000Z,2021-07-25T13:35:00.000Z,2021-07-25T13:40:00.000Z,2021-07-25T13:45:00.000Z,2021-07-25T13:50:00.000Z,2021-07-25T13:55:00.000Z,2021-07-25T14:00:00.000Z,2021-07-25T14:05:00.000Z,2021-07-25T14:10:00.000Z,2021-07-25T14:15:00.000Z,2021-07-25T14:20:00.000Z,2021-07-25T14:25:00.000Z,2021-07-25T14:30:00.000Z,2021-07-25T14:35:00.000Z,2021-07-25T14:40:00.000Z,2021-07-25T14:45:00.000Z,2021-07-25T14:50:00.000Z,2021-07-25T14:55:00.000Z,2021-07-25T15:00:00.000Z,2021-07-25T15:05:00.000Z,2021-07-25T15:10:00.000Z,2021-07-25T15:15:00.000Z,2021-07-25T15:20:00.000Z,2021-07-25T15:25:00.000Z,2021-07-25T15:30:00.000Z,2021-07-25T15:35:00.000Z,2021-07-25T15:40:00.000Z,2021-07-25T15:45:00.000Z,2021-07-25T15:50:00.000Z,2021-07-25T15:55:00.000Z,2021-07-25T16:00:00.000Z,2021-07-25T16:05:00.000Z,2021-07-25T16:10:00.000Z,2021-07-25T16:15:00.000Z,2021-07-25T16:20:00.000Z,2021-07-25T16:25:00.000Z,2021-07-25T16:30:00.000Z,2021-07-25T16:35:00.000Z,2021-07-25T16:40:00.000Z,2021-07-25T16:45:00.000Z,2021-07-25T16:50:00.000Z,2021-07-25T16:55:00.000Z,2021-07-25T17:00:00.000Z,2021-07-25T17:05:00.000Z,2021-07-25T17:10:00.000Z,2021-07-25T17:15:00.000Z,2021-07-25T17:20:00.000Z,2021-07-25T17:25:00.000Z,2021-07-25T17:30:00.000Z,2021-07-25T17:35:00.000Z,2021-07-25T17:40:00.000Z,2021-07-25T17:45:00.000Z,2021-07-25T17:50:00.000Z,2021-07-25T17:55:00.000Z,2021-07-25T18:00:00.000Z,2021-07-25T18:05:00.000Z,2021-07-25T18:10:00.000Z,2021-07-25T18:15:00.000Z,2021-07-25T18:20:00.000Z,2021-07-25T18:25:00.000Z,2021-07-25T18:30:00.000Z,2021-07-25T18:35:00.000Z,2021-07-25T18:40:00.000Z,2021-07-25T18:45:00.000Z,2021-07-25T18:50:00.000Z,2021-07-25T18:55:00.000Z,2021-07-25T19:00:00.000Z,2021-07-25T19:05:00.000Z,2021-07-25T19:10:00.000Z,2021-07-25T19:15:00.000Z,2021-07-25T19:20:00.000Z,2021-07-25T19:25:00.000Z,2021-07-25T19:30:00.000Z,2021-07-25T19:35:00.000Z,2021-07-25T19:40:00.000Z,2021-07-25T19:45:00.000Z,2021-07-25T19:50:00.000Z,2021-07-25T19:55:00.000Z,2021-07-25T20:00:00.000Z,2021-07-25T20:05:00.000Z,2021-07-25T20:10:00.000Z,2021-07-25T20:15:00.000Z,2021-07-25T20:20:00.000Z,2021-07-25T20:25:00.000Z,2021-07-25T20:30:00.000Z,2021-07-25T20:35:00.000Z,2021-07-25T20:40:00.000Z,2021-07-25T20:45:00.000Z,2021-07-25T20:50:00.000Z,2021-07-25T20:55:00.000Z,2021-07-25T21:00:00.000Z,2021-07-25T21:05:00.000Z,2021-07-25T21:10:00.000Z,2021-07-25T21:15:00.000Z,2021-07-25T21:20:00.000Z,2021-07-25T21:25:00.000Z,2021-07-25T21:30:00.000Z,2021-07-25T21:35:00.000Z,2021-07-25T21:40:00.000Z,2021-07-25T21:45:00.000Z,2021-07-25T21:50:00.000Z,2021-07-25T21:55:00.000Z,2021-07-25T22:00:00.000Z,2021-07-25T22:05:00.000Z,2021-07-25T22:10:00.000Z,2021-07-25T22:15:00.000Z,2021-07-25T22:20:00.000Z,2021-07-25T22:25:00.000Z,2021-07-25T22:30:00.000Z,2021-07-25T22:35:00.000Z,2021-07-25T22:40:00.000Z,2021-07-25T22:45:00.000Z,2021-07-25T22:50:00.000Z,2021-07-25T22:55:00.000Z,2021-07-25T23:00:00.000Z,2021-07-25T23:05:00.000Z,2021-07-25T23:10:00.000Z,2021-07-25T23:15:00.000Z,2021-07-25T23:20:00.000Z,2021-07-25T23:25:00.000Z,2021-07-25T23:30:00.000Z,2021-07-25T23:35:00.000Z,2021-07-25T23:40:00.000Z,2021-07-25T23:45:00.000Z,2021-07-25T23:50:00.000Z,2021-07-25T23:55:00.000Z,2021-07-26T00:00:00.000Z,2021-07-26T00:05:00.000Z,2021-07-26T00:10:00.000Z,2021-07-26T00:15:00.000Z,2021-07-26T00:20:00.000Z,2021-07-26T00:25:00.000Z,2021-07-26T00:30:00.000Z,2021-07-26T00:35:00.000Z,2021-07-26T00:40:00.000Z,2021-07-26T00:45:00.000Z,2021-07-26T00:50:00.000Z,2021-07-26T00:55:00.000Z,2021-07-26T01:00:00.000Z,2021-07-26T01:05:00.000Z,2021-07-26T01:10:00.000Z,2021-07-26T01:15:00.000Z,2021-07-26T01:20:00.000Z,2021-07-26T01:25:00.000Z,2021-07-26T01:30:00.000Z,2021-07-26T01:35:00.000Z,2021-07-26T01:40:00.000Z,2021-07-26T01:45:00.000Z,2021-07-26T01:50:00.000Z,2021-07-26T01:55:00.000Z,2021-07-26T02:00:00.000Z,2021-07-26T02:05:00.000Z,2021-07-26T02:10:00.000Z,2021-07-26T02:15:00.000Z,2021-07-26T02:20:00.000Z,2021-07-26T02:25:00.000Z,2021-07-26T02:30:00.000Z,2021-07-26T02:35:00.000Z,2021-07-26T02:40:00.000Z,2021-07-26T02:45:00.000Z,2021-07-26T02:50:00.000Z,2021-07-26T02:55:00.000Z,2021-07-26T03:00:00.000Z,2021-07-26T03:05:00.000Z,2021-07-26T03:10:00.000Z,2021-07-26T03:15:00.000Z,2021-07-26T03:20:00.000Z,2021-07-26T03:25:00.000Z,2021-07-26T03:30:00.000Z,2021-07-26T03:35:00.000Z,2021-07-26T03:40:00.000Z,2021-07-26T03:45:00.000Z,2021-07-26T03:50:00.000Z,2021-07-26T03:55:00.000Z,2021-07-26T04:00:00.000Z,2021-07-26T04:05:00.000Z,2021-07-26T04:10:00.000Z,2021-07-26T04:15:00.000Z,2021-07-26T04:20:00.000Z,2021-07-26T04:25:00.000Z,2021-07-26T04:30:00.000Z,2021-07-26T04:35:00.000Z,2021-07-26T04:40:00.000Z,2021-07-26T04:45:00.000Z,2021-07-26T04:50:00.000Z,2021-07-26T04:55:00.000Z,2021-07-26T05:00:00.000Z,2021-07-26T05:05:00.000Z,2021-07-26T05:10:00.000Z,2021-07-26T05:15:00.000Z,2021-07-26T05:20:00.000Z,2021-07-26T05:25:00.000Z,2021-07-26T05:30:00.000Z,2021-07-26T05:35:00.000Z,2021-07-26T05:40:00.000Z,2021-07-26T05:45:00.000Z,2021-07-26T05:50:00.000Z,2021-07-26T05:55:00.000Z,2021-07-26T06:00:00.000Z,2021-07-26T06:05:00.000Z,2021-07-26T06:10:00.000Z,2021-07-26T06:15:00.000Z,2021-07-26T06:20:00.000Z,2021-07-26T06:25:00.000Z,2021-07-26T06:30:00.000Z,2021-07-26T06:35:00.000Z,2021-07-26T06:40:00.000Z,2021-07-26T06:45:00.000Z,2021-07-26T06:50:00.000Z,2021-07-26T06:55:00.000Z,2021-07-26T07:00:00.000Z,2021-07-26T07:05:00.000Z,2021-07-26T07:10:00.000Z,2021-07-26T07:15:00.000Z,2021-07-26T07:20:00.000Z,2021-07-26T07:25:00.000Z,2021-07-26T07:30:00.000Z,2021-07-26T07:35:00.000Z,2021-07-26T07:40:00.000Z,2021-07-26T07:45:00.000Z,2021-07-26T07:50:00.000Z,2021-07-26T07:55:00.000Z,2021-07-26T08:00:00.000Z,2021-07-26T08:05:00.000Z,2021-07-26T08:10:00.000Z,2021-07-26T08:15:00.000Z,2021-07-26T08:20:00.000Z,2021-07-26T08:25:00.000Z,2021-07-26T08:30:00.000Z,2021-07-26T08:35:00.000Z,2021-07-26T08:40:00.000Z,2021-07-26T08:45:00.000Z,2021-07-26T08:50:00.000Z,2021-07-26T08:55:00.000Z,2021-07-26T09:00:00.000Z,2021-07-26T09:05:00.000Z,2021-07-26T09:10:00.000Z,2021-07-26T09:15:00.000Z,2021-07-26T09:20:00.000Z,2021-07-26T09:25:00.000Z,2021-07-26T09:30:00.000Z,2021-07-26T09:35:00.000Z,2021-07-26T09:40:00.000Z,2021-07-26T09:45:00.000Z,2021-07-26T09:50:00.000Z,2021-07-26T09:55:00.000Z,2021-07-26T10:00:00.000Z,2021-07-26T10:05:00.000Z,2021-07-26T10:10:00.000Z,2021-07-26T10:15:00.000Z,2021-07-26T10:20:00.000Z,2021-07-26T10:25:00.000Z,2021-07-26T10:30:00.000Z,2021-07-26T10:35:00.000Z,2021-07-26T10:40:00.000Z,2021-07-26T10:45:00.000Z,2021-07-26T10:50:00.000Z,2021-07-26T10:55:00.000Z,2021-07-26T11:00:00.000Z,2021-07-26T11:05:00.000Z,2021-07-26T11:10:00.000Z,2021-07-26T11:15:00.000Z,2021-07-26T11:20:00.000Z,2021-07-26T11:25:00.000Z,2021-07-26T11:30:00.000Z,2021-07-26T11:35:00.000Z,2021-07-26T11:40:00.000Z,2021-07-26T11:45:00.000Z,2021-07-26T11:50:00.000Z,2021-07-26T11:55:00.000Z,2021-07-26T12:00:00.000Z,2021-07-26T12:05:00.000Z,2021-07-26T12:10:00.000Z,2021-07-26T12:15:00.000Z,2021-07-26T12:20:00.000Z,2021-07-26T12:25:00.000Z,2021-07-26T12:30:00.000Z,2021-07-26T12:35:00.000Z,2021-07-26T12:40:00.000Z,2021-07-26T12:45:00.000Z,2021-07-26T12:50:00.000Z,2021-07-26T12:55:00.000Z,2021-07-26T13:00:00.000Z,2021-07-26T13:05:00.000Z,2021-07-26T13:10:00.000Z,2021-07-26T13:15:00.000Z,2021-07-26T13:20:00.000Z,2021-07-26T13:25:00.000Z,2021-07-26T13:30:00.000Z,2021-07-26T13:35:00.000Z,2021-07-26T13:40:00.000Z,2021-07-26T13:45:00.000Z,2021-07-26T13:50:00.000Z,2021-07-26T13:55:00.000Z,2021-07-26T14:00:00.000Z,2021-07-26T14:05:00.000Z,2021-07-26T14:10:00.000Z,2021-07-26T14:15:00.000Z,2021-07-26T14:20:00.000Z,2021-07-26T14:25:00.000Z,2021-07-26T14:30:00.000Z,2021-07-26T14:35:00.000Z,2021-07-26T14:40:00.000Z,2021-07-26T14:45:00.000Z,2021-07-26T14:50:00.000Z,2021-07-26T14:55:00.000Z,2021-07-26T15:00:00.000Z,2021-07-26T15:05:00.000Z,2021-07-26T15:10:00.000Z,2021-07-26T15:15:00.000Z,2021-07-26T15:20:00.000Z,2021-07-26T15:25:00.000Z,2021-07-26T15:30:00.000Z,2021-07-26T15:35:00.000Z,2021-07-26T15:40:00.000Z,2021-07-26T15:45:00.000Z,2021-07-26T15:50:00.000Z,2021-07-26T15:55:00.000Z,2021-07-26T16:00:00.000Z,2021-07-26T16:05:00.000Z,2021-07-26T16:10:00.000Z,2021-07-26T16:15:00.000Z,2021-07-26T16:20:00.000Z,2021-07-26T16:25:00.000Z,2021-07-26T16:30:00.000Z,2021-07-26T16:35:00.000Z,2021-07-26T16:40:00.000Z,2021-07-26T16:45:00.000Z,2021-07-26T16:50:00.000Z,2021-07-26T16:55:00.000Z,2021-07-26T17:00:00.000Z,2021-07-26T17:05:00.000Z,2021-07-26T17:10:00.000Z,2021-07-26T17:15:00.000Z,2021-07-26T17:20:00.000Z,2021-07-26T17:25:00.000Z,2021-07-26T17:30:00.000Z,2021-07-26T17:35:00.000Z,2021-07-26T17:40:00.000Z,2021-07-26T17:45:00.000Z,2021-07-26T17:50:00.000Z,2021-07-26T17:55:00.000Z,2021-07-26T18:00:00.000Z,2021-07-26T18:05:00.000Z,2021-07-26T18:10:00.000Z,2021-07-26T18:15:00.000Z,2021-07-26T18:20:00.000Z,2021-07-26T18:25:00.000Z,2021-07-26T18:30:00.000Z,2021-07-26T18:35:00.000Z,2021-07-26T18:40:00.000Z,2021-07-26T18:45:00.000Z,2021-07-26T18:50:00.000Z,2021-07-26T18:55:00.000Z,2021-07-26T19:00:00.000Z,2021-07-26T19:05:00.000Z,2021-07-26T19:10:00.000Z,2021-07-26T19:15:00.000Z,2021-07-26T19:20:00.000Z,2021-07-26T19:25:00.000Z,2021-07-26T19:30:00.000Z,2021-07-26T19:35:00.000Z,2021-07-26T19:40:00.000Z,2021-07-26T19:45:00.000Z,2021-07-26T19:50:00.000Z,2021-07-26T19:55:00.000Z,2021-07-26T20:00:00.000Z,2021-07-26T20:05:00.000Z,2021-07-26T20:10:00.000Z,2021-07-26T20:15:00.000Z,2021-07-26T20:20:00.000Z,2021-07-26T20:25:00.000Z,2021-07-26T20:30:00.000Z,2021-07-26T20:35:00.000Z,2021-07-26T20:40:00.000Z,2021-07-26T20:45:00.000Z,2021-07-26T20:50:00.000Z,2021-07-26T20:55:00.000Z,2021-07-26T21:00:00.000Z,2021-07-26T21:05:00.000Z,2021-07-26T21:10:00.000Z,2021-07-26T21:15:00.000Z,2021-07-26T21:20:00.000Z,2021-07-26T21:25:00.000Z,2021-07-26T21:30:00.000Z,2021-07-26T21:35:00.000Z,2021-07-26T21:40:00.000Z,2021-07-26T21:45:00.000Z,2021-07-26T21:50:00.000Z,2021-07-26T22:05:00.000Z,2021-07-26T22:10:00.000Z,2021-07-26T22:15:00.000Z,2021-07-26T22:20:00.000Z,2021-07-26T22:25:00.000Z,2021-07-26T22:30:00.000Z,2021-07-26T22:35:00.000Z,2021-07-26T22:40:00.000Z,2021-07-26T22:45:00.000Z,2021-07-26T22:50:00.000Z,2021-07-26T22:55:00.000Z,2021-07-26T23:00:00.000Z,2021-07-26T23:05:00.000Z,2021-07-26T23:10:00.000Z,2021-07-26T23:15:00.000Z,2021-07-26T23:20:00.000Z,2021-07-26T23:25:00.000Z,2021-07-26T23:30:00.000Z,2021-07-26T23:35:00.000Z,2021-07-26T23:40:00.000Z,2021-07-26T23:45:00.000Z,2021-07-26T23:50:00.000Z,2021-07-26T23:55:00.000Z,2021-07-27T00:00:00.000Z,2021-07-27T00:05:00.000Z,2021-07-27T00:10:00.000Z,2021-07-27T00:15:00.000Z,2021-07-27T00:20:00.000Z,2021-07-27T00:25:00.000Z,2021-07-27T00:30:00.000Z,2021-07-27T00:35:00.000Z,2021-07-27T00:40:00.000Z,2021-07-27T00:45:00.000Z,2021-07-27T00:50:00.000Z,2021-07-27T00:55:00.000Z,2021-07-27T01:00:00.000Z,2021-07-27T01:05:00.000Z,2021-07-27T01:10:00.000Z,2021-07-27T01:15:00.000Z,2021-07-27T01:20:00.000Z,2021-07-27T01:25:00.000Z,2021-07-27T01:30:00.000Z,2021-07-27T01:35:00.000Z,2021-07-27T01:40:00.000Z,2021-07-27T01:45:00.000Z,2021-07-27T01:50:00.000Z,2021-07-27T01:55:00.000Z,2021-07-27T02:00:00.000Z,2021-07-27T02:05:00.000Z,2021-07-27T02:10:00.000Z,2021-07-27T02:15:00.000Z,2021-07-27T02:20:00.000Z,2021-07-27T02:25:00.000Z,2021-07-27T02:30:00.000Z,2021-07-27T02:35:00.000Z,2021-07-27T02:40:00.000Z,2021-07-27T02:45:00.000Z,2021-07-27T02:50:00.000Z,2021-07-27T02:55:00.000Z,2021-07-27T03:00:00.000Z,2021-07-27T03:05:00.000Z,2021-07-27T03:10:00.000Z,2021-07-27T03:15:00.000Z,2021-07-27T03:20:00.000Z,2021-07-27T03:25:00.000Z,2021-07-27T03:30:00.000Z,2021-07-27T03:35:00.000Z,2021-07-27T03:40:00.000Z,2021-07-27T03:45:00.000Z,2021-07-27T03:50:00.000Z,2021-07-27T03:55:00.000Z,2021-07-27T04:00:00.000Z,2021-07-27T04:05:00.000Z,2021-07-27T04:10:00.000Z,2021-07-27T04:15:00.000Z,2021-07-27T04:20:00.000Z,2021-07-27T04:25:00.000Z,2021-07-27T04:30:00.000Z,2021-07-27T04:35:00.000Z,2021-07-27T04:40:00.000Z,2021-07-27T04:45:00.000Z,2021-07-27T04:50:00.000Z,2021-07-27T04:55:00.000Z,2021-07-27T05:00:00.000Z,2021-07-27T05:05:00.000Z,2021-07-27T05:10:00.000Z,2021-07-27T05:15:00.000Z,2021-07-27T05:20:00.000Z,2021-07-27T05:25:00.000Z,2021-07-27T05:30:00.000Z,2021-07-27T05:35:00.000Z,2021-07-27T05:40:00.000Z,2021-07-27T05:45:00.000Z,2021-07-27T05:50:00.000Z,2021-07-27T05:55:00.000Z,2021-07-27T06:00:00.000Z,2021-07-27T06:05:00.000Z,2021-07-27T06:10:00.000Z,2021-07-27T06:15:00.000Z,2021-07-27T06:20:00.000Z,2021-07-27T06:25:00.000Z,2021-07-27T06:30:00.000Z,2021-07-27T06:35:00.000Z,2021-07-27T06:40:00.000Z,2021-07-27T06:45:00.000Z,2021-07-27T06:50:00.000Z,2021-07-27T06:55:00.000Z,2021-07-27T07:00:00.000Z,2021-07-27T07:05:00.000Z,2021-07-27T07:10:00.000Z,2021-07-27T07:15:00.000Z,2021-07-27T07:20:00.000Z,2021-07-27T07:25:00.000Z,2021-07-27T07:30:00.000Z,2021-07-27T07:35:00.000Z,2021-07-27T07:40:00.000Z,2021-07-27T07:45:00.000Z,2021-07-27T07:50:00.000Z,2021-07-27T07:55:00.000Z,2021-07-27T08:00:00.000Z,2021-07-27T08:05:00.000Z,2021-07-27T08:10:00.000Z,2021-07-27T08:15:00.000Z,2021-07-27T08:20:00.000Z,2021-07-27T08:25:00.000Z,2021-07-27T08:30:00.000Z,2021-07-27T08:35:00.000Z,2021-07-27T08:40:00.000Z,2021-07-27T08:45:00.000Z,2021-07-27T08:50:00.000Z,2021-07-27T08:55:00.000Z,2021-07-27T09:00:00.000Z,2021-07-27T09:05:00.000Z,2021-07-27T09:10:00.000Z,2021-07-27T09:15:00.000Z,2021-07-27T09:20:00.000Z,2021-07-27T09:25:00.000Z,2021-07-27T09:30:00.000Z,2021-07-27T09:35:00.000Z,2021-07-27T09:40:00.000Z,2021-07-27T09:45:00.000Z,2021-07-27T09:50:00.000Z,2021-07-27T09:55:00.000Z,2021-07-27T10:00:00.000Z,2021-07-27T10:05:00.000Z,2021-07-27T10:10:00.000Z,2021-07-27T10:15:00.000Z,2021-07-27T10:20:00.000Z,2021-07-27T10:25:00.000Z,2021-07-27T10:30:00.000Z,2021-07-27T10:35:00.000Z,2021-07-27T10:40:00.000Z,2021-07-27T10:45:00.000Z,2021-07-27T10:50:00.000Z,2021-07-27T10:55:00.000Z,2021-07-27T11:00:00.000Z,2021-07-27T11:05:00.000Z,2021-07-27T11:10:00.000Z,2021-07-27T11:15:00.000Z,2021-07-27T11:20:00.000Z,2021-07-27T11:25:00.000Z,2021-07-27T11:30:00.000Z,2021-07-27T11:35:00.000Z,2021-07-27T11:40:00.000Z,2021-07-27T11:45:00.000Z,2021-07-27T11:50:00.000Z,2021-07-27T11:55:00.000Z,2021-07-27T12:00:00.000Z,2021-07-27T12:05:00.000Z,2021-07-27T12:10:00.000Z</Extent>
+              <Style>
+                <Name>wn-produkt</Name>
+                <Title>reflectivity</Title>
+                <Abstract>style for reflectivity</Abstract>
+                <LegendURL width="101" height="459">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=WN-Produkt"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>wn-produkt-ohne-abdeckung</Name>
+                <Title>reflectivity</Title>
+                <Abstract>style for reflectivity</Abstract>
+                <LegendURL width="101" height="436">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=WN-Produkt&amp;style=wn-produkt-ohne-abdeckung"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>WX-Produkt</Name>
+              <Title>WX-Produkt</Title>
+              <Abstract>WX-Radarprodukt (Auflösung 1km) für die Nutzung in der Luftfahrt, 5 minütig, aus der Produktionslinie der RADLOAN-Produkte.</Abstract>
+              <KeywordList>
+                <Keyword>Atmosphärische Bedingungen</Keyword>
+                <Keyword>Luftfahrt</Keyword>
+                <Keyword>Niederschlag</Keyword>
+                <Keyword>Radarreflektivität</Keyword>
+              </KeywordList>
+              <SRS>EPSG:1000001</SRS>
+              <LatLonBoundingBox minx="3.0889290880260805" miny="46.374598974681994" maxx="17.11279417896716" maxy="55.96251827280641"/>
+              <BoundingBox SRS="EPSG:1000001" minx="-443.462" miny="-4758.645" maxx="456.538" maxy="-3658.645"/>
+              <Dimension name="time" units="ISO8601"/>
+              <Extent name="time" default="2021-07-27T12:10:00Z">2021-07-26T12:10:00.000Z/2021-07-27T12:10:00.000Z/PT5M</Extent>
+              <Style>
+                <Name>wx-produkt</Name>
+                <Title>reflectivity</Title>
+                <Abstract>style for reflectivity</Abstract>
+                <LegendURL width="94" height="436">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=WX-Produkt"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+          </Layer>
+          <Layer>
+            <Name>Warnungen</Name>
+            <Title>Warnungen</Title>
+            <Layer queryable="1" opaque="0">
+              <Name>Warngebiete_Binnenseen</Name>
+              <Title>Warngebiete des DWD für Binnenseen</Title>
+              <Abstract>Warngebiete des DWD für Binnenseen.&#13;
+Copyright GeoBasis-DE / BKG (http://www.bkg.bund.de) 2019 (Daten modifiziert)</Abstract>
+              <KeywordList>
+                <Keyword>Binnensee</Keyword>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>Eisberg</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Geographisches Gebiet</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauewtter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="8.87570600000026" miny="47.4795380000002" maxx="12.794415" maxy="49.2400118276503"/>
+              <BoundingBox SRS="EPSG:4326" minx="8.87570600000026" miny="47.4795380000002" maxx="12.794415" maxy="49.2400118276503"/>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Binnenseen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Binnenseen&amp;style=Warngebiete_gruen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Grenzen</Name>
+                <Title>Warngebiete</Title>
+                <Abstract>Warngebiete</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Binnenseen&amp;style=Warngebiete_Grenzen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Binnenseen_Text</Name>
+                <Title>Warngebiete Binnenseen</Title>
+                <Abstract>Warngebiete Binnenseen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Binnenseen&amp;style=Warngebiete_Binnenseen_Text"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warngebiete_Gemeinden</Name>
+              <Title>Warngebiete des DWD auf Gemeindebasis</Title>
+              <Abstract>Warngebiete des DWD, basierend auf den Geodaten für deutsche Gemeinden. Abweichende Unterteilung in Warngebiete z.B. für Großstädte. Copyright GeoBasis-DE / BKG (http://www.bkg.bund.de) 2019 (Daten modifiziert)</Abstract>
+              <KeywordList>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Gemeinde</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Hochnebel</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Luftfeuchtigkeit</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Niederschlag</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Relative Feuchte</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauwetter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Verwaltungsgebiet</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetter</Keyword>
+                <Keyword>Wettererscheinung</Keyword>
+                <Keyword>Wettervorhersagen</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>Windgeschwindigkeit</Keyword>
+                <Keyword>Windrichtung</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="5.876914" miny="47.270362" maxx="15.037507" maxy="55.044381"/>
+              <BoundingBox SRS="EPSG:4326" minx="5.876914" miny="47.270362" maxx="15.037507" maxy="55.044381"/>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Gemeinden"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Gemeinden&amp;style=Warngebiete_gruen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>warngebiete_gemeinden_env</Name>
+                <Title>Warngebiete Gemeinden Env</Title>
+                <Abstract>Warngebiete Gemeinden Grenzen und Namen, Environment: strokecolour, strokewidth, strokedash, textfill, textopacity</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Gemeinden&amp;style=warngebiete_gemeinden_env"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Grenzen</Name>
+                <Title>Warngebiete</Title>
+                <Abstract>Warngebiete</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Gemeinden&amp;style=Warngebiete_Grenzen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Gemeinden_Text</Name>
+                <Title>Warngebiete Gemeinden</Title>
+                <Abstract>Warngebiete Gemeinden</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Gemeinden&amp;style=Warngebiete_Gemeinden_Text"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warngebiete_Kueste</Name>
+              <Title>Warngebiete des DWD für Küsten</Title>
+              <Abstract>Warngebiete des DWD für Küsten. Copyright GeoBasis-DE / BKG (http://www.bkg.bund.de) 2019 (Daten modifiziert)</Abstract>
+              <KeywordList>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>Eisberg</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauwetter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.19999999999999" miny="53.240715" maxx="14.265214" maxy="55.058"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.19999999999999" miny="53.240715" maxx="14.265214" maxy="55.058"/>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Kueste"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Kueste&amp;style=Warngebiete_gruen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Kueste_Text</Name>
+                <Title>Warngebiete Kueste</Title>
+                <Abstract>Warngebiete Kueste</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Kueste&amp;style=Warngebiete_Kueste_Text"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Grenzen</Name>
+                <Title>Warngebiete</Title>
+                <Abstract>Warngebiete</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Kueste&amp;style=Warngebiete_Grenzen"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warngebiete_See</Name>
+              <Title>Warngebiete des DWD auf See</Title>
+              <Abstract>Warngebiete des DWD auf See. Copyright GeoBasis-DE / BKG (http://www.bkg.bund.de) 2019 (Daten modifiziert)</Abstract>
+              <KeywordList>
+                <Keyword>Binnensee</Keyword>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>Eisberg</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Geographischer Ort</Keyword>
+                <Keyword>Geographisches Gebiet</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauewtter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-5.69437405911549" miny="48.3358760957053" maxx="24.5823325795849" maxy="61.0162547905262"/>
+              <BoundingBox SRS="EPSG:4326" minx="-5.69437405911549" miny="48.3358760957053" maxx="24.5823325795849" maxy="61.0162547905262"/>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_See"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_gruen</Name>
+                <Title>Warngebiete_gruen</Title>
+                <Abstract>Warngebiete_gruen</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_See&amp;style=Warngebiete_gruen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_Grenzen</Name>
+                <Title>Warngebiete</Title>
+                <Abstract>Warngebiete</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_See&amp;style=Warngebiete_Grenzen"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>Warngebiete_See_Text</Name>
+                <Title>Warngebiete See</Title>
+                <Abstract>Warngebiete See</Abstract>
+                <LegendURL width="20" height="20">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_See&amp;style=Warngebiete_See_Text"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warnungen_Binnenseen</Name>
+              <Title>Wetterwarnungen für Binnenseen</Title>
+              <Abstract>aktuelle amtliche Wetterwarnungen des DWD für Binnenseen</Abstract>
+              <KeywordList>
+                <Keyword>Binnensee</Keyword>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>Eisberg</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauewtter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="8.87570600000026" miny="47.4795380000002" maxx="12.794415" maxy="49.2400118276503"/>
+              <BoundingBox SRS="EPSG:4326" minx="8.87570600000026" miny="47.4795380000002" maxx="12.794415" maxy="49.2400118276503"/>
+              <Style>
+                <Name>Warnungen_Landkreise</Name>
+                <Title>Basiswarnungen</Title>
+                <LegendURL width="275" height="160">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warnungen_Binnenseen"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warnungen_Gemeinden</Name>
+              <Title>Wetterwarnungen und Vorabinformationen auf Gemeindeebene</Title>
+              <Abstract>aktuelle amtliche Wetterwarnungen und Vorabinformationen auf Gemeindeebene mit Einzelgemeindeauflösung</Abstract>
+              <KeywordList>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Gemeinde</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Hochnebel</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Luftfeuchtigkeit</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Niederschlag</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Relative Feuchte</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauwetter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Verwaltungsgebiet</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetter</Keyword>
+                <Keyword>Wettererscheinung</Keyword>
+                <Keyword>Wettervorhersagen</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>Windgeschwindigkeit</Keyword>
+                <Keyword>Windrichtung</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="5.87691362426438" miny="47.2703623257608" maxx="15.0375065863599" maxy="55.0443808252149"/>
+              <BoundingBox SRS="EPSG:4326" minx="5.87691362426438" miny="47.2703623257608" maxx="15.0375065863599" maxy="55.0443808252149"/>
+              <Style>
+                <Name>Warnungen_Landkreise</Name>
+                <Title>Basiswarnungen</Title>
+                <LegendURL width="275" height="160">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warnungen_Gemeinden"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warnungen_Gemeinden_vereinigt</Name>
+              <Title>Wetterwarnungen und Vorabinformationen auf Gemeindeebene (vereinigte Warngebiete)</Title>
+              <Abstract>aktuelle amtliche Wetterwarnungen und Vorabinformationen auf Gemeindeebene mit vereinigten Gemeindepolygonen für zusammenhängende Warngebiete</Abstract>
+              <KeywordList>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>Eisberg</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Gemeinde</Keyword>
+                <Keyword>Geographisches Gebiet</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Niederschlag</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauwetter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Verwaltungsgebiet</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="5.87691362426438" miny="47.2703623257608" maxx="15.0375065863599" maxy="55.0443808252149"/>
+              <BoundingBox SRS="EPSG:4326" minx="5.87691362426438" miny="47.2703623257608" maxx="15.0375065863599" maxy="55.0443808252149"/>
+              <Style>
+                <Name>Warnungen_Landkreise</Name>
+                <Title>Basiswarnungen</Title>
+                <LegendURL width="275" height="160">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warnungen_Gemeinden_vereinigt"/>
+                </LegendURL>
+              </Style>
+              <Style>
+                <Name>warnungen_gemeinden_vereinigt_event_seamless_param</Name>
+                <Title>Basiswarnungen</Title>
+                <Abstract>Warnungen plus Ereignislabel</Abstract>
+                <LegendURL width="209" height="160">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warnungen_Gemeinden_vereinigt&amp;style=warnungen_gemeinden_vereinigt_event_seamless_param"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warnungen_Kueste</Name>
+              <Title>Wetterwarnungen für Küstengebiete</Title>
+              <Abstract>aktuelle amtliche Wetterwarnungen des DWD für Küstengebiete</Abstract>
+              <KeywordList>
+                <Keyword>cap</Keyword>
+                <Keyword>Dauerregen</Keyword>
+                <Keyword>Eisberg</Keyword>
+                <Keyword>ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extrem starke Schneeverwehung</Keyword>
+                <Keyword>extrem starker Schneefall</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Frost</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>Glätte</Keyword>
+                <Keyword>Glatteis</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Leiterseilschwingung</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Orkanböen</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schneeverwehung</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauwetter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Turbulenz in wolkenfreier Luft</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Warngebiet</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="6.20000000000016" miny="53.3176110000002" maxx="14.2549290000002" maxy="55.0580000000004"/>
+              <BoundingBox SRS="EPSG:4326" minx="6.20000000000016" miny="53.3176110000002" maxx="14.2549290000002" maxy="55.0580000000004"/>
+              <Style>
+                <Name>Warnungen_Landkreise</Name>
+                <Title>Basiswarnungen</Title>
+                <LegendURL width="275" height="160">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warnungen_Kueste"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+            <Layer queryable="1" opaque="0">
+              <Name>Warnungen_See</Name>
+              <Title>Warnhinweise für Seegebiete</Title>
+              <Abstract>aktuelle amtliche Warnhinweise des DWD für Seegebiete</Abstract>
+              <KeywordList>
+                <Keyword>cap</Keyword>
+                <Keyword>extrem ergiebiger Dauerregen</Keyword>
+                <Keyword>extrem heftiger Starkregen</Keyword>
+                <Keyword>extrem schweres Gewitter</Keyword>
+                <Keyword>extreme Orkanböen</Keyword>
+                <Keyword>extreme Unwetterwarnung</Keyword>
+                <Keyword>Gewitter</Keyword>
+                <Keyword>heftiger Starkregen</Keyword>
+                <Keyword>Nebel</Keyword>
+                <Keyword>Schneefall</Keyword>
+                <Keyword>Schweres Gewitter</Keyword>
+                <Keyword>starke Schneeverwehung</Keyword>
+                <Keyword>starker Schneefall</Keyword>
+                <Keyword>starkes Gewitter</Keyword>
+                <Keyword>starkes Tauewtter</Keyword>
+                <Keyword>Starkregen</Keyword>
+                <Keyword>strenger Frost</Keyword>
+                <Keyword>Sturmböen</Keyword>
+                <Keyword>Tauwetter</Keyword>
+                <Keyword>Text</Keyword>
+                <Keyword>Tiefsttemperatur</Keyword>
+                <Keyword>Tornado</Keyword>
+                <Keyword>Tropischer Wirbelsturm</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Hurrikan)</Keyword>
+                <Keyword>Tropischer Wirbelsturm (Taifun)</Keyword>
+                <Keyword>Tsunami</Keyword>
+                <Keyword>Unwetterwarnung</Keyword>
+                <Keyword>Vulkanaschewolke</Keyword>
+                <Keyword>Wetterwarnungen</Keyword>
+                <Keyword>Windböen</Keyword>
+                <Keyword>XML</Keyword>
+                <Keyword>Zyklon</Keyword>
+              </KeywordList>
+              <SRS>EPSG:4326</SRS>
+              <LatLonBoundingBox minx="-5.69437405911549" miny="48.3358760957053" maxx="24.5823325795849" maxy="61.0162547905262"/>
+              <BoundingBox SRS="EPSG:4326" minx="-5.69437405911549" miny="48.3358760957053" maxx="24.5823325795849" maxy="61.0162547905262"/>
+              <Style>
+                <Name>Warnungen_Landkreise</Name>
+                <Title>Basiswarnungen</Title>
+                <LegendURL width="275" height="160">
+                  <Format>image/png</Format>
+                  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warnungen_See"/>
+                </LegendURL>
+              </Style>
+            </Layer>
+          </Layer>
+        </Layer>
+      </Layer>
+      <Layer>
+        <Name>Basislayer</Name>
+        <Title>Basislayer</Title>
+        <Layer queryable="1" opaque="0">
+          <Name>Icon-eu_Modelarea</Name>
+          <Title>Grenze ICON-EU Modellgebiet</Title>
+          <Abstract>Grenze ICON-EU Modellgebiet</Abstract>
+          <KeywordList>
+            <Keyword>Geobasisdaten</Keyword>
+            <Keyword>Meteorologie</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <LatLonBoundingBox minx="-23.53125" miny="29.46875" maxx="62.53125" maxy="70.53125"/>
+          <BoundingBox SRS="EPSG:4326" minx="-23.53125" miny="29.46875" maxx="62.53125" maxy="70.53125"/>
+          <Style>
+            <Name>icon-eu_modelarea</Name>
+            <Title>A yellow line style</Title>
+            <LegendURL width="20" height="20">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Icon-eu_Modelarea"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" opaque="0">
+          <Name>Warngebiete_Bundeslaender</Name>
+          <Title>Warngebiete_Bundeslaender</Title>
+          <Abstract>Copyright GeoBasis-DE / BKG (http://www.bkg.bund.de) 2019 (Daten modifiziert).</Abstract>
+          <KeywordList>
+            <Keyword>Geographisches Gebiet</Keyword>
+            <Keyword>Luftfahrt</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <LatLonBoundingBox minx="5.86599899999999" miny="47.270362" maxx="15.037507" maxy="55.057375"/>
+          <BoundingBox SRS="EPSG:4326" minx="5.86599899999999" miny="47.270362" maxx="15.037507" maxy="55.057375"/>
+          <Style>
+            <Name>Bundeslaender</Name>
+            <Title>Bundeslaender</Title>
+            <Abstract>Bundeslaender</Abstract>
+            <LegendURL width="20" height="20">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://brz-maps.dwd.de/geoserver/dwd/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Warngebiete_Bundeslaender"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMT_MS_Capabilities>
