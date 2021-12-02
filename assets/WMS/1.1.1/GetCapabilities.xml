@@ -1,802 +1,617 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE WMT_MS_Capabilities SYSTEM "https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=DTD" [<!ELEMENT VendorSpecificCapabilities EMPTY>]>
-<WMT_MS_Capabilities version="1.1.1" updateSequence="0">
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd"
+        [
+                <!ELEMENT VendorSpecificCapabilities EMPTY>
+                ]>  <!-- end of DOCTYPE declaration -->
+
+<WMT_MS_Capabilities version="1.1.1">
+
+  <!-- MapServer version 7.6.2 OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=RSVG SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=FASTCGI SUPPORTS=THREADS SUPPORTS=GEOS SUPPORTS=POINT_Z_M SUPPORTS=PBF INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
   <Service>
     <Name>OGC:WMS</Name>
-    <Title>WMS Bebauungspläne Ohmden</Title>
-    <Abstract>Bebauungspläne Ohmden</Abstract>
-    <KeywordList>
-      <Keyword>Bodennutzung</Keyword>
-      <Keyword>infoMapAccessService</Keyword>
-    </KeywordList>
-    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
+    <Title>Wasserdaten Stadtverwaltung</Title>
+    <Abstract>WMS - Wasserdaten Stadtverwaltung</Abstract>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/>
     <ContactInformation>
       <ContactPersonPrimary>
-        <ContactPerson></ContactPerson>
-        <ContactOrganization>Gemeinde Ohmden</ContactOrganization>
+        <ContactPerson>Gunnar Ströer</ContactPerson>
+        <ContactOrganization>Stabsstelle Geodatenmanagement - Stadt Freiburg i. Br.</ContactOrganization>
       </ContactPersonPrimary>
-      <ContactPosition></ContactPosition>
+      <ContactPosition>resourceProvider</ContactPosition>
       <ContactAddress>
         <AddressType>postal</AddressType>
-        <Address>Hauptstraße 18</Address>
-        <City>Ohmden</City>
-        <StateOrProvince>Baden-Württemberg</StateOrProvince>
-        <PostCode>73275</PostCode>
-        <Country>Deutschland</Country>
+        <Address>Fehrenbachallee 12</Address>
+        <City>Freiburg i. Br.</City>
+        <StateOrProvince></StateOrProvince>
+        <PostCode>79106</PostCode>
+        <Country>Germany</Country>
       </ContactAddress>
-      <ContactVoiceTelephone>07023 95100</ContactVoiceTelephone>
-      <ContactElectronicMailAddress>gemeinde@ohmden.de</ContactElectronicMailAddress>
+      <ContactVoiceTelephone>+49 761 201-4030</ContactVoiceTelephone>
+      <ContactElectronicMailAddress>gdi-support@stadt.freiburg.de</ContactElectronicMailAddress>
     </ContactInformation>
-    <Fees>Die dargestellten Daten geben den Inhalt der Bebauungspläne wieder. Es handelt sich hier um keine rechtlich verbindlichen Informationen. Amtliche Auskünft sind bei der jeweiligen Gemeindeverwaltung (Datenherr) zu erfragen.</Fees>
+    <Fees>Es gelten die Nutzungsbedingungen des Geoportals der Stadt Freiburg i. Br.: https://geoportal.freiburg.de/docs/freigis_terms_of_service.html</Fees>
     <AccessConstraints>otherRestrictions</AccessConstraints>
   </Service>
+
   <Capability>
     <Request>
       <GetCapabilities>
         <Format>application/vnd.ogc.wms_xml</Format>
         <DCPType>
           <HTTP>
-            <Get>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
-            </Get>
+            <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Get>
+            <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Post>
           </HTTP>
         </DCPType>
       </GetCapabilities>
       <GetMap>
         <Format>image/png</Format>
-        <Format>image/png; subtype=8bit</Format>
         <Format>image/png; mode=8bit</Format>
-        <Format>image/gif</Format>
         <Format>image/jpeg</Format>
-        <Format>image/tiff</Format>
-        <Format>image/x-ms-bmp</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
         <Format>image/svg+xml</Format>
+        <Format>application/x-pdf</Format>
+        <Format>image/tiff</Format>
+        <Format>application/vnd.google-earth.kml.xml</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>application/x-protobuf</Format>
+        <Format>application/json</Format>
         <DCPType>
           <HTTP>
-            <Get>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
-            </Get>
+            <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Get>
+            <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Post>
           </HTTP>
         </DCPType>
       </GetMap>
       <GetFeatureInfo>
         <Format>text/html</Format>
-        <Format>text/plain</Format>
-        <Format>text/xml</Format>
-        <Format>text/xml; subtype=gml/2.1.2</Format>
-        <Format>text/xml; subtype=gml/3.0.1</Format>
-        <Format>text/xml; subtype=gml/3.1.1</Format>
-        <Format>text/xml; subtype=gml/3.2.1</Format>
-        <Format>application/gml+xml; version=2.1</Format>
-        <Format>application/gml+xml; version=3.0</Format>
-        <Format>application/gml+xml; version=3.1</Format>
-        <Format>application/gml+xml; version=3.2</Format>
         <Format>application/vnd.ogc.gml</Format>
+        <Format>text/plain</Format>
         <DCPType>
           <HTTP>
-            <Get>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
-            </Get>
+            <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Get>
+            <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Post>
           </HTTP>
         </DCPType>
       </GetFeatureInfo>
-      <GetLegendGraphic>
-        <Format>image/png</Format>
-        <Format>image/png; subtype=8bit</Format>
-        <Format>image/png; mode=8bit</Format>
-        <Format>image/gif</Format>
-        <Format>image/jpeg</Format>
-        <Format>image/tiff</Format>
-        <Format>image/x-ms-bmp</Format>
-        <Format>image/svg+xml</Format>
+      <DescribeLayer>
+        <Format>text/xml</Format>
         <DCPType>
           <HTTP>
-            <Get>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?"/>
-            </Get>
+            <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Get>
+            <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Post>
+          </HTTP>
+        </DCPType>
+      </DescribeLayer>
+      <GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <DCPType>
+          <HTTP>
+            <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Get>
+            <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Post>
           </HTTP>
         </DCPType>
       </GetLegendGraphic>
+      <GetStyles>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Get>
+            <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?"/></Post>
+          </HTTP>
+        </DCPType>
+      </GetStyles>
     </Request>
     <Exception>
-      <Format>application/vnd.ogc.se_blank</Format>
       <Format>application/vnd.ogc.se_xml</Format>
       <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
     </Exception>
-    <Layer queryable="0" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-      <Title>Bebauungspläne Ohmden</Title>
-      <Abstract>Bebauungspläne Ohmden</Abstract>
-      <SRS>EPSG:3857</SRS>
+    <VendorSpecificCapabilities />
+    <UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0"/>
+    <Layer queryable="1">
+      <Name>uwsa_wasser</Name>
+      <Title>Wasserdaten Stadtverwaltung</Title>
+      <Abstract>WMS - Wasserdaten Stadtverwaltung</Abstract>
       <SRS>EPSG:25832</SRS>
-      <SRS>EPSG:3042</SRS>
-      <SRS>EPSG:3043</SRS>
-      <SRS>EPSG:3040</SRS>
-      <SRS>EPSG:3041</SRS>
       <SRS>EPSG:31467</SRS>
       <SRS>EPSG:4326</SRS>
-      <SRS>EPSG:3039</SRS>
-      <SRS>EPSG:4258</SRS>
-      <SRS>EPSG:3038</SRS>
-      <SRS>EPSG:3046</SRS>
-      <SRS>EPSG:3047</SRS>
-      <SRS>EPSG:3044</SRS>
-      <SRS>EPSG:900913</SRS>
-      <SRS>EPSG:3045</SRS>
-      <LatLonBoundingBox minx="9.51641109" miny="48.64286577" maxx="9.55469910" maxy="48.65369179"/>
-      <BoundingBox SRS="EPSG:3857" minx="1059362.03684756" miny="6214479.02413101" maxx="1063624.23817303" maxy="6216303.12616841"/>
-      <BoundingBox SRS="EPSG:25832" minx="538032.71802702" miny="5387884.77979439" maxx="540861.29377304" maxy="5389107.96498518"/>
-      <BoundingBox SRS="EPSG:3042" minx="1420832.61826519" miny="5463836.96325407" maxx="1423843.61479585" maxy="5465505.54750427"/>
-      <BoundingBox SRS="EPSG:3043" minx="979789.98473443" miny="5408281.61517015" maxx="982711.16878600" maxy="5409726.33922344"/>
-      <BoundingBox SRS="EPSG:3040" minx="2296996.39565588" miny="5684916.45546586" maxx="2300176.68849014" maxy="5687051.34151795"/>
-      <BoundingBox SRS="EPSG:3041" minx="1860310.55308320" miny="5555526.59362561" maxx="1863408.42174364" maxy="5557424.45223830"/>
-      <BoundingBox SRS="EPSG:31467" minx="3538123.77138692" miny="5389600.99407833" maxx="3540953.49318568" maxy="5390824.69417598"/>
-      <BoundingBox SRS="EPSG:4326" minx="9.51641109" miny="48.64286577" maxx="9.55469910" maxy="48.65369179"/>
-      <BoundingBox SRS="EPSG:3039" minx="2729070.88767929" miny="5854114.10969869" maxx="2732325.98538055" maxy="5856495.06517972"/>
-      <BoundingBox SRS="EPSG:4258" minx="9.51641109" miny="48.64286577" maxx="9.55469910" maxy="48.65369179"/>
-      <BoundingBox SRS="EPSG:3038" minx="3153869.32531292" miny="6065677.08231271" maxx="3157186.33648975" maxy="6068312.93928498"/>
-      <BoundingBox SRS="EPSG:3046" minx="-345179.99335474" miny="5451305.80545365" maxx="-342184.83510485" maxy="5452934.11004754"/>
-      <BoundingBox SRS="EPSG:3047" minx="-785101.22098535" miny="5536446.52953841" maxx="-782018.59763688" maxy="5538302.94563377"/>
-      <BoundingBox SRS="EPSG:3044" minx="538032.71802702" miny="5387884.77979439" maxx="540861.29377304" maxy="5389107.96498518"/>
-      <BoundingBox SRS="EPSG:900913" minx="1059362.03684756" miny="6214479.02413101" maxx="1063624.23817303" maxy="6216303.12616841"/>
-      <BoundingBox SRS="EPSG:3045" minx="96135.02784562" miny="5402080.98308839" maxx="99039.89969437" maxy="5403486.08701760"/>
-      <AuthorityURL name="GemeindeOhmden">
-        <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-      </AuthorityURL>
-      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-        <Name>bp_plan</Name>
-        <Title>bp_plan</Title>
-        <Abstract>Bebauungspläne Ohmden</Abstract>
-        <SRS>EPSG:3857</SRS>
+      <SRS>EPSG:3857</SRS>
+      <LatLonBoundingBox minx="7.65139" miny="47.8936" maxx="7.93958" maxy="48.0796" />
+      <BoundingBox SRS="EPSG:25832"
+                   minx="399550" miny="5.30535e+06" maxx="420740" maxy="5.32569e+06" />
+      <BoundingBox SRS="EPSG:31467"
+                   minx="3.39952e+06" miny="5.30693e+06" maxx="3.42072e+06" maxy="5.32728e+06" />
+      <BoundingBox SRS="EPSG:4326"
+                   minx="7.65139" miny="47.8936" maxx="7.93958" maxy="48.0796" />
+      <BoundingBox SRS="EPSG:3857"
+                   minx="851749" miny="6.08917e+06" maxx="883830" maxy="6.1201e+06" />
+      <Attribution>
+        <Title>Daten: Stadt Freiburg i. Br.</Title>
+        <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.freiburg.de"/>
+      </Attribution>
+      <MetadataURL type="TC211">
+        <Format>text/html</Format>
+        <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/f327cca1-9d5f-4770-955f-2d323c4cc26e"/>
+      </MetadataURL>
+      <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>fliessgewaesser</Name>
+        <Title>Fließgewässer und Gräben</Title>
+        <Abstract>Fließgewässer und Gräben</Abstract>
         <SRS>EPSG:25832</SRS>
-        <SRS>EPSG:3042</SRS>
-        <SRS>EPSG:3043</SRS>
-        <SRS>EPSG:3040</SRS>
-        <SRS>EPSG:3041</SRS>
         <SRS>EPSG:31467</SRS>
         <SRS>EPSG:4326</SRS>
-        <SRS>EPSG:3039</SRS>
-        <SRS>EPSG:4258</SRS>
-        <SRS>EPSG:3038</SRS>
-        <SRS>EPSG:3046</SRS>
-        <SRS>EPSG:3047</SRS>
-        <SRS>EPSG:3044</SRS>
-        <SRS>EPSG:900913</SRS>
-        <SRS>EPSG:3045</SRS>
-        <LatLonBoundingBox minx="9.51641684" miny="48.64302956" maxx="9.55464584" maxy="48.65353572"/>
-        <BoundingBox SRS="EPSG:3857" minx="1059362.67654733" miny="6214506.61826775" maxx="1063618.30926975" maxy="6216276.82646901"/>
-        <BoundingBox SRS="EPSG:25832" minx="538033.25863808" miny="5387902.98897944" maxx="540857.23813735" maxy="5389090.58786311"/>
-        <BoundingBox SRS="EPSG:3042" minx="1420835.92200192" miny="5463855.17986770" maxx="1423836.67107273" maxy="5465487.60296212"/>
-        <BoundingBox SRS="EPSG:3043" minx="979791.89408158" miny="5408299.84266031" maxx="982705.67980146" maxy="5409708.66711853"/>
-        <BoundingBox SRS="EPSG:3040" minx="2297002.65744036" miny="5684934.51075783" maxx="2300166.68464218" maxy="5687032.95052979"/>
-        <BoundingBox SRS="EPSG:3041" minx="1860315.30031513" miny="5555544.75922854" maxx="1863399.97948545" maxy="5557406.26347778"/>
-        <BoundingBox SRS="EPSG:31467" minx="3538124.31236049" miny="5389619.21058026" maxx="3540949.43576853" maxy="5390807.31004191"/>
-        <BoundingBox SRS="EPSG:4326" minx="9.51641684" miny="48.64302956" maxx="9.55464584" maxy="48.65353572"/>
-        <BoundingBox SRS="EPSG:3039" minx="2729078.75417658" miny="5854131.96672585" maxx="2732314.34245544" maxy="5856476.53730717"/>
-        <BoundingBox SRS="EPSG:4258" minx="9.51641684" miny="48.64302956" maxx="9.55464584" maxy="48.65353572"/>
-        <BoundingBox SRS="EPSG:3038" minx="3153878.90077699" miny="6065694.61333869" maxx="3157172.97002353" maxy="6068294.37479703"/>
-        <BoundingBox SRS="EPSG:3046" minx="-345176.80238738" miny="5451324.55700724" maxx="-342191.37675472" maxy="5452916.74458802"/>
-        <BoundingBox SRS="EPSG:3047" minx="-785096.52582762" miny="5536465.52784413" maxx="-782026.55738132" maxy="5538285.61965228"/>
-        <BoundingBox SRS="EPSG:3044" minx="538033.25863808" miny="5387902.98897944" maxx="540857.23813735" maxy="5389090.58786311"/>
-        <BoundingBox SRS="EPSG:900913" minx="1059362.67654733" miny="6214506.61826775" maxx="1063618.30926975" maxy="6216276.82646901"/>
-        <BoundingBox SRS="EPSG:3045" minx="96136.76207617" miny="5402099.45954912" maxx="99034.73859635" maxy="5403468.71801550"/>
-        <AuthorityURL name="GemeindeOhmden">
-          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-        </AuthorityURL>
-        <Identifier authority="GemeindeOhmden">www.gemeinde-ohmden.de/91c3aacd-6c19-41ad-b563-34f2a1494ae5</Identifier>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.64921" miny="47.8906" maxx="8.10569" maxy="48.151" />
+        <BoundingBox SRS="EPSG:25832"
+                     minx="399524" miny="5.30502e+06" maxx="433154" maxy="5.33347e+06" />
+        <BoundingBox SRS="EPSG:31467"
+                     minx="3.3995e+06" miny="5.3066e+06" maxx="3.43313e+06" maxy="5.33506e+06" />
+        <BoundingBox SRS="EPSG:4326"
+                     minx="7.64921" miny="47.8906" maxx="8.10569" maxy="48.151" />
+        <BoundingBox SRS="EPSG:3857"
+                     minx="851506" miny="6.08868e+06" maxx="902321" maxy="6.13201e+06" />
         <MetadataURL type="TC211">
-          <Format>text/xml</Format>
-          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/services/bsp/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8/md/dataset/dataset1"/>
+          <Format>text/html</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
         </MetadataURL>
         <Style>
           <Name>default</Name>
           <Title>default</Title>
-          <LegendURL width="249" height="135">
+          <LegendURL width="233" height="66">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=bp_plan&amp;format=image/png"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=fliessgewaesser&amp;format=image/png&amp;STYLE=default"/>
           </LegendURL>
         </Style>
       </Layer>
-      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-        <Name>bp_planRaster</Name>
-        <Title>bp_planRaster</Title>
-        <Abstract>Bebauungspläne Ohmden</Abstract>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grundwasserflurabstand</Name>
+        <Title>Grundwasserflurabstand bei MHW</Title>
+        <Abstract>Grundwasserflurabstand bei MHW</Abstract>
         <SRS>EPSG:25832</SRS>
-        <LatLonBoundingBox minx="9.51641109" miny="48.64286577" maxx="9.55469910" maxy="48.65369179"/>
-        <BoundingBox SRS="EPSG:25832" minx="538040.72676700" miny="5387904.50619800" maxx="540852.69129300" maxy="5389088.23121600"/>
-        <AuthorityURL name="GemeindeOhmden">
-          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-        </AuthorityURL>
-        <Identifier authority="GemeindeOhmden">www.gemeinde-ohmden.de/91c3aacd-6c19-41ad-b563-34f2a1494ae5</Identifier>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.71822" miny="47.9732" maxx="7.91239" maxy="48.0595" />
+        <BoundingBox SRS="EPSG:25832"
+                     minx="404493" miny="5.31412e+06" maxx="418831" maxy="5.32349e+06" />
+        <BoundingBox SRS="EPSG:31467"
+                     minx="3.40447e+06" miny="5.3157e+06" maxx="3.41881e+06" maxy="5.32508e+06" />
+        <BoundingBox SRS="EPSG:4326"
+                     minx="7.71822" miny="47.9732" maxx="7.91239" maxy="48.0595" />
+        <BoundingBox SRS="EPSG:3857"
+                     minx="859189" miny="6.1024e+06" maxx="880803" maxy="6.11677e+06" />
         <MetadataURL type="TC211">
-          <Format>text/xml</Format>
-          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/services/bsp/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8/md/dataset/dataset1"/>
+          <Format>text/html</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
         </MetadataURL>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.c4216073-88fe-464a-be29-10b125c16b0f_bp_planRaster</Name>
-          <Title>Stahlacker-und Dorfwiesenweg</Title>
-          <Abstract>Stahlacker-und Dorfwiesenweg Nutzung: MI</Abstract>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="75" height="198">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=grundwasserflurabstand&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grundwasserhochstand</Name>
+        <Title>Mittlerer Grundwasserhochstand (m ü NN)</Title>
+        <Abstract>Mittlerer Grundwasserhochstand (m ü NN)</Abstract>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.71817" miny="47.9732" maxx="7.91239" maxy="48.0611" />
+        <BoundingBox SRS="EPSG:25832"
+                     minx="404492" miny="5.31412e+06" maxx="418831" maxy="5.32366e+06" />
+        <BoundingBox SRS="EPSG:31467"
+                     minx="3.40446e+06" miny="5.3157e+06" maxx="3.41881e+06" maxy="5.32525e+06" />
+        <BoundingBox SRS="EPSG:4326"
+                     minx="7.71817" miny="47.9732" maxx="7.91239" maxy="48.0611" />
+        <BoundingBox SRS="EPSG:3857"
+                     minx="859183" miny="6.1024e+06" maxx="880803" maxy="6.11702e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/html</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="172" height="44">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=grundwasserhochstand&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer>
+        <Name>hwgk</Name>
+        <Title>Hochwassergefahrenkarten</Title>
+        <Abstract>hwgk</Abstract>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="273" height="198">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hwgk&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>hq100_typ2</Name>
+          <Title>HWGK geschützter Bereich bei HQ100</Title>
+          <Abstract>HWGK geschützter Bereich bei HQ100</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.51947853" miny="48.64299963" maxx="9.52606866" maxy="48.64506010"/>
-          <BoundingBox SRS="EPSG:25832" minx="538266.69516400" miny="5387904.50619800" maxx="538750.61343500" maxy="5388130.23931900"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.52196" miny="47.7086" maxx="7.90589" maxy="48.1534" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="390065" miny="5.28495e+06" maxx="417933" maxy="5.33394e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.39003e+06" miny="5.28653e+06" maxx="3.41791e+06" maxy="5.33553e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.52196" miny="47.7086" maxx="7.90589" maxy="48.1534" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="837341" miny="6.05851e+06" maxx="880080" maxy="6.13242e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="245" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.c4216073-88fe-464a-be29-10b125c16b0f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hq100_typ2&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.83cb6d08-966c-4b9d-b497-613f6ab80bd9_bp_planRaster</Name>
-          <Title>Marienstraße</Title>
-          <Abstract>Marienstraße Baulinienplan, Verfahrensdaten unbekannt</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>hqext</Name>
+          <Title>HWGK HQ Extrem</Title>
+          <Abstract>HWGK HQ Extrem</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53009433" miny="48.64594896" maxx="9.53262577" maxy="48.64798043"/>
-          <BoundingBox SRS="EPSG:25832" minx="539046.42813500" miny="5388235.69645600" maxx="539231.33445200" maxy="5388460.23426600"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.5032" miny="47.6258" maxx="8.11067" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="388821" miny="5.27577e+06" maxx="433190" maxy="5.34179e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.38879e+06" miny="5.27735e+06" maxx="3.43317e+06" maxy="5.34338e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.5032" miny="47.6258" maxx="8.11067" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="835252" miny="6.04483e+06" maxx="902876" maxy="6.14451e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="138" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.83cb6d08-966c-4b9d-b497-613f6ab80bd9_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hqext&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.83513ae1-724c-430c-ae31-9f20f66e2406_bp_planRaster</Name>
-          <Title>Mittlere Schulstraße</Title>
-          <Abstract>Mittlere Schulstraße Nutzung: WA</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>hq100</Name>
+          <Title>HWGK HQ100</Title>
+          <Abstract>HWGK HQ100</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52822188" miny="48.64434547" maxx="9.52990090" maxy="48.64486311"/>
-          <BoundingBox SRS="EPSG:25832" minx="538909.74211700" miny="5388056.06782300" maxx="539033.03319300" maxy="5388112.75482400"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.5032" miny="47.6258" maxx="8.11066" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="388821" miny="5.27578e+06" maxx="433189" maxy="5.34179e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.38879e+06" miny="5.27735e+06" maxx="3.43317e+06" maxy="5.34338e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.5032" miny="47.6258" maxx="8.11066" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="835252" miny="6.04483e+06" maxx="902874" maxy="6.14451e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="117" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.83513ae1-724c-430c-ae31-9f20f66e2406_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hq100&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.53745c03-5e6b-4042-a520-bf58407baf2f_bp_planRaster</Name>
-          <Title>Östliche Schulstraße  (1. Änderung)</Title>
-          <Abstract>Östliche Schulstraße (1. Änderung) Genehmigungsdatum: 04.05.1972/ 02.10.1972; Nutzung: WR</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>hq50</Name>
+          <Title>HWGK HQ50</Title>
+          <Abstract>HWGK HQ50</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53052563" miny="48.64449690" maxx="9.53216158" maxy="48.64526261"/>
-          <BoundingBox SRS="EPSG:25832" minx="539079.32302400" miny="5388074.05661600" maxx="539199.24694200" maxy="5388158.34117200"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.5032" miny="47.6259" maxx="8.11066" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="388821" miny="5.27578e+06" maxx="433189" maxy="5.34179e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.38879e+06" miny="5.27735e+06" maxx="3.43317e+06" maxy="5.34338e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.5032" miny="47.6259" maxx="8.11066" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="835252" miny="6.04483e+06" maxx="902874" maxy="6.14451e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="110" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.53745c03-5e6b-4042-a520-bf58407baf2f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hq50&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.40ccb983-ae93-434f-91ff-ef0ec5a03fce_bp_planRaster</Name>
-          <Title>Erweiterung Carl-Scheufelen-Straße</Title>
-          <Abstract>Nutzung: WA</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>hq10</Name>
+          <Title>HWGK HQ10</Title>
+          <Abstract>HWGK HQ10</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52717762" miny="48.64781527" maxx="9.52904069" maxy="48.64911670"/>
-          <BoundingBox SRS="EPSG:25832" minx="538830.15546200" miny="5388441.31869400" maxx="538966.39269900" maxy="5388585.04707500"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.5032" miny="47.6259" maxx="8.11058" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="388821" miny="5.27578e+06" maxx="433183" maxy="5.34179e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.38879e+06" miny="5.27735e+06" maxx="3.43316e+06" maxy="5.34338e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.5032" miny="47.6259" maxx="8.11058" maxy="48.2258" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="835252" miny="6.04483e+06" maxx="902865" maxy="6.14451e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="110" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.40ccb983-ae93-434f-91ff-ef0ec5a03fce_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hq10&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.d8c2591a-57b5-4dec-8096-e2212bf97714_bp_planRaster</Name>
-          <Title>Ortsbaulinienplanerweiterung Im Grund Halden</Title>
-          <Abstract>Ortsbaulinienplanerweiterung "Im Grund Halden" ist im westl. Teil durch den Bebauungsplan "Südlich der Carl-Scheufelenstr." von 1971 ersetzt.</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>schutz</Name>
+          <Title>Schutzeinrichtungen</Title>
+          <Abstract>Schutzeinrichtungen</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52287404" miny="48.64488337" maxx="9.52975772" maxy="48.64907533"/>
-          <BoundingBox SRS="EPSG:25832" minx="538515.38423300" miny="5388115.76661400" maxx="539019.25488500" maxy="5388578.28360300"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.68106" miny="47.9348" maxx="7.9126" maxy="48.1486" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="401893" miny="5.30989e+06" maxx="418787" maxy="5.33339e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.40187e+06" miny="5.31147e+06" maxx="3.41876e+06" maxy="5.33498e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.68106" miny="47.9348" maxx="7.9126" maxy="48.1486" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="855052" miny="6.09602e+06" maxx="880826" maxy="6.13161e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="147" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.d8c2591a-57b5-4dec-8096-e2212bf97714_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=schutz&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.660136d9-77a0-4cec-ae89-99d446514b12_bp_planRaster</Name>
-          <Title>Südseite der vorderen Carl-Scheufelen-Straße</Title>
-          <Abstract>Südseite der vorderen Carl-Scheufelen-Straße Nutzung: WA</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>hrbts</Name>
+          <Title>Hochwasserrückhaltebecken oder Talsperre</Title>
+          <Abstract>Hochwasserrückhaltebecken oder Talsperre</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52471347" miny="48.64636309" maxx="9.52646517" maxy="48.64715799"/>
-          <BoundingBox SRS="EPSG:25832" minx="538649.76544300" miny="5388278.58866000" maxx="538778.19583200" maxy="5388366.06839100"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.69172" miny="47.9367" maxx="7.87203" maxy="48.1433" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="402676" miny="5.31009e+06" maxx="415759" maxy="5.33285e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.40265e+06" miny="5.31167e+06" maxx="3.41574e+06" maxy="5.33444e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.69172" miny="47.9367" maxx="7.87203" maxy="48.1433" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="856239" miny="6.09633e+06" maxx="876310" maxy="6.13073e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="273" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.660136d9-77a0-4cec-ae89-99d446514b12_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hrbts&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.f4ffd84d-6beb-49dd-b390-13a84966a893_bp_planRaster</Name>
-          <Title>Östliches Weitgassbett und Göpelshalde (1. Änderung)</Title>
-          <Abstract>Östliches Weitgassbett und Göpelshalde (1. Änderung) Nutzung: WA</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>bruecke</Name>
+          <Title>Brückenstatus</Title>
+          <Abstract>Brückenstatus</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53195105" miny="48.64528381" maxx="9.53391970" maxy="48.64598154"/>
-          <BoundingBox SRS="EPSG:25832" minx="539183.70974900" miny="5388162.43270400" maxx="539328.19279200" maxy="5388238.98558300"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.67841" miny="47.8924" maxx="8.10528" maxy="48.1502" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="401695" miny="5.30518e+06" maxx="433125" maxy="5.33338e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.40167e+06" miny="5.30676e+06" maxx="3.43311e+06" maxy="5.33497e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.67841" miny="47.8924" maxx="8.10528" maxy="48.1502" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="854756" miny="6.08897e+06" maxx="902276" maxy="6.13187e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="223" height="44">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.f4ffd84d-6beb-49dd-b390-13a84966a893_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=bruecke&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.3aeb34f8-8831-4b4e-aa38-b9901d74e734_bp_planRaster</Name>
-          <Title>Friedrichstraße</Title>
-          <Abstract>Friedrichstraße Baulinienplan Genehmigung: 15.10.1877</Abstract>
+      </Layer>
+      <Layer queryable="1">
+        <Name>baechle</Name>
+        <Title>Bächle</Title>
+        <Abstract>baechle</Abstract>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="158" height="88">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=baechle&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>schacht</Name>
+          <Title>Schachtposition (fiktiv)</Title>
+          <Abstract>Schachtposition (fiktiv)</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52071030" miny="48.64474763" maxx="9.52340314" maxy="48.64682942"/>
-          <BoundingBox SRS="EPSG:25832" minx="538356.11926600" miny="5388097.45995800" maxx="538552.90824400" maxy="5388327.53248500"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.84629" miny="47.9922" maxx="7.85641" maxy="47.9978" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="413935" miny="5.31608e+06" maxx="414681" maxy="5.31669e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.41391e+06" miny="5.31766e+06" maxx="3.41466e+06" maxy="5.31828e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.84629" miny="47.9922" maxx="7.85641" maxy="47.9978" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="873445" miny="6.10556e+06" maxx="874571" maxy="6.10649e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="158" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.3aeb34f8-8831-4b4e-aa38-b9901d74e734_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=schacht&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.021e28cb-83fe-42c2-b01a-646b60e0215f_bp_planRaster</Name>
-          <Title>Weitgaßbett</Title>
-          <Abstract>Weitgaßbett Nutzung: WA</Abstract>
+        <Layer queryable="1" opaque="0" cascaded="0">
+          <Name>fliess</Name>
+          <Title>Fließrichtung</Title>
+          <Abstract>Fließrichtung</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53089203" miny="48.64602138" maxx="9.53493035" maxy="48.64847259"/>
-          <BoundingBox SRS="EPSG:25832" minx="539105.12514100" miny="5388244.93139200" maxx="539400.70274100" maxy="5388515.35165000"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.84351" miny="47.9914" maxx="7.85846" maxy="47.9987" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="413730" miny="5.31599e+06" maxx="414833" maxy="5.31678e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.41371e+06" miny="5.31758e+06" maxx="3.41481e+06" maxy="5.31837e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.84351" miny="47.9914" maxx="7.85846" maxy="47.9987" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="873136" miny="6.10543e+06" maxx="874800" maxy="6.10663e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="107" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.021e28cb-83fe-42c2-b01a-646b60e0215f_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=fliess&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.543417c0-52ee-4a0e-9a89-d9eac3c455d0_bp_planRaster</Name>
-          <Title>Dorfwiesenweg II</Title>
-          <Abstract>Nutzung: WA</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>flaeche</Name>
+          <Title>Schachtfläche</Title>
+          <Abstract>Schachtfläche</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52385340" miny="48.64400040" maxx="9.52578704" maxy="48.64504213"/>
-          <BoundingBox SRS="EPSG:25832" minx="538588.21562300" miny="5388015.61184400" maxx="538729.86710100" maxy="5388130.43923700"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.84434" miny="47.9919" maxx="7.85803" maxy="47.9984" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="413791" miny="5.31604e+06" maxx="414802" maxy="5.31676e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.41377e+06" miny="5.31763e+06" maxx="3.41478e+06" maxy="5.31834e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.84434" miny="47.9919" maxx="7.85803" maxy="47.9984" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="873228" miny="6.1055e+06" maxx="874752" maxy="6.10659e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="113" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.543417c0-52ee-4a0e-9a89-d9eac3c455d0_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=flaeche&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.cc37b57e-c71e-4dbc-b844-5f043a4ed283_bp_planRaster</Name>
-          <Title>Östliche Schulstraße</Title>
-          <Abstract>Nutzung: WA</Abstract>
+        <Layer queryable="0" opaque="0" cascaded="0">
+          <Name>leitung</Name>
+          <Title>Leitungen</Title>
+          <Abstract>Leitungen</Abstract>
           <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52871380" miny="48.64410267" maxx="9.53220087" maxy="48.64534726"/>
-          <BoundingBox SRS="EPSG:25832" minx="538946.15825900" miny="5388030.25300200" maxx="539202.08178100" maxy="5388166.82737000"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.84374" miny="47.9919" maxx="7.85803" maxy="47.9985" />
+          <BoundingBox SRS="EPSG:25832"
+                       minx="413746" miny="5.31605e+06" maxx="414801" maxy="5.31676e+06" />
+          <BoundingBox SRS="EPSG:31467"
+                       minx="3.41372e+06" miny="5.31763e+06" maxx="3.41478e+06" maxy="5.31835e+06" />
+          <BoundingBox SRS="EPSG:4326"
+                       minx="7.84374" miny="47.9919" maxx="7.85803" maxy="47.9985" />
+          <BoundingBox SRS="EPSG:3857"
+                       minx="873161" miny="6.10551e+06" maxx="874752" maxy="6.1066e+06" />
+          <MetadataURL type="TC211">
+            <Format>text/html</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/89141cd9-e688-4c7c-ba85-fe4ea776984d"/>
+          </MetadataURL>
           <Style>
             <Name>default</Name>
             <Title>default</Title>
-            <LegendURL width="16" height="16">
+            <LegendURL width="91" height="22">
               <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.cc37b57e-c71e-4dbc-b844-5f043a4ed283_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.f165cb91-a841-4cce-bf28-0f1e031d8d87_bp_planRaster</Name>
-          <Title>Bäumlen</Title>
-          <Abstract>Baulinienplan Bäumlen</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52748397" miny="48.64557098" maxx="9.53207804" maxy="48.64772617"/>
-          <BoundingBox SRS="EPSG:25832" minx="538854.43453600" miny="5388193.39962100" maxx="539191.19478700" maxy="5388430.63942500"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.f165cb91-a841-4cce-bf28-0f1e031d8d87_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.ea25ffdf-fbe1-431c-a757-9d44220d94e0_bp_planRaster</Name>
-          <Title>Baulinienplan</Title>
-          <Abstract>Baulinienplan; Genehmigung: 15.10.1877</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.51642911" miny="48.64331602" maxx="9.53212741" maxy="48.64827136"/>
-          <BoundingBox SRS="EPSG:25832" minx="538041.79573200" miny="5387942.75325600" maxx="539194.44769400" maxy="5388485.68718300"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.ea25ffdf-fbe1-431c-a757-9d44220d94e0_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.3f368396-fc3d-4347-90d8-d0ac99554923_bp_planRaster</Name>
-          <Title>Bei Hauptstraße 2</Title>
-          <Abstract>Baulinienplan; Nutzung: ---</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52577837" miny="48.64561964" maxx="9.52646752" maxy="48.64595162"/>
-          <BoundingBox SRS="EPSG:25832" minx="538728.77722900" miny="5388195.95195800" maxx="538779.28964500" maxy="5388232.50810600"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.3f368396-fc3d-4347-90d8-d0ac99554923_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.f3be30a4-b650-4708-aeae-f28c06896867_bp_planRaster</Name>
-          <Title>Schulhaus</Title>
-          <Abstract>Schulhaus Baulinienplan, Genehmigungsdatum "Mai 1915"</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52548959" miny="48.64405147" maxx="9.52858838" maxy="48.64578956"/>
-          <BoundingBox SRS="EPSG:25832" minx="538708.69712200" miny="5388022.71043200" maxx="538935.64429100" maxy="5388214.35470800"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.f3be30a4-b650-4708-aeae-f28c06896867_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.2c96b307-1fe5-4a0d-a567-5ead5bdefc75_bp_planRaster</Name>
-          <Title>Weitgaßbett (2. Änderung)</Title>
-          <Abstract>Weitgaßbett (2. Änderung) Nutzung: WR</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53332794" miny="48.64721454" maxx="9.53442461" maxy="48.64784727"/>
-          <BoundingBox SRS="EPSG:25832" minx="539283.63540900" miny="5388377.30881200" maxx="539363.92848400" maxy="5388447.08426300"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.2c96b307-1fe5-4a0d-a567-5ead5bdefc75_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.a81733ba-0ef5-4df9-957a-07d9c293fd0f_bp_planRaster</Name>
-          <Title>Golfanlage Wasenwiesen (1. Änderung)</Title>
-          <Abstract>Golfanlage Wasenwiesen (1. Änderung)</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.54288534" miny="48.65059898" maxx="9.54383155" maxy="48.65110115"/>
-          <BoundingBox SRS="EPSG:25832" minx="539984.93211900" miny="5388758.41071900" maxx="540054.23231700" maxy="5388813.74114500"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.a81733ba-0ef5-4df9-957a-07d9c293fd0f_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.82fe6224-64a2-459c-a756-668948916722_bp_planRaster</Name>
-          <Title>Am Berbach</Title>
-          <Abstract>Am Berbach, Nutzung: GE</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.51643089" miny="48.64496793" maxx="9.51961174" maxy="48.64748106"/>
-          <BoundingBox SRS="EPSG:25832" minx="538040.72676700" miny="5388120.03807800" maxx="538273.15011400" maxy="5388397.82770400"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.82fe6224-64a2-459c-a756-668948916722_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.b2de1001-9d16-408e-863a-c29b037f75d6_bp_planRaster</Name>
-          <Title>Östliche Schulstraße (2. Änderung)</Title>
-          <Abstract>Östliche Schulstraße (2. Änderung) Nutzung: WR</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53055073" miny="48.64450622" maxx="9.53213928" maxy="48.64524901"/>
-          <BoundingBox SRS="EPSG:25832" minx="539081.16431300" miny="5388075.08175400" maxx="539197.61459500" maxy="5388156.84202100"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.b2de1001-9d16-408e-863a-c29b037f75d6_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.d0a8994d-fb29-44d8-a5ff-6f36b6c49a37_bp_planRaster</Name>
-          <Title>Hintere Schulstraße</Title>
-          <Abstract>Nutzung: WA</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52974348" miny="48.64476042" maxx="9.53222535" maxy="48.64558901"/>
-          <BoundingBox SRS="EPSG:25832" minx="539021.50235200" miny="5388103.38187100" maxx="539203.69432800" maxy="5388194.22340100"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.d0a8994d-fb29-44d8-a5ff-6f36b6c49a37_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.4cc79e8f-cc3b-4baf-ae37-05c8eed99478_bp_planRaster</Name>
-          <Title>Stahlacker-und Dorfwiesenweg (3. Änderung)</Title>
-          <Abstract>Stahlacker-und Dorfwiesenweg (3. Änderung) Nutzung: MD</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52021055" miny="48.64341305" maxx="9.52598845" maxy="48.64446279"/>
-          <BoundingBox SRS="EPSG:25832" minx="538320.30749000" miny="5387950.42576700" maxx="538745.16031200" maxy="5388064.20605700"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.4cc79e8f-cc3b-4baf-ae37-05c8eed99478_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.2e5fb2d2-f221-4477-b5ed-f71c99948577_bp_planRaster</Name>
-          <Title>Golfanlage Wasenwiesen</Title>
-          <Abstract>Golfanlage Wasenwiesen</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.54182545" miny="48.65043244" maxx="9.55469910" maxy="48.65357538"/>
-          <BoundingBox SRS="EPSG:25832" minx="539906.95575400" miny="5388745.64463900" maxx="540852.69129300" maxy="5389088.23121600"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.2e5fb2d2-f221-4477-b5ed-f71c99948577_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.b232c35b-4fcd-4021-9c86-fbc0eacbb64f_bp_planRaster</Name>
-          <Title>Östliches Weitgassbett und Göpelshalde</Title>
-          <Abstract>Östliches Weitgassbett und Göpelshalde Nutzung: WA</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53137780" miny="48.64519354" maxx="9.53589372" maxy="48.64919715"/>
-          <BoundingBox SRS="EPSG:25832" minx="539141.54514300" miny="5388153.39970800" maxx="539471.09667300" maxy="5388596.14957400"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.b232c35b-4fcd-4021-9c86-fbc0eacbb64f_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.b2449072-160e-4a47-a855-8c455788a3bc_bp_planRaster</Name>
-          <Title>Karlstraße</Title>
-          <Abstract>Karlstraße Nutzung: WA</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.51990046" miny="48.64607948" maxx="9.52092096" maxy="48.64689963"/>
-          <BoundingBox SRS="EPSG:25832" minx="538295.46297600" miny="5388244.26095800" maxx="538370.01727900" maxy="5388334.92371400"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.b2449072-160e-4a47-a855-8c455788a3bc_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.6c0bdd51-38d6-4cf4-9fb8-3bc50def82d4_bp_planRaster</Name>
-          <Title>Hofäcker - Fabrikstraße</Title>
-          <Abstract>Hofäcker - Fabrikstraße</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.51653302" miny="48.64479662" maxx="9.51964531" maxy="48.64636718"/>
-          <BoundingBox SRS="EPSG:25832" minx="538048.37875400" miny="5388101.01694100" maxx="538276.46539500" maxy="5388274.05688000"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.6c0bdd51-38d6-4cf4-9fb8-3bc50def82d4_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.d327e0a2-fc9c-4897-b2d8-1d737a045489_bp_planRaster</Name>
-          <Title>Weitgaßbett (1. Änderung)</Title>
-          <Abstract>Weitgaßbett (1. Änderung) Nutzung: WR</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53334171" miny="48.64680610" maxx="9.53477575" maxy="48.64784524"/>
-          <BoundingBox SRS="EPSG:25832" minx="539284.96592600" miny="5388332.08704200" maxx="539389.79516700" maxy="5388446.86789200"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.d327e0a2-fc9c-4897-b2d8-1d737a045489_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.bdb5c12a-01c9-4bc7-a6fa-6c72bf4c720a_bp_planRaster</Name>
-          <Title>Grubäcker I</Title>
-          <Abstract>Grubäcker I Nutzung: WA</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53380457" miny="48.64798269" maxx="9.53896653" maxy="48.65047461"/>
-          <BoundingBox SRS="EPSG:25832" minx="539318.13079600" miny="5388465.03712100" maxx="539696.42239800" maxy="5388739.38944700"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.bdb5c12a-01c9-4bc7-a6fa-6c72bf4c720a_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.5b35020e-db1d-4cee-b9a6-040668d0ee3e_bp_planRaster</Name>
-          <Title>Stahlacker-und Dorfwiesenweg (1. Änderung)</Title>
-          <Abstract>Stahlacker-und Dorfwiesenweg (1. Änderung) Nutzung: Mi</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52298603" miny="48.64401424" maxx="9.52472028" maxy="48.64456736"/>
-          <BoundingBox SRS="EPSG:25832" minx="538524.31357500" miny="5388016.61190500" maxx="538651.65138700" maxy="5388077.22503800"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.5b35020e-db1d-4cee-b9a6-040668d0ee3e_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.6f48eca2-aa51-4e6b-8663-31c9f93a44b2_bp_planRaster</Name>
-          <Title>Stahlacker-und Dorfwiesenweg (2. Änderung zwischen Stahlackerweg und Trinkbach)</Title>
-          <Abstract>Stahlacker-und Dorfwiesenweg (2. Änderung zwischen Stahlackerweg und Trinkbach) Nutzung: Mi</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.52345787" miny="48.64373879" maxx="9.52421674" maxy="48.64407483"/>
-          <BoundingBox SRS="EPSG:25832" minx="538559.28336200" miny="5387985.73992600" maxx="538614.93231300" maxy="5388022.71303900"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.6f48eca2-aa51-4e6b-8663-31c9f93a44b2_bp_planRaster&amp;style=default&amp;format=image/png"/>
-            </LegendURL>
-          </Style>
-        </Layer>
-        <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
-          <Name>org.140.d0b3ae0c-d069-4483-97bc-111e0118d5b2_bp_planRaster</Name>
-          <Title>Grubäcker 2 Nord</Title>
-          <Abstract>Grubäcker 2 Nord; Verfahren nach § 13b; Nutzung: WA</Abstract>
-          <SRS>EPSG:25832</SRS>
-          <LatLonBoundingBox minx="9.53794520" miny="48.64851662" maxx="9.54030557" maxy="48.65022350"/>
-          <BoundingBox SRS="EPSG:25832" minx="539622.70530100" miny="5388525.08929900" maxx="539795.23376900" maxy="5388713.61378400"/>
-          <AuthorityURL name="GemeindeOhmden">
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.gemeinde-ohmden.de"/>
-          </AuthorityURL>
-          <Style>
-            <Name>default</Name>
-            <Title>default</Title>
-            <LegendURL width="16" height="16">
-              <Format>image/png</Format>
-              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geodienste.komm.one/ows/services/org.140.1f9dc4ab-f305-473f-becd-9fa4ba231ce8_wms?request=GetLegendGraphic&amp;version=1.1.1&amp;service=WMS&amp;layer=org.140.d0b3ae0c-d069-4483-97bc-111e0118d5b2_bp_planRaster&amp;style=default&amp;format=image/png"/>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.freiburg.de/wms/uwsa_wasser/uwsa_wasser?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=leitung&amp;format=image/png&amp;STYLE=default"/>
             </LegendURL>
           </Style>
         </Layer>
